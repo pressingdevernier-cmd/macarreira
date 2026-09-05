@@ -448,6 +448,314 @@ a { color: inherit; }
   text-align: center;
 }
 
+/* --- Navigation de l'en-tete --------------------------------------------- */
+
+.nav-haut {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--pas) * 1.5);
+}
+
+.nav-lien {
+  font-family: var(--serif);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.nav-lien:hover,
+.nav-lien[aria-current='page'] { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* --- Reglettes : les commandes d'un meme reglage, soudees en un bloc ------
+   Trois formes, toutes batties sur le meme cadre a filets :
+     .reglette          le cadre
+     .reglette .champ   la valeur en cours, en plein couleur accent
+     .reglette button   une touche (− / + ou un choix)
+   Une touche « choisie » (aria-pressed="true") passe elle aussi en plein.
+   -------------------------------------------------------------------------- */
+
+.barre-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--pas) * 1.25);
+  margin-top: calc(var(--pas) * 2.5);
+}
+
+.reglette {
+  display: inline-flex;
+  align-items: stretch;
+  background: var(--surface);
+  border: 1.5px solid var(--accent);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.reglette > * {
+  min-height: 42px;
+  border-right: 1px solid var(--accent);
+}
+.reglette > *:last-child { border-right: 0; }
+
+.reglette button {
+  font-family: var(--serif);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding: 0 14px;
+  border: 0;
+  border-right: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background-color .12s, color .12s;
+}
+.reglette button:last-child { border-right: 0; }
+.reglette button:hover { background: var(--filet); }
+.reglette button[aria-pressed='true'] { background: var(--accent); color: var(--fond); }
+.reglette button[aria-pressed='true']:hover { background: var(--accent); }
+.reglette button[disabled] { opacity: .35; cursor: default; }
+.reglette button[disabled]:hover { background: transparent; }
+
+/* Les touches − et + : un signe seul, plus gros, sans espacement de lettres */
+.reglette button.pas {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  padding: 0 16px;
+  line-height: 1;
+}
+
+.reglette .champ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  background: var(--accent);
+  color: var(--fond);
+}
+.reglette .champ .etiq {
+  font-family: var(--serif);
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  opacity: .85;
+}
+.reglette .champ .val {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+/* Astuce discrete proposee quand on a transpose : la ligne a coller dans le .pro */
+.astuce {
+  margin: calc(var(--pas) * 1.5) 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .82rem;
+  color: var(--secondaire);
+  line-height: 1.5;
+}
+.astuce code {
+  font-family: var(--mono);
+  font-style: normal;
+  color: var(--encre);
+}
+.astuce button {
+  font-family: var(--serif);
+  font-style: normal;
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  margin-left: 6px;
+  padding: 3px 8px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--rayon);
+  cursor: pointer;
+}
+.astuce button:hover { background: var(--accent); color: var(--fond); }
+
+/* --- Accords cliquables dans les paroles --------------------------------- */
+
+/* Un accord reconnu devient un bouton : on le tape pour voir ses positions.
+   Il doit garder exactement l'allure du .chord d'origine. */
+button.chord {
+  font-family: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0 .7em 0 0;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px dotted transparent;
+}
+button.chord:hover { border-bottom-color: var(--accent); }
+
+/* --- Diagrammes d'accords ------------------------------------------------ */
+
+.diagramme { display: block; margin: 0 auto; }
+
+.diagrammes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: calc(var(--pas) * 2) var(--pas);
+  margin-top: calc(var(--pas) * 2);
+}
+
+.diagramme-carte { text-align: center; }
+.diagramme-legende {
+  display: block;
+  font-family: var(--serif);
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--secondaire);
+  margin-top: 2px;
+}
+
+/* --- Panneau des positions d'un accord (glisse depuis le bas) ------------- */
+
+.panneau[hidden] { display: none; }
+
+.panneau {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.panneau-fond {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.panneau-boite {
+  position: relative;
+  width: 100%;
+  max-width: var(--largeur-max);
+  max-height: 84vh;
+  overflow-y: auto;
+  background: var(--fond);
+  border-top: 2px solid var(--accent);
+  border-radius: 6px 6px 0 0;
+  padding: calc(var(--pas) * 2.5);
+  padding-bottom: calc(var(--pas) * 4 + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, .22);
+}
+
+.panneau-tete {
+  display: flex;
+  align-items: baseline;
+  gap: var(--pas);
+  border-bottom: 1px solid var(--filet);
+  padding-bottom: var(--pas);
+}
+.panneau-titre {
+  flex: 1 1 auto;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin: 0;
+}
+.panneau-sous {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .82rem;
+  color: var(--secondaire);
+}
+.panneau-fermer {
+  flex: none;
+  align-self: flex-start;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--secondaire);
+  border: 1px solid var(--filet);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.panneau-fermer:hover { color: var(--accent); border-color: var(--accent); }
+
+.panneau .barre-actions { margin-top: calc(var(--pas) * 2); }
+
+/* --- Dictionnaire d'accords ---------------------------------------------- */
+
+.choix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--pas);
+}
+.choix button {
+  font-family: var(--mono);
+  font-size: .88rem;
+  font-weight: 700;
+  min-width: 46px;
+  min-height: 40px;
+  padding: 0 9px;
+  background: var(--surface);
+  color: var(--encre);
+  border: 1.5px solid var(--filet);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color .12s, background-color .12s, color .12s;
+}
+.choix button:hover { border-color: var(--accent); }
+.choix button[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--fond);
+}
+
+.grille-accords {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: calc(var(--pas) * 2) var(--pas);
+  margin: calc(var(--pas) * 2) 0 calc(var(--pas) * 8);
+}
+
+.carte-accord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: calc(var(--pas) * 1.5) 4px var(--pas);
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  cursor: pointer;
+  transition: border-color .12s;
+}
+.carte-accord:hover { border-color: var(--accent); }
+.carte-accord .nom {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+}
+.carte-accord .type {
+  font-family: var(--serif);
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--secondaire);
+}
+
 /* --- Ecrans larges ------------------------------------------------------- */
 
 @media (min-width: 700px) {

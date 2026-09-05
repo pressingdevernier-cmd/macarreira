@@ -21,19 +21,28 @@
       <span class="brand-title">Macarreira</span>
       <span class="brand-sub">Guitare · Piano · Deux voix</span>
     </a>
-    <button id="theme-toggle" class="icon-button" type="button" aria-label="Changer de thème">
-      <span id="theme-icon" aria-hidden="true">☾</span>
-    </button>
+    <nav class="nav-haut">
+      <a class="nav-lien" href="#/accords">Accords</a>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Changer de thème">
+        <span id="theme-icon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
   </div>
 </header>
 
-<!-- Toute l'application s'affiche ici, remplacée par app.js selon l'adresse (#/ ou #/song/xxx) -->
+<!-- Toute l'application s'affiche ici, remplacée par app.js selon l'adresse
+     (#/ , #/song/xxx ou #/accords) -->
 <main id="view" class="wrap" tabindex="-1"></main>
 
 <footer class="site-footer wrap">
   <p>Notre recueil · <span id="song-count"></span></p>
 </footer>
 
+<!-- Bibliothèques téléchargées une fois et rangées dans lib/ (aucun appel à Internet) :
+     ChordSheetJS lit et transpose les accords ; chords.js dessine les diagrammes
+     à partir des bases guitar.json et ukulele.json. -->
+<script src="lib/chordsheetjs.bundle.js"></script>
+<script src="chords.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

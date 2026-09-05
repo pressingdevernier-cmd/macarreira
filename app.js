@@ -706,7 +706,14 @@ function majChanson() {
   if (facts) facts.innerHTML = faitsChanson();
 
   var feuille = document.getElementById('sheet');
-  if (feuille) feuille.innerHTML = rendreSections(e.sections);
+  if (feuille) {
+    // Une chanson dont le fichier .pro ne contient encore que ses
+    // metadonnees : on le dit, plutot que d'afficher une page blanche.
+    feuille.innerHTML = e.sections.length
+      ? rendreSections(e.sections)
+      : '<p class="message">Les paroles ne sont pas encore saisies.<br>' +
+        'Ajoutez-les dans <code>songs/' + txt(e.slug) + '.pro</code>.</p>';
+  }
 
   majAstuce();
 }
@@ -1159,10 +1166,13 @@ function router() {
    12. Mode hors ligne (service worker)
    --------------------------------------------------------------------------
    sw.js garde une copie de l'application, des chansons, des bases d'accords
-   et des partitions deja ouvertes. Quand une nouvelle version est publiee,
-   le navigateur la telecharge en arriere-plan des qu'il y a du reseau, puis
-   la page se recharge toute seule, une seule fois.
+   et des partitions. A chaque ouverture avec du reseau, il demande au
+   serveur si les fichiers ont change ; si oui, il les remplace dans son
+   cache et la page se recharge toute seule, une seule fois. Rien a mettre
+   a jour a la main.
    -------------------------------------------------------------------------- */
+
+var CLE_RECHARGE = 'macarreira.derniere-recharge';
 
 function initHorsLigne() {
   if (!('serviceWorker' in navigator)) return;
@@ -1170,40 +1180,86 @@ function initHorsLigne() {
   // ne fonctionne : on n'essaie meme pas.
   if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
 
-  var avaitDejaUneVersion = !!navigator.serviceWorker.controller;
-  var rechargementLance = false;
-
-  navigator.serviceWorker.addEventListener('controllerchange', function () {
-    if (!avaitDejaUneVersion) { afficherVersion(); return; }  // toute premiere installation
-    if (rechargementLance) return;
-    rechargementLance = true;
-    window.location.reload();
-  });
+  navigator.serviceWorker.addEventListener('controllerchange', afficherVersion);
 
   navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
     .then(function (enregistrement) {
       enregistrement.update();
       // A chaque fois qu'on revient sur l'application, on regarde s'il y a du neuf.
       document.addEventListener('visibilitychange', function () {
-        if (!document.hidden) enregistrement.update();
+        if (document.hidden) return;
+        enregistrement.update();
+        verifierLesMisesAJour();
       });
       return navigator.serviceWorker.ready;
     })
-    .then(afficherVersion)
+    .then(function () {
+      afficherVersion();
+      verifierLesMisesAJour();
+    })
     .catch(function () { /* pas de hors ligne : l'application marche quand meme */ });
 }
 
-/* Le pied de page indique la version reellement installee sur ce telephone :
-   c'est le moyen de verifier qu'une publication est bien arrivee. */
+/* Poser une question au service worker et attendre sa reponse. */
+function demanderAuServiceWorker(message) {
+  return new Promise(function (repondre) {
+    var chef = navigator.serviceWorker && navigator.serviceWorker.controller;
+    if (!chef) { repondre(null); return; }
+
+    var canal = new MessageChannel();
+    var fini = false;
+    canal.port1.onmessage = function (ev) { fini = true; repondre(ev.data); };
+    // Si le service worker ne repond pas, on n'attend pas indefiniment.
+    setTimeout(function () { if (!fini) repondre(null); }, 20000);
+    chef.postMessage(message, [canal.port2]);
+  });
+}
+
+/* Le service worker verifie aupres du serveur si les fichiers ont change.
+   Si oui, il a deja range les nouveaux dans son cache : il ne reste qu'a
+   recharger la page une fois pour les utiliser. */
+function verifierLesMisesAJour() {
+  demanderAuServiceWorker({ type: 'verifier' }).then(function (reponse) {
+    if (!reponse || !reponse.codeAChange) return;
+    if (!peutRecharger()) return;
+    window.location.reload();
+  });
+}
+
+/* Garde-fou : jamais deux rechargements coup sur coup, meme si quelque
+   chose se passait mal du cote du serveur. */
+function peutRecharger() {
+  try {
+    var dernier = Number(sessionStorage.getItem(CLE_RECHARGE) || 0);
+    if (Date.now() - dernier < 20000) return false;
+    sessionStorage.setItem(CLE_RECHARGE, String(Date.now()));
+  } catch (e) { /* navigation privee : on recharge quand meme */ }
+  return true;
+}
+
+/* Le pied de page indique la version installee sur ce telephone, c'est-a-dire
+   la date de publication des fichiers qu'il a en memoire. C'est le moyen de
+   verifier qu'une publication est bien arrivee. */
 function afficherVersion() {
   var boite = document.getElementById('app-version');
-  if (!boite || !navigator.serviceWorker.controller) return;
+  if (!boite) return;
 
-  var canal = new MessageChannel();
-  canal.port1.onmessage = function (ev) {
-    if (ev.data && ev.data.version) boite.textContent = 'Version ' + ev.data.version;
-  };
-  navigator.serviceWorker.controller.postMessage({ type: 'version' }, [canal.port2]);
+  demanderAuServiceWorker({ type: 'version' }).then(function (reponse) {
+    if (!reponse || !reponse.date) return;
+    var lisible = dateLisible(reponse.date);
+    if (lisible) boite.textContent = 'Version du ' + lisible;
+  });
+}
+
+function dateLisible(iso) {
+  var d = new Date(iso);
+  if (isNaN(d.getTime())) return '';
+  try {
+    return d.toLocaleDateString('fr-CA', { day: 'numeric', month: 'short', year: 'numeric' }) +
+      ', ' + d.toLocaleTimeString('fr-CA', { hour: '2-digit', minute: '2-digit' });
+  } catch (e) {
+    return iso.slice(0, 16).replace('T', ' ');
+  }
 }
 
 window.addEventListener('hashchange', router);

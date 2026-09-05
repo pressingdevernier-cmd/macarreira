@@ -5,29 +5,52 @@
    et qui repond a la place du reseau quand il n'y en a pas. Grace a lui,
    l'application s'ouvre en mode avion, au chalet, dans le metro.
 
-   COMMENT PUBLIER UNE NOUVELLE VERSION
+   MISE A JOUR : IL N'Y A RIEN A FAIRE
    -----------------------------------
-   Il n'y a qu'une seule chose a faire : changer la ligne VERSION ci-dessous
-   (mettre la date du jour, par exemple), puis commiter et pousser.
-   Au prochain lancement avec du reseau, les telephones voient que la version
-   a change, telechargent la nouvelle et se rechargent tout seuls.
-   Si vous oubliez de changer VERSION, les telephones garderont l'ancienne
-   version en memoire : c'est LA ligne a ne pas oublier.
+   Aucun numero de version a changer a la main. A chaque ouverture de
+   l'application avec du reseau, ce fichier redemande au serveur les
+   quelques fichiers de code (index.html, app.css, app.js, chords.js) en
+   posant la question : « ont-ils change depuis ma copie ? ». Le serveur
+   repond en general « non » en quelques centaines d'octets, et rien n'est
+   retelecharge. Le jour ou vous publiez, il repond « oui » : les nouveaux
+   fichiers remplacent les anciens dans le cache, et la page se recharge
+   une fois, toute seule.
+
+   Hors ligne, toutes ces verifications echouent sans bruit et le cache
+   continue de servir : le mode avion n'est pas affecte.
+
+   La « version » affichee en pied de page est la date de publication des
+   fichiers, lue dans leur en-tete Last-Modified : elle se met donc a jour
+   toute seule elle aussi.
    ========================================================================== */
 
 'use strict';
 
-var VERSION = '2026-09-05-jalon4';
-var CACHE = 'macarreira-' + VERSION;
+/* Un seul cache, sans numero : c'est son CONTENU qui se met a jour, pas son
+   nom. Ne changez ce nom que si vous voulez repartir d'un cache vide (par
+   exemple apres avoir remplace une police dans fonts/). */
+var CACHE = 'macarreira';
 
-/* Les fichiers de l'application elle-meme, telecharges des l'installation. */
-var COQUILLE = [
+/* Les fichiers de code. Ce sont eux qu'on surveille : s'ils changent, la
+   page se recharge pour utiliser la nouvelle version. */
+var FICHIERS_CODE = [
   './',
   './index.html',
   './app.css',
   './app.js',
-  './chords.js',
+  './chords.js'
+];
+
+/* Surveilles aussi, mais sans declencher de rechargement : leur changement
+   est pris en compte au prochain affichage. */
+var FICHIERS_DISCRETS = [
   './manifest.json',
+  './songs/index.json'
+];
+
+/* Fichiers qui ne changent jamais : telecharges une fois a l'installation.
+   (Les bibliotheques, les polices, les icones.) */
+var FICHIERS_FIXES = [
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
@@ -43,12 +66,11 @@ var COQUILLE = [
   './fonts/courier-prime-bold-latin.woff2',
   './fonts/courier-prime-bold-latin-ext.woff2',
   './fonts/courier-prime-italic-latin.woff2',
-  './fonts/courier-prime-italic-latin-ext.woff2',
-  './songs/index.json'
+  './fonts/courier-prime-italic-latin-ext.woff2'
 ];
 
 /* --------------------------------------------------------------------------
-   Installation : on remplit le cache
+   Remplir le cache
    -------------------------------------------------------------------------- */
 
 /* On ajoute les fichiers un par un : si l'un manque (une police renommee,
@@ -89,16 +111,22 @@ function fichiersDesPartitions(cache, chansons) {
   });
 }
 
+/* Toutes les chansons et leurs partitions. Sert a l'installation, puis a
+   nouveau chaque fois que la liste des chansons a change. */
+function prendreLesChansons(cache) {
+  return fichiersDesChansons()
+    .then(function (chansons) {
+      return ajouterChacun(cache, chansons).then(function () { return chansons; });
+    })
+    .then(function (chansons) { return fichiersDesPartitions(cache, chansons); })
+    .then(function (partitions) { return ajouterChacun(cache, partitions); });
+}
+
 self.addEventListener('install', function (ev) {
   ev.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      return ajouterChacun(cache, COQUILLE)
-        .then(function () { return fichiersDesChansons(); })
-        .then(function (chansons) {
-          return ajouterChacun(cache, chansons).then(function () { return chansons; });
-        })
-        .then(function (chansons) { return fichiersDesPartitions(cache, chansons); })
-        .then(function (partitions) { return ajouterChacun(cache, partitions); });
+      return ajouterChacun(cache, FICHIERS_CODE.concat(FICHIERS_DISCRETS, FICHIERS_FIXES))
+        .then(function () { return prendreLesChansons(cache); });
     }).then(function () {
       // On prend la main tout de suite, sans attendre la fermeture des onglets.
       return self.skipWaiting();
@@ -106,20 +134,91 @@ self.addEventListener('install', function (ev) {
   );
 });
 
-/* --------------------------------------------------------------------------
-   Activation : on jette les caches des versions precedentes
-   -------------------------------------------------------------------------- */
-
 self.addEventListener('activate', function (ev) {
   ev.waitUntil(
     caches.keys().then(function (noms) {
       return Promise.all(noms.map(function (nom) {
-        if (nom !== CACHE && nom.indexOf('macarreira-') === 0) return caches.delete(nom);
+        // On jette les caches numerotes des versions precedentes.
+        if (nom !== CACHE && nom.indexOf('macarreira') === 0) return caches.delete(nom);
         return null;
       }));
     }).then(function () { return self.clients.claim(); })
   );
 });
+
+/* --------------------------------------------------------------------------
+   Verifier s'il y a du neuf
+   --------------------------------------------------------------------------
+   Chaque fichier arrive du serveur avec une etiquette (ETag, ou a defaut
+   Last-Modified) qui change des que son contenu change. On compare
+   l'etiquette du serveur a celle de notre copie : c'est tout.
+   -------------------------------------------------------------------------- */
+
+function etiquette(reponse) {
+  if (!reponse) return null;
+  return reponse.headers.get('etag') || reponse.headers.get('last-modified') || null;
+}
+
+/* Renvoie true si le fichier a change depuis notre copie. Si le serveur ne
+   fournit aucune etiquette, on ne signale jamais de changement : mieux vaut
+   ne rien faire que recharger la page en boucle. */
+function revalider(cache, adresse) {
+  return fetch(adresse, { cache: 'no-cache' }).then(function (duReseau) {
+    if (!duReseau || duReseau.status !== 200) return false;
+
+    return cache.match(adresse).then(function (enCache) {
+      var ancienne = etiquette(enCache);
+      var nouvelle = etiquette(duReseau);
+      var aChange = ancienne !== null && nouvelle !== null && ancienne !== nouvelle;
+
+      if (!enCache || aChange) {
+        return cache.put(adresse, duReseau.clone()).then(function () { return aChange; });
+      }
+      return false;
+    });
+  }).catch(function () {
+    return false;                       // hors ligne : rien ne bouge
+  });
+}
+
+function verifierMisesAJour() {
+  return caches.open(CACHE).then(function (cache) {
+    return Promise.all(FICHIERS_CODE.map(function (a) { return revalider(cache, a); }))
+      .then(function (changements) {
+        var codeAChange = changements.some(Boolean);
+
+        return Promise.all(FICHIERS_DISCRETS.map(function (a) { return revalider(cache, a); }))
+          .then(function (autres) {
+            // La liste des chansons a bouge : on remet a jour les .pro et
+            // les partitions, pour que les nouveautes soient la hors ligne.
+            var listeAChange = autres[FICHIERS_DISCRETS.indexOf('./songs/index.json')];
+            if (!listeAChange) return codeAChange;
+            return prendreLesChansons(cache).then(function () { return codeAChange; });
+          });
+      });
+  }).then(function (codeAChange) {
+    return { codeAChange: codeAChange };
+  }).catch(function () {
+    return { codeAChange: false };
+  });
+}
+
+/* La date de publication des fichiers installes : elle sert de numero de
+   version en pied de page, et elle n'a pas a etre entretenue. */
+function dateInstallee() {
+  return caches.open(CACHE).then(function (cache) {
+    return Promise.all(FICHIERS_CODE.map(function (adresse) {
+      return cache.match(adresse).then(function (r) {
+        var d = r && r.headers.get('last-modified');
+        var t = d ? Date.parse(d) : NaN;
+        return isNaN(t) ? 0 : t;
+      });
+    }));
+  }).then(function (dates) {
+    var plusRecente = Math.max.apply(null, dates.concat([0]));
+    return plusRecente ? new Date(plusRecente).toISOString() : null;
+  }).catch(function () { return null; });
+}
 
 /* --------------------------------------------------------------------------
    Reponse aux demandes de la page
@@ -217,7 +316,7 @@ self.addEventListener('fetch', function (ev) {
   // 3. Tout le reste (application, polices, bases d'accords, partitions) :
   //    le cache d'abord, c'est instantane ; sinon le reseau, et on garde.
   ev.respondWith(
-    caches.match(requete, { ignoreSearch: false }).then(function (enCache) {
+    caches.match(requete).then(function (enCache) {
       if (enCache) return range ? tranche(enCache, range) : enCache;
 
       return fetch(requete).then(function (r) {
@@ -231,11 +330,22 @@ self.addEventListener('fetch', function (ev) {
 });
 
 /* --------------------------------------------------------------------------
-   La page peut demander quelle version est installee (affichee en pied de page)
+   Les questions que la page peut poser
    -------------------------------------------------------------------------- */
 
 self.addEventListener('message', function (ev) {
-  if (ev.data && ev.data.type === 'version' && ev.ports && ev.ports[0]) {
-    ev.ports[0].postMessage({ version: VERSION });
+  var demande = ev.data && ev.data.type;
+  var port = ev.ports && ev.ports[0];
+  if (!demande || !port) return;
+
+  if (demande === 'version') {
+    dateInstallee().then(function (date) { port.postMessage({ date: date }); });
+    return;
+  }
+
+  if (demande === 'verifier') {
+    ev.waitUntil(
+      verifierMisesAJour().then(function (resultat) { port.postMessage(resultat); })
+    );
   }
 });

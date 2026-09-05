@@ -1,15 +1,124 @@
 {
-  "_note": "Liste des chansons, pour afficher la bibliotheque rapidement. Les fichiers .pro restent la source de verite : a l'ouverture d'une chanson, l'application relit le .pro. Quand vous ajoutez une chanson, ajoutez ici une ligne avec au minimum \"file\" et \"title\".",
+  "_note": "Liste des chansons, pour afficher la bibliotheque rapidement. Les fichiers .pro restent la source de verite : a l'ouverture d'une chanson, l'application relit le .pro. Ce fichier est engendre par outils/regenerer-index.py : relancez-le apres chaque ajout de chanson plutot que de le modifier a la main.",
   "songs": [
     {
-      "file": "sous-les-toits.pro",
-      "title": "Sous les toits",
-      "artist": "Macarreira",
+      "file": "addicted.pro",
+      "title": "Addicted",
+      "artist": "Ben l'Oncle Soul",
+      "key": "G#m",
+      "status": "en_travail"
+    },
+    {
+      "file": "angels.pro",
+      "title": "Angels (acoustique)",
+      "artist": "Tom Walker",
       "key": "Am",
-      "our_key": "Bm",
-      "capo": 2,
-      "status": "en_travail",
-      "tags": ["guitare", "setlist-soiree"]
+      "status": "en_travail"
+    },
+    {
+      "file": "beautiful-things.pro",
+      "title": "Beautiful Things",
+      "artist": "Benson Boone",
+      "key": "Eb",
+      "status": "en_travail"
+    },
+    {
+      "file": "bits-and-pieces.pro",
+      "title": "Bits and Pieces",
+      "artist": "JP Cooper",
+      "key": "Ebm",
+      "status": "en_travail"
+    },
+    {
+      "file": "ex-factor.pro",
+      "title": "Ex-Factor (version JP Cooper)",
+      "artist": "Lauryn Hill",
+      "key": "Ab",
+      "status": "en_travail"
+    },
+    {
+      "file": "he-loves-me.pro",
+      "title": "He Loves Me (Jill Scott)",
+      "artist": "Lianne La Havas",
+      "key": "Em",
+      "status": "en_travail"
+    },
+    {
+      "file": "how-come-you-dont-call-me.pro",
+      "title": "How Come You Don't Call Me Anymore (Prince)",
+      "artist": "La'Porsha Renae",
+      "key": "A",
+      "status": "en_travail"
+    },
+    {
+      "file": "i-love-you.pro",
+      "title": "i love you",
+      "artist": "Billie Eilish",
+      "key": "C",
+      "status": "en_travail"
+    },
+    {
+      "file": "i-should-go.pro",
+      "title": "I Should Go",
+      "artist": "James Vincent McMorrow",
+      "key": "Bm",
+      "status": "en_travail"
+    },
+    {
+      "file": "i-wish-i-didnt-miss-you.pro",
+      "title": "I Wish I Didn't Miss You",
+      "artist": "Angie Stone",
+      "key": "Cm",
+      "status": "en_travail"
+    },
+    {
+      "file": "ive-got-you-under-my-skin.pro",
+      "title": "I've Got You Under My Skin (version Ben l'Oncle Soul)",
+      "artist": "Frank Sinatra",
+      "key": "F",
+      "status": "en_travail"
+    },
+    {
+      "file": "is-this-love.pro",
+      "title": "Is This Love",
+      "artist": "Bob Marley & The Wailers",
+      "key": "F#m",
+      "status": "en_travail"
+    },
+    {
+      "file": "lift-me-up.pro",
+      "title": "Lift Me Up",
+      "artist": "Rihanna",
+      "key": "A",
+      "status": "en_travail"
+    },
+    {
+      "file": "lose-control.pro",
+      "title": "Lose Control",
+      "artist": "Teddy Swims",
+      "key": "F#m",
+      "status": "en_travail"
+    },
+    {
+      "file": "love-on-the-brain.pro",
+      "title": "Love On The Brain",
+      "artist": "Rihanna",
+      "key": "Db",
+      "status": "en_travail"
+    },
+    {
+      "file": "nightcall.pro",
+      "title": "Nightcall",
+      "artist": "Kavinsky",
+      "key": "Am",
+      "status": "en_travail"
+    },
+    {
+      "file": "paranoia-purple.pro",
+      "title": "Paranoia Purple (version Yebba & Lizzy McAlpine)",
+      "artist": "Yebba",
+      "key": "C",
+      "status": "en_travail"
     },
     {
       "file": "premier-matin.pro",
@@ -17,9 +126,129 @@
       "artist": "Macarreira",
       "key": "C",
       "our_key": "D",
-      "capo": 0,
       "status": "au_point",
-      "tags": ["piano", "setlist-soiree"]
+      "tags": [
+        "piano",
+        "setlist-soiree"
+      ]
+    },
+    {
+      "file": "price-tag.pro",
+      "title": "Price Tag (acoustique)",
+      "artist": "Jessie J",
+      "key": "Eb",
+      "status": "en_travail"
+    },
+    {
+      "file": "radioactive.pro",
+      "title": "Radioactive",
+      "artist": "Imagine Dragons",
+      "key": "Bm",
+      "status": "en_travail"
+    },
+    {
+      "file": "redemption-song.pro",
+      "title": "Redemption Song",
+      "artist": "Bob Marley & The Wailers",
+      "key": "G",
+      "status": "en_travail"
+    },
+    {
+      "file": "rude.pro",
+      "title": "Rude",
+      "artist": "MAGIC!",
+      "key": "F#",
+      "status": "en_travail"
+    },
+    {
+      "file": "self-sabotage.pro",
+      "title": "Self Sabotage",
+      "artist": "Mychelle",
+      "key": "F",
+      "status": "en_travail"
+    },
+    {
+      "file": "session-32.pro",
+      "title": "Session 32",
+      "artist": "Summer Walker",
+      "key": "C#m",
+      "status": "en_travail"
+    },
+    {
+      "file": "shape-of-you.pro",
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "key": "C#m",
+      "status": "en_travail"
+    },
+    {
+      "file": "sous-les-toits.pro",
+      "title": "Sous les toits",
+      "artist": "Macarreira",
+      "key": "Am",
+      "our_key": "Bm",
+      "status": "en_travail",
+      "capo": 2,
+      "tags": [
+        "guitare",
+        "setlist-soiree"
+      ]
+    },
+    {
+      "file": "stay.pro",
+      "title": "Stay (ft. Mikky Ekko)",
+      "artist": "Rihanna",
+      "key": "C",
+      "status": "en_travail"
+    },
+    {
+      "file": "stay-with-you.pro",
+      "title": "Stay With You",
+      "artist": "John Legend",
+      "key": "A",
+      "status": "en_travail"
+    },
+    {
+      "file": "strangers.pro",
+      "title": "sTraNgeRs",
+      "artist": "Bring Me The Horizon",
+      "key": "Dm",
+      "status": "en_travail"
+    },
+    {
+      "file": "sweater-weather.pro",
+      "title": "Sweater Weather",
+      "artist": "The Neighbourhood",
+      "key": "Eb",
+      "status": "en_travail"
+    },
+    {
+      "file": "talking-to-the-moon.pro",
+      "title": "Talking To The Moon (version Sam Tompkins)",
+      "artist": "Bruno Mars",
+      "key": "G",
+      "status": "en_travail"
+    },
+    {
+      "file": "the-sweetest-gift.pro",
+      "title": "The Sweetest Gift",
+      "artist": "Sade",
+      "key": "C",
+      "status": "en_travail"
+    },
+    {
+      "file": "what-was-i-made-for.pro",
+      "title": "What Was I Made For?",
+      "artist": "Billie Eilish",
+      "key": "C",
+      "status": "en_travail"
+    },
+    {
+      "file": "wicked-game.pro",
+      "title": "Wicked Game",
+      "artist": "Chris Isaak",
+      "key": "Bm",
+      "status": "en_travail"
     }
   ]
 }

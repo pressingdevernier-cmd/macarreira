@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Macarreira - feuille de style unique
+   Deux themes : « recueil vintage » (jour) et « carnet noir » (nuit).
+   Toutes les couleurs sont des variables CSS declarees ci-dessous : pour
+   retoucher l'identite, il suffit de modifier ces deux blocs.
+   ========================================================================== */
+
+/* --- Polices locales (fichiers dans fonts/, aucun appel a Internet) ------- */
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;              /* police variable : graisses 400 a 700 */
+  font-display: swap;
+  src: url('fonts/playfair-display-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('fonts/playfair-display-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('fonts/playfair-display-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('fonts/playfair-display-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url('fonts/courier-prime-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url('fonts/courier-prime-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url('fonts/courier-prime-bold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url('fonts/courier-prime-bold-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url('fonts/courier-prime-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url('fonts/courier-prime-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* --- Theme jour : « recueil vintage » ------------------------------------ */
+
+:root {
+  --fond:        #f4ecda;
+  --surface:     #ede2c8;
+  --encre:       #3d2f21;
+  --secondaire:  #8a6f52;
+  --accent:      #a3492c;
+  --filet:       #d8c9a8;
+
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --mono:  'Courier Prime', 'Courier New', ui-monospace, monospace;
+
+  /* Rythme vertical : une seule echelle reutilisee partout */
+  --pas: 8px;
+  --largeur-max: 44rem;
+  --rayon: 2px;                      /* coins presque droits, esprit imprime */
+
+  color-scheme: light;
+}
+
+/* --- Theme nuit : « carnet noir » ---------------------------------------- */
+
+/* Applique automatiquement si le telephone est en mode sombre,
+   sauf si l'utilisateur a explicitement choisi le jour. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='jour']) {
+    --fond:       #1a1a1e;
+    --surface:    #24242a;
+    --encre:      #e8e3d8;
+    --secondaire: #8d8a82;
+    --accent:     #d4a94e;
+    --filet:      #3b3b42;
+    color-scheme: dark;
+  }
+}
+/* Choix manuel de la nuit : prioritaire dans tous les cas. */
+:root[data-theme='nuit'] {
+  --fond:       #1a1a1e;
+  --surface:    #24242a;
+  --encre:      #e8e3d8;
+  --secondaire: #8d8a82;
+  --accent:     #d4a94e;
+  --filet:      #3b3b42;
+  color-scheme: dark;
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  /* Colonne : l'ecran occupe toute la hauteur et le pied reste en bas */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fond);
+  color: var(--encre);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* Leger grain de papier : deux degrades tres pales, aucun fichier image */
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(138, 111, 82, .06), transparent 55%),
+    radial-gradient(circle at 88% 78%, rgba(138, 111, 82, .06), transparent 55%);
+  background-attachment: fixed;
+}
+
+main { flex: 1 0 auto; }
+
+a { color: inherit; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 0 calc(var(--pas) * 2.5);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* --- En-tete ------------------------------------------------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--filet);
+}
+
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--pas);
+  padding-top: calc(var(--pas) * 3);
+  padding-bottom: calc(var(--pas) * 2);
+}
+
+.brand { text-decoration: none; display: block; }
+
+.brand-title {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  line-height: 1.1;
+}
+
+.brand-sub {
+  display: block;
+  font-style: italic;
+  font-size: .9rem;
+  color: var(--secondaire);
+  margin-top: 2px;
+}
+
+.icon-button {
+  flex: none;
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  font-size: 1.15rem;
+  color: var(--secondaire);
+  background: transparent;
+  border: 1px solid var(--filet);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.icon-button:hover { color: var(--accent); border-color: var(--accent); }
+
+/* --- Bibliotheque -------------------------------------------------------- */
+
+.section-title {
+  font-family: var(--serif);
+  font-size: .78rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--secondaire);
+  margin: calc(var(--pas) * 4) 0 var(--pas);
+}
+
+.song-list { list-style: none; margin: 0; padding: 0; }
+
+.song-list li { border-bottom: 1px solid var(--filet); }
+
+.song-link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--pas);
+  padding: calc(var(--pas) * 2) 0;
+  text-decoration: none;
+  color: inherit;
+}
+.song-link:hover .song-title { color: var(--accent); }
+
+.song-main { flex: 1 1 auto; min-width: 0; }
+
+.song-title {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.32rem;
+  font-weight: 600;
+  line-height: 1.25;
+  transition: color .15s;
+}
+
+.song-meta {
+  display: block;
+  font-size: .82rem;
+  color: var(--secondaire);
+  letter-spacing: .02em;
+  margin-top: 2px;
+}
+
+/* Badge de statut : un filet discret, pas de pastille criarde */
+.badge {
+  flex: none;
+  font-family: var(--serif);
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding: 3px 7px;
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  color: var(--secondaire);
+  white-space: nowrap;
+}
+.badge--au-point { color: var(--accent); border-color: var(--accent); }
+
+/* --- Vue chanson --------------------------------------------------------- */
+
+.back-link {
+  display: inline-block;
+  margin-top: calc(var(--pas) * 3);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  text-decoration: none;
+}
+.back-link:hover { color: var(--accent); }
+
+.song-header {
+  padding: calc(var(--pas) * 2) 0 calc(var(--pas) * 3);
+  border-bottom: 1px solid var(--filet);
+}
+
+.song-header h2 {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.song-artist {
+  font-style: italic;
+  color: var(--secondaire);
+  margin: 2px 0 0;
+}
+
+/* Ligne de renseignements : tonalites, capo, tempo, ecoute */
+.song-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px calc(var(--pas) * 1.5);
+  margin-top: calc(var(--pas) * 2);
+  font-size: .84rem;
+  color: var(--secondaire);
+}
+.fact { display: inline-flex; align-items: baseline; gap: 6px; }
+.fact-label {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .68rem;
+}
+.fact-value {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--encre);
+}
+.fact-value--accent { color: var(--accent); }
+.song-facts a { color: var(--accent); }
+
+/* Bloc « Nos notes », facon annotation au crayon */
+.notes {
+  margin: calc(var(--pas) * 3) 0 0;
+  padding: calc(var(--pas) * 2) calc(var(--pas) * 2.5);
+  background: var(--surface);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--rayon);
+  font-style: italic;
+}
+.notes-label {
+  display: block;
+  font-style: normal;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  margin-bottom: 4px;
+}
+
+/* --- Paroles et accords -------------------------------------------------- */
+
+.sheet {
+  font-family: var(--mono);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: calc(var(--pas) * 3) 0 calc(var(--pas) * 8);
+  overflow-x: auto;                  /* les lignes longues defilent, pas la page */
+}
+
+.sheet-section { margin-bottom: calc(var(--pas) * 3); }
+
+.sheet-section-title {
+  font-family: var(--serif);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--secondaire);
+  margin-bottom: var(--pas);
+}
+
+/* Refrain : retire vers la droite avec un filet, comme souligne au crayon */
+.sheet-section--chorus {
+  border-left: 1px solid var(--filet);
+  padding-left: calc(var(--pas) * 2);
+}
+
+.line { margin-bottom: 2px; min-height: 1.5em; }
+
+/* Un « segment » = un accord pose au-dessus du bout de texte qu'il commande */
+.seg { display: inline-block; vertical-align: bottom; }
+
+.chord {
+  display: block;
+  font-weight: 700;
+  font-size: .82rem;
+  line-height: 1.35;
+  color: var(--accent);
+  white-space: pre;
+  padding-right: .7em;               /* evite que deux accords se touchent */
+}
+.lyric { display: block; white-space: pre; }
+
+/* Ligne sans aucun accord : pas de place reservee au-dessus */
+.line--plain { white-space: pre-wrap; }
+
+.sheet-comment {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--secondaire);
+  margin: var(--pas) 0;
+}
+
+/* --- Messages et pied de page -------------------------------------------- */
+
+.message {
+  margin: calc(var(--pas) * 6) 0;
+  color: var(--secondaire);
+  font-style: italic;
+  text-align: center;
+}
+.message code {
+  font-family: var(--mono);
+  font-style: normal;
+  color: var(--encre);
+}
+
+.site-footer {
+  margin-top: calc(var(--pas) * 2);
+  border-top: 1px solid var(--filet);
+  padding-top: calc(var(--pas) * 2);
+  padding-bottom: calc(var(--pas) * 4);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--secondaire);
+  text-align: center;
+}
+
+/* --- Ecrans larges ------------------------------------------------------- */
+
+@media (min-width: 700px) {
+  body { font-size: 18px; }
+  .brand-title { font-size: 2.4rem; }
+  .song-header h2 { font-size: 2.6rem; }
+}

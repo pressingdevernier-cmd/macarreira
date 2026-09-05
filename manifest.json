@@ -1,0 +1,19 @@
+{
+  "name": "Macarreira",
+  "short_name": "Macarreira",
+  "description": "Le songbook du duo : paroles, accords et partitions.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4ecda",
+  "theme_color": "#f4ecda",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Macarreira</title>
+<meta name="description" content="Le songbook du duo : paroles, accords et partitions.">
+<!-- Couleur de la barre du navigateur sur téléphone, une par thème -->
+<meta name="theme-color" content="#f4ecda" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a1e" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#/">
+      <span class="brand-title">Macarreira</span>
+      <span class="brand-sub">Guitare · Piano · Deux voix</span>
+    </a>
+    <button id="theme-toggle" class="icon-button" type="button" aria-label="Changer de thème">
+      <span id="theme-icon" aria-hidden="true">☾</span>
+    </button>
+  </div>
+</header>
+
+<!-- Toute l'application s'affiche ici, remplacée par app.js selon l'adresse (#/ ou #/song/xxx) -->
+<main id="view" class="wrap" tabindex="-1"></main>
+
+<footer class="site-footer wrap">
+  <p>Notre recueil · <span id="song-count"></span></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

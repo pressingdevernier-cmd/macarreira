@@ -1,0 +1,5 @@
+# Fichiers techniques de Windows et des outils, inutiles dans le depot
+Thumbs.db
+desktop.ini
+.DS_Store
+.playwright-mcp/

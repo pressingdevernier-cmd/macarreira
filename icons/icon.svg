@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Macarreira">
+  <!-- Icone provisoire du jalon 2 : fond creme, filet, initiale M.
+       Les vraies icones PNG (192 et 512) arriveront au jalon 6. -->
+  <rect width="512" height="512" fill="#f4ecda"/>
+  <rect x="44" y="44" width="424" height="424" rx="8" fill="none" stroke="#d8c9a8" stroke-width="6"/>
+  <rect x="60" y="60" width="392" height="392" rx="4" fill="none" stroke="#a3492c" stroke-width="2"/>
+  <text x="256" y="330" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="260" font-weight="700"
+        fill="#a3492c">M</text>
+</svg>

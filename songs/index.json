@@ -1,0 +1,25 @@
+{
+  "_note": "Liste des chansons, pour afficher la bibliotheque rapidement. Les fichiers .pro restent la source de verite : a l'ouverture d'une chanson, l'application relit le .pro. Quand vous ajoutez une chanson, ajoutez ici une ligne avec au minimum \"file\" et \"title\".",
+  "songs": [
+    {
+      "file": "sous-les-toits.pro",
+      "title": "Sous les toits",
+      "artist": "Macarreira",
+      "key": "Am",
+      "our_key": "Bm",
+      "capo": 2,
+      "status": "en_travail",
+      "tags": ["guitare", "setlist-soiree"]
+    },
+    {
+      "file": "premier-matin.pro",
+      "title": "Premier matin",
+      "artist": "Macarreira",
+      "key": "C",
+      "our_key": "D",
+      "capo": 0,
+      "status": "au_point",
+      "tags": ["piano", "setlist-soiree"]
+    }
+  ]
+}

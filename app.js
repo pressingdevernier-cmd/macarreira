@@ -358,7 +358,85 @@ function regletteInstrument(action, actuel) {
 
 /* --------------------------------------------------------------------------
    6. Ecran 1 : la bibliotheque
+   --------------------------------------------------------------------------
+   Une ligne de recherche et quatre onglets. La recherche regarde d'abord les
+   titres et les tags (immediat, tout est deja dans songs/index.json) ; des
+   deux lettres tapees, elle va aussi lire les paroles de tous les fichiers
+   .pro, une seule fois, et affine le resultat quand ils sont arrives.
    -------------------------------------------------------------------------- */
+
+var ONGLETS = [
+  { cle: 'tous',     nom: 'Tous' },
+  { cle: 'guitare',  nom: 'Guitare' },
+  { cle: 'piano',    nom: 'Piano' },
+  { cle: 'setlists', nom: 'Setlists' }
+];
+
+var ongletActif = 'tous';
+var recherche = '';
+var textesChansons = {};        // nom de fichier -> paroles, en minuscules sans accents
+var chargementTextes = null;
+
+/* Pour comparer sans se soucier des accents ni des majuscules :
+   « Café » et « cafe » doivent se trouver l'un l'autre. */
+function sansAccents(valeur) {
+  return String(valeur === undefined || valeur === null ? '' : valeur)
+    .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function slugDe(chanson) {
+  return String(chanson.file || '').replace(/\.pro$/i, '');
+}
+
+/* Les tags, qu'ils soient ecrits en tableau (index.json) ou separes par des
+   virgules (directive {tags:} d'un fichier .pro). */
+function tagsDe(chanson) {
+  var tags = chanson.tags || [];
+  if (typeof tags === 'string') tags = tags.split(',');
+  return tags.map(function (t) { return String(t).trim(); }).filter(Boolean);
+}
+
+function passeLOnglet(chanson) {
+  if (ongletActif === 'tous') return true;
+  var tags = tagsDe(chanson).map(sansAccents);
+  if (ongletActif === 'setlists') {
+    return tags.some(function (t) { return t.indexOf('setlist') === 0; });
+  }
+  return tags.indexOf(ongletActif) !== -1;
+}
+
+function passeLaRecherche(chanson) {
+  if (!recherche) return true;
+  var q = sansAccents(recherche);
+  var fiche = sansAccents([chanson.title, chanson.artist, chanson.key, chanson.our_key,
+    tagsDe(chanson).join(' ')].join(' '));
+  if (fiche.indexOf(q) !== -1) return true;
+  var paroles = textesChansons[slugDe(chanson)];
+  return !!paroles && paroles.indexOf(q) !== -1;
+}
+
+/* Lit une fois pour toutes les paroles de chaque chanson. */
+function chargerTextes() {
+  if (chargementTextes) return chargementTextes;
+  chargementTextes = chargerIndex().then(function (chansons) {
+    return Promise.all(chansons.map(function (c) {
+      var slug = slugDe(c);
+      if (!slug || textesChansons[slug] !== undefined) return null;
+      return fetch('songs/' + encodeURIComponent(slug) + '.pro')
+        .then(function (r) { return r.ok ? r.text() : ''; })
+        .then(function (t) { textesChansons[slug] = sansAccents(t); })
+        .catch(function () { textesChansons[slug] = ''; });
+    }));
+  });
+  return chargementTextes;
+}
+
+/* « setlist-soiree » devient « Soiree ». */
+function nomDeSetlist(tag) {
+  var nom = String(tag).replace(/^setlist[-_\s]*/i, '').replace(/[-_]+/g, ' ').trim();
+  if (!nom) return 'Sans nom';
+  return nom.charAt(0).toUpperCase() + nom.slice(1);
+}
 
 function chargerIndex() {
   if (indexChansons) return Promise.resolve(indexChansons);
@@ -384,20 +462,35 @@ function afficherBibliotheque() {
       return;
     }
 
-    var html = '<h2 class="section-title">Nos chansons</h2><ul class="song-list">';
-    chansons.forEach(function (c) {
-      var slug = String(c.file || '').replace(/\.pro$/i, '');
-      html +=
-        '<li><a class="song-link" href="#/song/' + encodeURIComponent(slug) + '">' +
-          '<span class="song-main">' +
-            '<span class="song-title">' + txt(c.title || slug) + '</span>' +
-            '<span class="song-meta">' + resumeTonalite(c) + '</span>' +
-          '</span>' +
-          badgeStatut(c.status) +
-        '</a></li>';
+    // Loupe dessinee a la main : le caractere « ⌕ » manque dans beaucoup de
+    // polices de telephone et s'y affiche en carre vide.
+    var html = '<div class="recherche">' +
+      '<svg class="loupe" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">' +
+        '<circle cx="6.8" cy="6.8" r="4.6" fill="none" stroke="currentColor" ' +
+          'stroke-width="1.4"/>' +
+        '<path d="M10.3 10.3 L14.2 14.2" stroke="currentColor" stroke-width="1.4" ' +
+          'stroke-linecap="round"/>' +
+      '</svg>' +
+      '<input id="champ-recherche" type="search" autocomplete="off" spellcheck="false" ' +
+        'placeholder="Chercher un titre, une parole…" ' +
+        'aria-label="Chercher dans le recueil" value="' + txt(recherche) + '">' +
+      '</div>';
+
+    html += '<nav class="onglets" role="group" aria-label="Filtrer le recueil">';
+    ONGLETS.forEach(function (o) {
+      html += '<button type="button" data-act="onglet" data-onglet="' + o.cle + '"' +
+        ' aria-pressed="' + (o.cle === ongletActif ? 'true' : 'false') + '">' +
+        txt(o.nom) + '</button>';
     });
-    html += '</ul>';
+    html += '</nav>';
+
+    html += '<div id="liste-chansons"></div>';
+
     vue.innerHTML = html;
+    majListe();
+
+    // Si une recherche etait en cours, on redemande les paroles.
+    if (recherche.length >= 2) chargerTextes().then(majListe);
 
     var compteur = document.getElementById('song-count');
     if (compteur) {
@@ -409,6 +502,66 @@ function afficherBibliotheque() {
       'Si vous ouvrez le fichier directement depuis le disque, lancez plutot un petit ' +
       'serveur local (voir les notes du projet).</p>';
   });
+}
+
+/* Redessine la seule liste : la ligne de recherche garde ainsi le curseur. */
+function majListe() {
+  var boite = document.getElementById('liste-chansons');
+  if (!boite || !indexChansons) return;
+
+  var retenues = indexChansons.filter(function (c) {
+    return passeLOnglet(c) && passeLaRecherche(c);
+  });
+
+  if (!retenues.length) {
+    boite.innerHTML = '<p class="message">' +
+      (recherche ? 'Rien trouve pour « ' + txt(recherche) + ' ».'
+                 : 'Aucune chanson dans cet onglet.') + '</p>';
+    return;
+  }
+
+  boite.innerHTML = ongletActif === 'setlists'
+    ? rendreParSetlist(retenues)
+    : '<h2 class="section-title">' +
+        (recherche || ongletActif !== 'tous' ? retenues.length + ' chanson' +
+          (retenues.length > 1 ? 's' : '') : 'Nos chansons') +
+      '</h2>' + rendreListe(retenues);
+}
+
+function rendreListe(chansons) {
+  var html = '<ul class="song-list">';
+  chansons.forEach(function (c) {
+    var slug = slugDe(c);
+    html +=
+      '<li><a class="song-link" href="#/song/' + encodeURIComponent(slug) + '">' +
+        '<span class="song-main">' +
+          '<span class="song-title">' + txt(c.title || slug) + '</span>' +
+          '<span class="song-meta">' + resumeTonalite(c) + '</span>' +
+        '</span>' +
+        badgeStatut(c.status) +
+      '</a></li>';
+  });
+  return html + '</ul>';
+}
+
+/* Onglet Setlists : une liste par setlist, dans l'ordre alphabetique. */
+function rendreParSetlist(chansons) {
+  var groupes = {};
+  var noms = [];
+
+  chansons.forEach(function (c) {
+    tagsDe(c).forEach(function (tag) {
+      if (sansAccents(tag).indexOf('setlist') !== 0) return;
+      var nom = nomDeSetlist(tag);
+      if (!groupes[nom]) { groupes[nom] = []; noms.push(nom); }
+      groupes[nom].push(c);
+    });
+  });
+
+  noms.sort();
+  return noms.map(function (nom) {
+    return '<p class="titre-setlist">' + txt(nom) + '</p>' + rendreListe(groupes[nom]);
+  }).join('');
 }
 
 /* --------------------------------------------------------------------------
@@ -429,6 +582,7 @@ function afficherBibliotheque() {
    -------------------------------------------------------------------------- */
 
 var etatChanson = null;
+var modeChant = false;
 
 function chargerChanson(slug) {
   if (cacheChansons[slug]) return Promise.resolve(cacheChansons[slug]);
@@ -472,6 +626,12 @@ function afficherChanson(slug) {
     html += '<div class="barre-actions">' +
       reglettePas('Ton', '<span id="val-ton"></span>', 'ton-', 'ton+', 'la tonalite') +
       reglettePas('Capo', '<span id="val-capo"></span>', 'capo-', 'capo+', 'le capo') +
+      '<span class="reglette">' +
+        '<button type="button" data-act="chant" aria-pressed="false">Chant</button>' +
+        (m.x_score
+          ? '<button type="button" data-act="partition" aria-pressed="false">Partition</button>'
+          : '') +
+      '</span>' +
       '</div>';
     html += '<p class="astuce" id="astuce" hidden></p>';
     html += '</header>';
@@ -483,7 +643,15 @@ function afficherChanson(slug) {
 
     html += '<div class="sheet" id="sheet"></div>';
 
+    if (m.x_score) {
+      html += '<section class="partition" id="partition" hidden>' +
+        '<h3 class="section-title">Partition piano</h3>' +
+        '<div id="cadre-partition"></div>' +
+        '</section>';
+    }
+
     vue.innerHTML = html;
+    modeChant = false;
     majChanson();
     vue.focus();
     window.scrollTo(0, 0);
@@ -574,9 +742,74 @@ function faitsChanson() {
   }
   if (m.status) bouts.push(badgeStatut(m.status));
   if (m.listen) {
-    bouts.push('<a href="' + txt(m.listen) + '" target="_blank" rel="noopener">Ecouter ↗</a>');
+    bouts.push('<a class="lien-ecoute" href="' + txt(m.listen) + '" target="_blank" ' +
+      'rel="noopener">Ecouter ↗</a>');
   }
   return bouts.join('');
+}
+
+/* --------------------------------------------------------------------------
+   Mode chant : un bouton, et les accords disparaissent. Les paroles passent
+   en grand, pour se voir de loin quand on chante debout.
+   -------------------------------------------------------------------------- */
+
+function basculerChant(bouton) {
+  var feuille = document.getElementById('sheet');
+  if (!feuille) return;
+  modeChant = !modeChant;
+  feuille.classList.toggle('sheet--chant', modeChant);
+  bouton.setAttribute('aria-pressed', modeChant ? 'true' : 'false');
+  if (modeChant) fermerPanneau();
+}
+
+/* --------------------------------------------------------------------------
+   Partition piano : le PDF de scores/ cite par {x_score:}
+   --------------------------------------------------------------------------
+   Le fichier n'est demande qu'au premier appui sur le bouton. C'est a ce
+   moment-la que le service worker le range pour le hors ligne : une
+   partition consultee une fois reste lisible en mode avion.
+   -------------------------------------------------------------------------- */
+
+function basculerPartition(bouton) {
+  var section = document.getElementById('partition');
+  if (!section) return;
+
+  if (!section.hidden) {
+    section.hidden = true;
+    bouton.setAttribute('aria-pressed', 'false');
+    return;
+  }
+
+  section.hidden = false;
+  bouton.setAttribute('aria-pressed', 'true');
+  chargerPartition();
+  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function chargerPartition() {
+  var cadre = document.getElementById('cadre-partition');
+  if (!cadre || !etatChanson || cadre.getAttribute('data-charge') === 'oui') return;
+
+  var fichier = etatChanson.meta.x_score;
+  var adresse = 'scores/' + fichier;
+  cadre.innerHTML = '<p class="message">Ouverture de la partition…</p>';
+
+  // On demande le fichier avant de l'afficher : cela verifie qu'il existe
+  // et, au passage, le met en cache pour le hors ligne.
+  fetch(adresse).then(function (r) {
+    if (!r.ok) throw new Error('partition absente');
+    cadre.setAttribute('data-charge', 'oui');
+    cadre.innerHTML =
+      '<div class="cadre-pdf"><iframe src="' + txt(adresse) + '" ' +
+        'title="Partition : ' + txt(etatChanson.meta.title || '') + '"></iframe></div>' +
+      '<p class="astuce"><a class="lien-ecoute" href="' + txt(adresse) + '" target="_blank" ' +
+        'rel="noopener">Plein ecran ↗</a> Sur telephone, le plein ecran est souvent ' +
+        'plus lisible que le cadre.</p>';
+  }).catch(function () {
+    cadre.innerHTML = '<p class="message">Partition introuvable : <code>scores/' +
+      txt(fichier) + '</code>.<br>Deposez le fichier dans <code>scores/</code>, ' +
+      'avec exactement ce nom.</p>';
+  });
 }
 
 /* Quand on a transpose, on propose la ligne exacte a coller dans le .pro.
@@ -869,7 +1102,32 @@ document.addEventListener('click', function (ev) {
       toniqueDico = cible.getAttribute('data-tonique');
       afficherDictionnaire();
       break;
+
+    case 'chant':
+      basculerChant(cible);
+      break;
+
+    case 'partition':
+      basculerPartition(cible);
+      break;
+
+    case 'onglet':
+      ongletActif = cible.getAttribute('data-onglet');
+      Array.prototype.forEach.call(document.querySelectorAll('[data-act="onglet"]'),
+        function (b) { b.setAttribute('aria-pressed', b === cible ? 'true' : 'false'); });
+      majListe();
+      break;
   }
+});
+
+/* La ligne de recherche. On filtre a chaque lettre sur ce qu'on a deja
+   (titres, artistes, tags) ; des deux lettres, on va aussi chercher dans
+   les paroles, et on affine des qu'elles sont arrivees. */
+document.addEventListener('input', function (ev) {
+  if (!ev.target || ev.target.id !== 'champ-recherche') return;
+  recherche = ev.target.value.trim();
+  majListe();
+  if (recherche.length >= 2) chargerTextes().then(majListe);
 });
 
 /* --------------------------------------------------------------------------
@@ -897,6 +1155,58 @@ function router() {
   }
 }
 
+/* --------------------------------------------------------------------------
+   12. Mode hors ligne (service worker)
+   --------------------------------------------------------------------------
+   sw.js garde une copie de l'application, des chansons, des bases d'accords
+   et des partitions deja ouvertes. Quand une nouvelle version est publiee,
+   le navigateur la telecharge en arriere-plan des qu'il y a du reseau, puis
+   la page se recharge toute seule, une seule fois.
+   -------------------------------------------------------------------------- */
+
+function initHorsLigne() {
+  if (!('serviceWorker' in navigator)) return;
+  // Sur un fichier ouvert directement depuis le disque, rien de tout cela
+  // ne fonctionne : on n'essaie meme pas.
+  if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
+
+  var avaitDejaUneVersion = !!navigator.serviceWorker.controller;
+  var rechargementLance = false;
+
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    if (!avaitDejaUneVersion) { afficherVersion(); return; }  // toute premiere installation
+    if (rechargementLance) return;
+    rechargementLance = true;
+    window.location.reload();
+  });
+
+  navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
+    .then(function (enregistrement) {
+      enregistrement.update();
+      // A chaque fois qu'on revient sur l'application, on regarde s'il y a du neuf.
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) enregistrement.update();
+      });
+      return navigator.serviceWorker.ready;
+    })
+    .then(afficherVersion)
+    .catch(function () { /* pas de hors ligne : l'application marche quand meme */ });
+}
+
+/* Le pied de page indique la version reellement installee sur ce telephone :
+   c'est le moyen de verifier qu'une publication est bien arrivee. */
+function afficherVersion() {
+  var boite = document.getElementById('app-version');
+  if (!boite || !navigator.serviceWorker.controller) return;
+
+  var canal = new MessageChannel();
+  canal.port1.onmessage = function (ev) {
+    if (ev.data && ev.data.version) boite.textContent = 'Version ' + ev.data.version;
+  };
+  navigator.serviceWorker.controller.postMessage({ type: 'version' }, [canal.port2]);
+}
+
 window.addEventListener('hashchange', router);
 initTheme();
 router();
+initHorsLigne();

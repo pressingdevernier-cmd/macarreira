@@ -756,10 +756,142 @@ button.chord:hover { border-bottom-color: var(--accent); }
   color: var(--secondaire);
 }
 
+/* --- Recherche et onglets de la bibliotheque ------------------------------ */
+
+.recherche {
+  display: flex;
+  align-items: center;
+  gap: var(--pas);
+  margin-top: calc(var(--pas) * 3);
+  border-bottom: 1px solid var(--filet);
+  transition: border-color .15s;
+}
+.recherche:focus-within { border-bottom-color: var(--accent); }
+
+.recherche .loupe {
+  flex: none;
+  display: block;
+  color: var(--secondaire);
+}
+.recherche:focus-within .loupe { color: var(--accent); }
+
+.recherche input {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--encre);
+  background: transparent;
+  border: 0;
+  padding: 10px 0 11px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.recherche input:focus { outline: none; }
+.recherche input::placeholder { color: var(--secondaire); font-style: italic; }
+
+.onglets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--pas) * 2.5);
+  margin-top: calc(var(--pas) * 2);
+}
+.onglets button {
+  font-family: var(--serif);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 4px 0 6px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.onglets button:hover { color: var(--encre); }
+.onglets button[aria-pressed='true'] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Nom d'une setlist, au-dessus de son groupe de chansons */
+.titre-setlist {
+  font-family: var(--serif);
+  font-size: .9rem;
+  font-style: italic;
+  color: var(--accent);
+  margin: calc(var(--pas) * 3) 0 0;
+}
+
+/* --- Mode chant : les paroles seules, en grand ---------------------------- */
+
+.sheet--chant .chord { display: none; }
+
+/* Sans les accords, plus besoin de decouper la ligne en blocs : le texte
+   redevient une phrase continue, qui va a la ligne la ou il faut. */
+.sheet--chant .seg { display: inline; }
+.sheet--chant .lyric { display: inline; white-space: pre-wrap; }
+
+.sheet--chant .line,
+.sheet--chant .line--plain { font-size: 1.4rem; line-height: 1.45; }
+.sheet--chant .line { margin-bottom: 4px; }
+.sheet--chant .sheet-section { margin-bottom: calc(var(--pas) * 4); }
+
+/* --- Lien d'ecoute -------------------------------------------------------- */
+
+.lien-ecoute {
+  font-family: var(--serif);
+  font-size: .64rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: var(--rayon);
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+.lien-ecoute:hover { background: var(--accent); color: var(--fond); }
+
+/* --- Partition piano (PDF) ------------------------------------------------ */
+
+.partition { margin: calc(var(--pas) * 4) 0 calc(var(--pas) * 6); }
+.partition[hidden] { display: none; }
+
+.cadre-pdf {
+  height: 70vh;
+  min-height: 320px;
+  margin-top: var(--pas);
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+.cadre-pdf iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--surface);
+}
+
+/* --- Pied de page : la version installee --------------------------------- */
+
+#app-version {
+  display: block;
+  margin-top: 5px;
+  font-size: .6rem;
+  letter-spacing: .12em;
+  opacity: .65;
+}
+
 /* --- Ecrans larges ------------------------------------------------------- */
 
 @media (min-width: 700px) {
   body { font-size: 18px; }
   .brand-title { font-size: 2.4rem; }
   .song-header h2 { font-size: 2.6rem; }
+  .sheet--chant .line,
+  .sheet--chant .line--plain { font-size: 1.6rem; }
 }

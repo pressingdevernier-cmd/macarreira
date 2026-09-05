@@ -9,7 +9,11 @@
 <meta name="theme-color" content="#f4ecda" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1a1a1e" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icons/icon.svg">
+<!-- L'iPhone n'accepte pas les icones SVG : il lui faut un PNG. -->
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Macarreira">
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="app.css">
 </head>
@@ -35,7 +39,7 @@
 <main id="view" class="wrap" tabindex="-1"></main>
 
 <footer class="site-footer wrap">
-  <p>Notre recueil · <span id="song-count"></span></p>
+  <p>Notre recueil · <span id="song-count"></span><span id="app-version"></span></p>
 </footer>
 
 <!-- Bibliothèques téléchargées une fois et rangées dans lib/ (aucun appel à Internet) :

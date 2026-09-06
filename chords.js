@@ -257,7 +257,7 @@ var Accords = (function () {
   var TYPES_AFFICHES = [
     { suffixe: 'major', nom: 'Majeur', ecrit: '' },
     { suffixe: 'minor', nom: 'Mineur', ecrit: 'm' },
-    { suffixe: '7', nom: 'Septieme', ecrit: '7' },
+    { suffixe: '7', nom: 'Septième', ecrit: '7' },
     { suffixe: 'm7', nom: 'Mineur 7', ecrit: 'm7' },
     { suffixe: 'maj7', nom: 'Majeur 7', ecrit: 'maj7' },
     { suffixe: 'sus2', nom: 'Sus2', ecrit: 'sus2' },
@@ -265,11 +265,11 @@ var Accords = (function () {
     { suffixe: 'add9', nom: 'Add9', ecrit: 'add9' },
     { suffixe: '6', nom: 'Sixte', ecrit: '6' },
     { suffixe: 'm6', nom: 'Mineur 6', ecrit: 'm6' },
-    { suffixe: '9', nom: 'Neuvieme', ecrit: '9' },
+    { suffixe: '9', nom: 'Neuvième', ecrit: '9' },
     { suffixe: 'm9', nom: 'Mineur 9', ecrit: 'm9' },
-    { suffixe: 'dim', nom: 'Diminue', ecrit: 'dim' },
-    { suffixe: 'dim7', nom: 'Diminue 7', ecrit: 'dim7' },
-    { suffixe: 'aug', nom: 'Augmente', ecrit: 'aug' },
+    { suffixe: 'dim', nom: 'Diminué', ecrit: 'dim' },
+    { suffixe: 'dim7', nom: 'Diminué 7', ecrit: 'dim7' },
+    { suffixe: 'aug', nom: 'Augmenté', ecrit: 'aug' },
     { suffixe: 'm7b5', nom: 'Mineur 7 b5', ecrit: 'm7b5' },
     { suffixe: '5', nom: 'Quinte (power)', ecrit: '5' }
   ];
@@ -311,7 +311,7 @@ var Accords = (function () {
 
     var s = '<svg class="diagramme" viewBox="0 0 ' + largeur + ' ' + hauteur + '" ' +
       'width="' + largeur + '" height="' + hauteur + '" role="img" ' +
-      'aria-label="' + (options.nom ? echapper(options.nom) + ', position' : 'Position d accord') + '">';
+      'aria-label="' + (options.nom ? echapper(options.nom) + ', position' : "Position d'accord") + '">';
 
     // Cordes (traits verticaux)
     for (var i = 0; i < nbCordes; i++) {

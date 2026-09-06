@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Macarreira · fabrique des icônes</title>
+<style>
+  /* ======================================================================
+     SOURCE DES ICONES DE L'APPLICATION
+     ----------------------------------------------------------------------
+     Cette page ne fait pas partie du site : elle sert a DESSINER les icones.
+     Les fichiers PNG de icons/ en sont des photographies, prises au pixel
+     pres par le navigateur. On passe par le navigateur parce que lui seul
+     sait lire nos polices .woff2 : le « M » est donc de la vraie Playfair
+     Display, la meme que les titres de l'application.
+
+     POUR REFABRIQUER LES ICONES (si la palette ou le dessin changent) :
+       1. Lancer un petit serveur depuis le dossier du projet :
+              python -m http.server 8000
+       2. Ouvrir http://127.0.0.1:8000/outils/icones.html
+       3. Faire une capture de chaque carre, a sa taille exacte, et
+          enregistrer sous le nom indique au-dessus de lui, dans icons/.
+     ====================================================================== */
+
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/playfair-display-latin.woff2') format('woff2');
+  }
+
+  :root {
+    --fond:   #f4ecda;   /* creme du recueil */
+    --accent: #a3492c;   /* terre de Sienne brulee */
+    --filet:  #d8c9a8;   /* filet pale */
+  }
+
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #55524c;
+    font-family: ui-monospace, 'Courier New', monospace;
+    color: #eee;
+  }
+  h1 { font-size: 15px; font-weight: 400; margin: 0 0 18px; }
+  p.nom { font-size: 12px; margin: 22px 0 6px; color: #d8c9a8; }
+
+  /* --- Le dessin ---------------------------------------------------------
+     Tout est exprime en pourcentage du cote, pour que le meme dessin tienne
+     a 180, 192 ou 512 pixels sans retouche. --------------------------- */
+
+  .icone {
+    position: relative;
+    background: var(--fond);
+    overflow: hidden;
+  }
+
+  /* Les deux filets du cartonnage, comme la couverture d'un recueil */
+  .icone .cadre-ext,
+  .icone .cadre-int {
+    position: absolute;
+    border-style: solid;
+    border-color: var(--filet);
+  }
+  /* L'epaisseur des filets est donnee en pixels pour chaque taille, plus
+     bas : border-width n'accepte pas les pourcentages. */
+  .icone .cadre-ext {
+    inset: 8.6%;
+    border-radius: 1.6%;
+  }
+  .icone .cadre-int {
+    inset: 11.7%;
+    border-color: var(--accent);
+    border-radius: .8%;
+  }
+
+  /* L'initiale, calee optiquement : la Playfair a un jambage genereux, on
+     la remonte legerement pour qu'elle paraisse centree. */
+  .icone .lettre {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: 0;
+    padding-bottom: 2%;
+  }
+
+  /* Variante « maskable » pour Android : le systeme decoupe l'icone en rond
+     ou en goutte, et ne garde que les 80 % du centre. Pas de cadre, donc :
+     il serait rogne. A la place, un sceau rond bien a l'interieur. */
+  .icone--sceau .sceau {
+    position: absolute;
+    inset: 16%;
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* --- Tailles exactes ---------------------------------------------- */
+  .t512 { width: 512px; height: 512px; }
+  .t512 .lettre { font-size: 268px; }
+  .t512.icone--sceau .lettre { font-size: 200px; }
+  .t512 .cadre-ext { border-width: 5px; }
+  .t512 .cadre-int { border-width: 2px; }
+  .t512 .sceau { border-width: 5px; }
+
+  .t192 { width: 192px; height: 192px; }
+  .t192 .lettre { font-size: 100px; }
+  .t192.icone--sceau .lettre { font-size: 75px; }
+  .t192 .cadre-ext { border-width: 2px; }
+  .t192 .cadre-int { border-width: 1px; }
+  .t192 .sceau { border-width: 2px; }
+
+  .t180 { width: 180px; height: 180px; }
+  .t180 .lettre { font-size: 94px; }
+  .t180 .cadre-ext { border-width: 2px; }
+  .t180 .cadre-int { border-width: 1px; }
+</style>
+</head>
+<body>
+
+<h1>Icônes de Macarreira — chaque carré est à sa taille finale, en pixels.</h1>
+
+<p class="nom">icons/icon-512.png &nbsp; (Android, usage courant)</p>
+<div class="icone t512" id="icone-512">
+  <span class="cadre-ext"></span>
+  <span class="cadre-int"></span>
+  <span class="lettre">M</span>
+</div>
+
+<p class="nom">icons/icon-192.png &nbsp; (Android, usage courant)</p>
+<div class="icone t192" id="icone-192">
+  <span class="cadre-ext"></span>
+  <span class="cadre-int"></span>
+  <span class="lettre">M</span>
+</div>
+
+<p class="nom">icons/icon-maskable-512.png &nbsp; (Android, découpe ronde)</p>
+<div class="icone icone--sceau t512" id="icone-maskable-512">
+  <span class="sceau"></span>
+  <span class="lettre">M</span>
+</div>
+
+<p class="nom">icons/icon-maskable-192.png &nbsp; (Android, découpe ronde)</p>
+<div class="icone icone--sceau t192" id="icone-maskable-192">
+  <span class="sceau"></span>
+  <span class="lettre">M</span>
+</div>
+
+<p class="nom">icons/apple-touch-icon.png &nbsp; (iPhone, 180 px, coins pleins)</p>
+<div class="icone t180" id="apple-touch-icon">
+  <span class="cadre-ext"></span>
+  <span class="cadre-int"></span>
+  <span class="lettre">M</span>
+</div>
+
+</body>
+</html>

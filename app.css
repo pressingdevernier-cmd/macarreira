@@ -186,6 +186,11 @@ a { color: inherit; }
   outline-offset: 3px;
 }
 
+/* La zone principale recoit le focus a chaque changement d'ecran, pour que
+   les lecteurs d'ecran annoncent le nouveau contenu. Elle n'est jamais
+   atteinte au clavier : inutile d'encadrer toute la page d'un liseret. */
+#view:focus, #view:focus-visible { outline: none; }
+
 /* --- En-tete ------------------------------------------------------------- */
 
 .site-header {
@@ -471,84 +476,111 @@ a { color: inherit; }
 .nav-lien:hover,
 .nav-lien[aria-current='page'] { color: var(--accent); border-bottom-color: var(--accent); }
 
-/* --- Reglettes : les commandes d'un meme reglage, soudees en un bloc ------
-   Trois formes, toutes batties sur le meme cadre a filets :
-     .reglette          le cadre
-     .reglette .champ   la valeur en cours, en plein couleur accent
-     .reglette button   une touche (− / + ou un choix)
-   Une touche « choisie » (aria-pressed="true") passe elle aussi en plein.
+/* --- Bandeaux d'action ----------------------------------------------------
+   Variante « bandeau du recueil », choisie au jalon 6.
+
+   Un bandeau est une seule masse pleine largeur, couleur accent, decoupee
+   en cellules par des filets couleur papier — comme le dos d'un livre ou la
+   facade d'un vieil appareil. On le repere d'un coup d'oeil a un metre,
+   guitare en main, ce que ne faisait pas l'ancienne version a filets fins.
+
+   La meme structure sert partout :
+     .reglette            le bandeau
+     .reglette .champ     la valeur en cours (Ton, Capo, Vitesse)
+     .reglette button     une touche
+     .reglette button.pas une touche − ou +
+   Une touche allumee (aria-pressed="true") s'inverse : fond papier, texte
+   accent. Toutes les cellules font 52 px de haut : on les attrape sans viser.
    -------------------------------------------------------------------------- */
 
 .barre-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--pas) * 1.25);
+  gap: var(--pas);
   margin-top: calc(var(--pas) * 2.5);
 }
 
+/* Enveloppe d'un bandeau qu'on montre ou cache (la vitesse de defilement) */
+.enveloppe { flex: 1 1 100%; }
+.enveloppe[hidden] { display: none; }
+
 .reglette {
-  display: inline-flex;
-  align-items: stretch;
-  background: var(--surface);
-  border: 1.5px solid var(--accent);
+  flex: 1 1 100%;
+  display: flex;
   border-radius: 3px;
   overflow: hidden;
+  background: var(--accent);
+  box-shadow: 0 2px 0 var(--filet);
 }
+.reglette[hidden] { display: none; }
 
 .reglette > * {
-  min-height: 42px;
-  border-right: 1px solid var(--accent);
-}
-.reglette > *:last-child { border-right: 0; }
-
-.reglette button {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 6px;
+  border: 0;
+  border-right: 1px solid var(--fond);
+  background: transparent;
+  color: var(--fond);
   font-family: var(--serif);
-  font-size: .7rem;
+  font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .14em;
-  padding: 0 14px;
-  border: 0;
-  border-right: 1px solid var(--accent);
-  background: transparent;
-  color: var(--accent);
   cursor: pointer;
   transition: background-color .12s, color .12s;
 }
-.reglette button:last-child { border-right: 0; }
-.reglette button:hover { background: var(--filet); }
-.reglette button[aria-pressed='true'] { background: var(--accent); color: var(--fond); }
-.reglette button[aria-pressed='true']:hover { background: var(--accent); }
-.reglette button[disabled] { opacity: .35; cursor: default; }
-.reglette button[disabled]:hover { background: transparent; }
+.reglette > *:last-child { border-right: 0; }
 
-/* Les touches − et + : un signe seul, plus gros, sans espacement de lettres */
+/* Les touches − et + : etroites, le signe bien gros */
 .reglette button.pas {
-  font-size: 1.2rem;
-  letter-spacing: 0;
-  padding: 0 16px;
+  flex: 0 0 58px;
+  font-size: 1.5rem;
   line-height: 1;
+  letter-spacing: 0;
 }
 
-.reglette .champ {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 14px;
-  background: var(--accent);
-  color: var(--fond);
-}
+/* La valeur en cours ne se touche pas : ce n'est pas un bouton */
+.reglette .champ { cursor: default; }
 .reglette .champ .etiq {
-  font-family: var(--serif);
-  font-size: .6rem;
-  text-transform: uppercase;
-  letter-spacing: .14em;
+  font-size: .58rem;
+  letter-spacing: .16em;
   opacity: .85;
 }
 .reglette .champ .val {
   font-family: var(--mono);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
+  text-transform: none;
+  letter-spacing: 0;
   white-space: nowrap;
+}
+
+/* Ce qui est allume s'inverse : creux clair sur la masse coloree */
+.reglette button[aria-pressed='true'] {
+  background: var(--fond);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.reglette button:active { background: rgba(0, 0, 0, .16); }
+.reglette button[aria-pressed='true']:active { background: var(--fond); }
+
+.reglette button[disabled] { opacity: .45; cursor: default; }
+
+/* Sur fond accent, le liseret de mise au point doit etre couleur papier */
+.reglette button:focus-visible {
+  outline: 2px solid var(--fond);
+  outline-offset: -4px;
+}
+
+/* Des qu'il y a la place, les bandeaux se rangent cote a cote */
+@media (min-width: 600px) {
+  .reglette, .enveloppe { flex: 1 1 250px; }
 }
 
 /* Astuce discrete proposee quand on a transpose : la ligne a coller dans le .pro */
@@ -815,13 +847,270 @@ button.chord:hover { border-bottom-color: var(--accent); }
   border-bottom-color: var(--accent);
 }
 
-/* Nom d'une setlist, au-dessus de son groupe de chansons */
-.titre-setlist {
+/* Choix du classement, sous les onglets, aligne a droite */
+.tri {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: calc(var(--pas) * 1.5);
+  margin-top: var(--pas);
+  padding-bottom: 2px;
+}
+.tri-nom {
   font-family: var(--serif);
-  font-size: .9rem;
+  font-size: .64rem;
   font-style: italic;
+  color: var(--secondaire);
+  margin-right: -4px;
+}
+.tri button {
+  font-family: var(--serif);
+  font-size: .64rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--secondaire);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 2px 0 3px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.tri button:hover { color: var(--encre); }
+.tri button[aria-pressed='true'] {
   color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Nom de l'artiste, au-dessus de son groupe de chansons */
+.titre-artiste {
+  font-family: var(--serif);
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--accent);
+  margin: calc(var(--pas) * 4) 0 calc(var(--pas) * .5);
+  padding-bottom: calc(var(--pas) * .5);
+  border-bottom: 1px solid var(--filet);
+}
+.titre-artiste:first-child { margin-top: calc(var(--pas) * 2); }
+
+/* Lien discret vers la page « Compléter une chanson », en bas de la liste */
+.lien-ajouter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--pas) * 3);
+  margin: calc(var(--pas) * 3) 0 calc(var(--pas) * 6);
+}
+.lien-ajouter a {
+  font-family: var(--serif);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  text-decoration: none;
+  border-bottom: 1px solid var(--filet);
+  padding-bottom: 3px;
+  transition: color .15s, border-color .15s;
+}
+.lien-ajouter a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Un bouton qui a l'allure d'un lien : pour les actions discretes, en bas
+   d'un ecran, la ou un vrai lien changerait l'adresse pour rien. */
+.lien-plat {
+  font-family: var(--serif);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--filet);
+  padding: 0 0 3px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.lien-plat:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.lien-danger:hover { color: #b3261e; border-bottom-color: #b3261e; }
+
+/* --- Une setlist : les chansons numerotees, dans l'ordre ------------------ */
+
+.liste-setlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: piste;
+}
+.liste-setlist li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--pas);
+  border-bottom: 1px solid var(--filet);
+  counter-increment: piste;
+}
+.liste-setlist li::before {
+  content: counter(piste);
+  flex: none;
+  width: 1.7em;
+  text-align: right;
+  font-family: var(--mono);
+  font-size: .8rem;
+  color: var(--secondaire);
+}
+.liste-setlist .song-link { flex: 1 1 auto; min-width: 0; }
+
+/* Le fil en bas d'une chanson jouee au sein d'une setlist */
+.fil-setlist {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--pas);
+  margin-bottom: calc(var(--pas) * 6);
+  padding-top: calc(var(--pas) * 2);
+  border-top: 1px solid var(--filet);
+  font-family: var(--serif);
+  font-size: .78rem;
+}
+.fil-setlist a { color: var(--accent); text-decoration: none; }
+.fil-setlist a:hover { text-decoration: underline; }
+.fil-setlist .fil-milieu {
+  color: var(--secondaire);
+  font-style: italic;
+  text-align: center;
+}
+
+/* --- Page « Ajouter une chanson » ---------------------------------------- */
+
+.formulaire { margin-top: calc(var(--pas) * 3); }
+
+.formulaire .champ { display: block; margin-bottom: calc(var(--pas) * 2.5); }
+
+.formulaire .champ-nom {
+  display: block;
+  font-family: var(--serif);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  margin-bottom: 5px;
+}
+
+.formulaire input,
+.formulaire textarea {
+  display: block;
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--encre);
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  padding: 10px 12px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.formulaire input:focus,
+.formulaire textarea:focus { outline: none; border-color: var(--accent); }
+
+/* Le texte colle garde son alignement : les accords sont poses au-dessus
+   des paroles a la colonne pres, il ne faut surtout pas le reflowler. */
+.formulaire textarea {
+  font-family: var(--mono);
+  font-size: .88rem;
+  line-height: 1.45;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  resize: vertical;
+}
+
+.formulaire select {
+  display: block;
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--encre);
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  padding: 10px 12px;
+  min-height: 44px;
+}
+.formulaire select:focus { outline: none; border-color: var(--accent); }
+
+/* Petite phrase d'explication, sous un champ ou un titre */
+.indice {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .82rem;
+  color: var(--secondaire);
+  margin: var(--pas) 0 calc(var(--pas) * 2);
+  line-height: 1.5;
+}
+.indice[hidden] { display: none; }
+
+/* Dans un formulaire, l'explication se colle sous le champ qu'elle commente */
+.formulaire .indice { margin-top: calc(var(--pas) * -1); }
+
+.avertissement {
   margin: calc(var(--pas) * 3) 0 0;
+  padding: calc(var(--pas) * 1.5) calc(var(--pas) * 2);
+  background: var(--surface);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--rayon);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .88rem;
+}
+
+/* Les notes sont de la prose, pas une grille : elles reviennent à la ligne
+   toutes seules et s'écrivent en serif, comme elles s'afficheront. */
+#edit-notes {
+  font-family: var(--serif);
+  font-size: .95rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+/* Le fichier .pro engendre */
+.zone-pro {
+  font-family: var(--mono);
+  font-size: .82rem;
+  line-height: 1.5;
+  margin: var(--pas) 0 0;
+  padding: calc(var(--pas) * 1.5);
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  max-height: 40vh;
+  overflow: auto;
+  white-space: pre;
+}
+
+/* L'apercu, encadre pour bien montrer que c'est un extrait */
+.sheet.apercu {
+  margin-top: var(--pas);
+  padding: calc(var(--pas) * 2);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+}
+
+.etapes {
+  margin: var(--pas) 0 calc(var(--pas) * 8);
+  padding-left: 1.4em;
+  font-size: .92rem;
+  line-height: 1.6;
+}
+.etapes li { margin-bottom: var(--pas); }
+.etapes code {
+  font-family: var(--mono);
+  font-size: .85em;
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon);
+  padding: 1px 5px;
 }
 
 /* --- Mode chant : les paroles seules, en grand ---------------------------- */
@@ -876,6 +1165,50 @@ button.chord:hover { border-bottom-color: var(--accent); }
   background: var(--surface);
 }
 
+/* --- Ecran Reglages ------------------------------------------------------- */
+
+/* Un paragraphe d'explication en pleine largeur */
+.paragraphe {
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--secondaire);
+  margin: var(--pas) 0 calc(var(--pas) * 6);
+}
+
+/* L'etat de la connexion au depot */
+.etat {
+  margin: calc(var(--pas) * 2) 0 0;
+  padding: calc(var(--pas) * 1.5) calc(var(--pas) * 2);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  border-left: 3px solid var(--filet);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.etat--present, .etat--ok { border-left-color: var(--accent); }
+.etat--absent { font-style: italic; color: var(--secondaire); }
+
+.etat code {
+  font-family: var(--mono);
+  font-size: .88em;
+  color: var(--encre);
+}
+.etat-detail {
+  display: inline-block;
+  margin-top: 3px;
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--secondaire);
+}
+
+/* Lien Réglages du pied de page */
+.lien-reglages {
+  color: var(--secondaire);
+  text-decoration: none;
+  border-bottom: 1px solid var(--filet);
+}
+.lien-reglages:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
 /* --- Pied de page : la version installee --------------------------------- */
 
 #app-version {
@@ -884,6 +1217,196 @@ button.chord:hover { border-bottom-color: var(--accent); }
   font-size: .6rem;
   letter-spacing: .12em;
   opacity: .65;
+}
+
+/* --- Le repertoire imprimable, vu a l'ecran ------------------------------- */
+
+.page-garde {
+  text-align: center;
+  padding: calc(var(--pas) * 6) 0;
+  border-bottom: 1px solid var(--filet);
+}
+.garde-titre {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.garde-sous {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--secondaire);
+  margin: 4px 0 0;
+}
+.garde-pied {
+  font-family: var(--serif);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--secondaire);
+  margin: calc(var(--pas) * 3) 0 0;
+}
+
+.table-matieres ul,
+.a-completer ul {
+  list-style: none;
+  margin: 0 0 calc(var(--pas) * 4);
+  padding: 0;
+}
+.table-matieres li,
+.a-completer li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--pas);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--filet);
+}
+.tm-titre { font-family: var(--serif); font-size: 1rem; }
+.tm-reste {
+  font-size: .76rem;
+  color: var(--secondaire);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.chanson-imprimee { padding-top: calc(var(--pas) * 4); }
+
+/* --- Impression ----------------------------------------------------------
+   Papier A4, encre economisee : aucun aplat, aucun fond, du noir sur blanc.
+   Les accords restent en gras au-dessus des paroles, les notes en italique.
+   Une section (couplet, refrain) ne se coupe jamais entre deux pages.
+   -------------------------------------------------------------------------- */
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 16mm 15mm 14mm;
+  }
+
+  html, body {
+    background: #fff !important;
+    background-image: none !important;
+    color: #000;
+    font-size: 10.5pt;
+  }
+
+  /* Tout ce qui ne sert qu'a l'ecran disparait */
+  .site-header,
+  .site-footer,
+  .back-link,
+  .barre-actions,
+  .astuce,
+  .indice,
+  .avertissement,
+  .panneau,
+  .recherche,
+  .onglets,
+  .tri,
+  .lien-ajouter,
+  .fil-setlist,
+  .formulaire,
+  .partition,
+  #resultat-import { display: none !important; }
+
+  main, .wrap {
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* --- Une chanson --- */
+
+  .song-header {
+    border-bottom: .5pt solid #999;
+    padding: 0 0 5pt;
+    margin-bottom: 8pt;
+  }
+  .song-header h2 { font-size: 19pt; line-height: 1.1; }
+  .song-artist { font-size: 10pt; color: #444; margin-top: 1pt; }
+
+  .song-facts {
+    margin-top: 5pt;
+    gap: 2pt 9pt;
+    font-size: 8.5pt;
+    color: #444;
+  }
+  .fact-label { font-size: 7.5pt; }
+  .fact-value, .fact-value--accent { color: #000; }
+  .badge { border-color: #999; color: #444; font-size: 7pt; }
+  .lien-ecoute { display: none; }
+
+  .notes {
+    background: none;
+    border-left: 1.5pt solid #777;
+    border-radius: 0;
+    margin: 0 0 8pt;
+    padding: 2pt 0 2pt 8pt;
+    font-size: 9.5pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .notes-label { color: #666; font-size: 7pt; }
+
+  .sheet {
+    padding: 0;
+    overflow: visible;
+    font-size: 10pt;
+    line-height: 1.3;
+  }
+  .sheet-section {
+    margin-bottom: 7pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .sheet-section--chorus { border-left: .5pt solid #aaa; padding-left: 6pt; }
+  .sheet-section-title { color: #555; font-size: 7.5pt; margin-bottom: 3pt; }
+  .sheet-comment { color: #444; font-size: 9pt; }
+
+  /* Les accords : noir gras, pour rester lisibles en photocopie */
+  .chord { color: #000; font-weight: 700; font-size: 8pt; }
+  button.chord { border-bottom: 0; background: none; }
+  .line { min-height: 0; }
+
+  /* --- Le repertoire complet --- */
+
+  .page-garde {
+    border: 0;
+    padding: 55mm 0 0;
+    break-after: page;
+    page-break-after: always;
+  }
+  .garde-titre { font-size: 34pt; }
+  .garde-sous { font-size: 12pt; color: #444; }
+  .garde-pied { font-size: 9pt; color: #555; margin-top: 14mm; }
+
+  .table-matieres li,
+  .a-completer li {
+    padding: 2.5pt 0;
+    border-bottom: .25pt solid #ccc;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .tm-titre { font-size: 10.5pt; }
+  .tm-reste { font-size: 8.5pt; color: #555; }
+  .table-matieres .section-title,
+  .a-completer .section-title { color: #555; margin-top: 0; }
+
+  /* Chaque chanson commence en haut d'une feuille */
+  .chanson-imprimee {
+    padding-top: 0;
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .a-completer {
+    break-before: page;
+    page-break-before: always;
+  }
 }
 
 /* --- Ecrans larges ------------------------------------------------------- */

@@ -38,14 +38,16 @@ var FICHIERS_CODE = [
   './index.html',
   './app.css',
   './app.js',
-  './chords.js'
+  './chords.js',
+  './depot.js'
 ];
 
 /* Surveilles aussi, mais sans declencher de rechargement : leur changement
    est pris en compte au prochain affichage. */
 var FICHIERS_DISCRETS = [
   './manifest.json',
-  './songs/index.json'
+  './songs/index.json',
+  './setlists.json'
 ];
 
 /* Fichiers qui ne changent jamais : telecharges une fois a l'installation.
@@ -54,6 +56,9 @@ var FICHIERS_FIXES = [
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
+  './icons/icon-maskable-192.png',
+  './icons/icon-maskable-512.png',
+  './icons/apple-touch-icon.png',
   './lib/chordsheetjs.bundle.js',
   './lib/guitar.json',
   './lib/ukulele.json',
@@ -299,7 +304,7 @@ self.addEventListener('fetch', function (ev) {
 
   // 2. Les donnees qui changent souvent (chansons, index) : le reseau
   //    d'abord, le cache en secours.
-  if (/\.pro$|index\.json$/i.test(url.pathname)) {
+  if (/\.pro$|index\.json$|setlists\.json$/i.test(url.pathname)) {
     ev.respondWith(
       fetch(requete).then(function (r) {
         mettreEnCache(requete, r);

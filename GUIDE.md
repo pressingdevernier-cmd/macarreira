@@ -52,6 +52,22 @@ eux, se mettent à jour tout seuls à leur prochaine ouverture avec du réseau.
 C'est le cas le plus fréquent : la chanson est listée, son fichier existe, mais
 il ne contient que ses renseignements — pas encore les paroles.
 
+### Trouver les chansons qui attendent
+
+Dans la bibliothèque, l'onglet **À compléter** ne montre que les chansons dont
+les paroles ne sont pas encore saisies. C'est la liste de travail : on en fait
+une, on revient, on enchaîne.
+
+Ouvrez l'une d'elles : à la place des paroles, deux boutons.
+**Trouver la grille** ouvre un nouvel onglet sur un site d'accords, avec le
+titre et l'artiste déjà cherchés. **Coller la grille** ramène à la page
+Compléter une fois que vous avez copié.
+
+Le site utilisé se règle dans **Réglages → Où chercher les grilles** : Ultimate
+Guitar par défaut, Google, ou l'adresse de votre choix. Dans cette adresse,
+`{recherche}` est remplacé par le titre et l'artiste. Si le site déménage dans
+quelques années, cette case suffit à réparer : il n'y a pas de code à toucher.
+
 ### Depuis le téléphone, sans toucher au PC (le plus simple)
 
 1. Sur un site d'accords, **copiez** le texte de la chanson (le format avec les

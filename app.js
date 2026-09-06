@@ -33,6 +33,7 @@ var CLE_INSTRUMENT = 'macarreira.instrument'; // guitare / ukulele / baryton
 var CLE_CAPO = 'macarreira.capo.';            // + nom du fichier de chanson
 var CLE_VITESSE = 'macarreira.vitesse.';      // + nom du fichier de chanson
 var CLE_TRI = 'macarreira.tri';               // classement de la bibliotheque
+var CLE_SITE_ACCORDS = 'macarreira.site-accords';   // ou chercher les grilles
 
 var vue = document.getElementById('view');
 
@@ -378,16 +379,50 @@ function regletteInstrument(action, actuel) {
    -------------------------------------------------------------------------- */
 
 var ONGLETS = [
-  { cle: 'tous',     nom: 'Tous' },
-  { cle: 'guitare',  nom: 'Guitare' },
-  { cle: 'piano',    nom: 'Piano' },
-  { cle: 'setlists', nom: 'Setlists' }
+  { cle: 'tous',        nom: 'Tous' },
+  { cle: 'guitare',     nom: 'Guitare' },
+  { cle: 'piano',       nom: 'Piano' },
+  { cle: 'setlists',    nom: 'Setlists' },
+  { cle: 'a-completer', nom: 'À compléter' }
 ];
+
+/* --------------------------------------------------------------------------
+   Ou chercher les grilles d'accords
+   --------------------------------------------------------------------------
+   L'adresse est reglable : les sites changent d'adresse avec les annees, et
+   il ne faudra pas toucher au code le jour ou celui-ci changera. Dans le
+   modele, {recherche} est remplace par le titre et l'artiste.
+   -------------------------------------------------------------------------- */
+
+var SITES_ACCORDS = [
+  { nom: 'Ultimate Guitar',
+    modele: 'https://www.ultimate-guitar.com/search.php?search_type=title&value={recherche}' },
+  { nom: 'Google',
+    modele: 'https://www.google.com/search?q={recherche}+accords+paroles' }
+];
+
+function modeleSiteAccords() {
+  var garde = lireMemoire(CLE_SITE_ACCORDS);
+  return garde && garde.trim() ? garde.trim() : SITES_ACCORDS[0].modele;
+}
+
+/* L'adresse de recherche pour une chanson donnee. */
+function adresseRecherche(titre, artiste) {
+  var recherche = encodeURIComponent(
+    [titre, artiste].filter(Boolean).join(' ').trim() || 'accords');
+  var modele = modeleSiteAccords();
+
+  // Un modele sans {recherche} reste utilisable : on ajoute la recherche au bout.
+  return modele.indexOf('{recherche}') !== -1
+    ? modele.replace(/\{recherche\}/g, recherche)
+    : modele + recherche;
+}
 
 var ongletActif = 'tous';
 var triActif = 'titre';           // 'titre' ou 'artiste'
 var recherche = '';
 var textesChansons = {};        // nom de fichier -> paroles, en minuscules sans accents
+var parolesConnues = {};        // nom de fichier -> la chanson a-t-elle des paroles ?
 var chargementTextes = null;
 
 /* Pour comparer sans se soucier des accents ni des majuscules :
@@ -411,6 +446,7 @@ function tagsDe(chanson) {
 
 function passeLOnglet(chanson) {
   if (ongletActif === 'tous') return true;
+  if (ongletActif === 'a-completer') return parolesConnues[slugDe(chanson)] === false;
   return tagsDe(chanson).map(sansAccents).indexOf(ongletActif) !== -1;
 }
 
@@ -433,8 +469,16 @@ function chargerTextes() {
       if (!slug || textesChansons[slug] !== undefined) return null;
       return fetch('songs/' + encodeURIComponent(slug) + '.pro')
         .then(function (r) { return r.ok ? r.text() : ''; })
-        .then(function (t) { textesChansons[slug] = sansAccents(t); })
-        .catch(function () { textesChansons[slug] = ''; });
+        .then(function (t) {
+          textesChansons[slug] = sansAccents(t);
+          // On en profite : savoir si la chanson a des paroles sert a
+          // l'onglet « À compléter », et cela ne coute qu'une lecture.
+          parolesConnues[slug] = analyserChordPro(t).sections.length > 0;
+        })
+        .catch(function () {
+          textesChansons[slug] = '';
+          parolesConnues[slug] = true;   // dans le doute, on ne la propose pas
+        });
     }));
   });
   return chargementTextes;
@@ -537,6 +581,14 @@ function majListe() {
   // L'onglet Setlists ne montre pas des chansons mais des listes ordonnees.
   if (ongletActif === 'setlists') {
     boite.innerHTML = rendreSetlists() + lienAjouter();
+    return;
+  }
+
+  // « À compléter » a besoin d'avoir lu les chansons pour savoir lesquelles
+  // n'ont pas encore de paroles.
+  if (ongletActif === 'a-completer' && !chargementTextes) {
+    boite.innerHTML = '<p class="message">Lecture du recueil…</p>';
+    chargerTextes().then(majListe);
     return;
   }
 
@@ -828,12 +880,43 @@ function majChanson() {
     // metadonnees : on le dit, plutot que d'afficher une page blanche.
     feuille.innerHTML = e.sections.length
       ? rendreSections(e.sections)
-      : '<p class="message">Les paroles ne sont pas encore saisies.<br>' +
-        'Ajoutez-les dans <code>songs/' + txt(e.slug) + '.pro</code>, ou collez-les ' +
-        'depuis la page <a href="#/completer">Compléter une chanson</a>.</p>';
+      : blocSansParoles(e);
   }
 
   majAstuce();
+}
+
+/* --------------------------------------------------------------------------
+   Une chanson dont les paroles restent a saisir
+   --------------------------------------------------------------------------
+   Plutot qu'une page vide, on propose le chemin complet : aller chercher la
+   grille sur un site d'accords, la copier, revenir la coller. Le bouton n'a
+   de sens que pour une chanson en travail et sans paroles.
+   -------------------------------------------------------------------------- */
+
+function blocSansParoles(e) {
+  var m = e.meta;
+  var enTravail = (m.status || 'en_travail').trim().toLowerCase() !== 'au_point';
+
+  var html = '<p class="message">Les paroles ne sont pas encore saisies.</p>';
+
+  if (enTravail) {
+    html += '<div class="barre-actions">' +
+      '<span class="reglette">' +
+        '<a href="' + txt(adresseRecherche(m.title, m.artist)) + '" ' +
+          'target="_blank" rel="noopener">Trouver la grille</a>' +
+        '<a href="#/completer">Coller la grille</a>' +
+      '</span></div>';
+    html += '<p class="indice">« Trouver la grille » ouvre un nouvel onglet. ' +
+      'Sélectionnez la grille, copiez-la, revenez ici : « Coller la grille » ' +
+      'reconnaîtra la chanson toute seule.</p>';
+  } else {
+    html += '<p class="indice">Ajoutez-les dans <code>songs/' + txt(e.slug) +
+      '.pro</code>, ou collez-les depuis la page ' +
+      '<a href="#/completer">Compléter une chanson</a>.</p>';
+  }
+
+  return html;
 }
 
 /* La ligne de renseignements sous le titre. */
@@ -2353,6 +2436,43 @@ function rappelExpiration() {
     '<a href="#/reglages">Réglages</a> pour le renouveler.</p>';
 }
 
+/* --- Le site ou l'on cherche les grilles ---------------------------------- */
+
+function choisirSiteAccords(bouton) {
+  var modele = bouton.getAttribute('data-modele');
+  ecrireMemoire(CLE_SITE_ACCORDS, modele);
+
+  var champ = document.getElementById('champ-site');
+  if (champ) champ.value = modele;
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-act="site-accords"]'),
+    function (b) { b.setAttribute('aria-pressed', b === bouton ? 'true' : 'false'); });
+
+  var boite = document.getElementById('etat-site');
+  if (boite) boite.innerHTML = messageReglages('ok', 'Recherche sur ' +
+    txt(bouton.textContent) + '.');
+}
+
+function enregistrerSiteAccords() {
+  var champ = document.getElementById('champ-site');
+  var boite = document.getElementById('etat-site');
+  var modele = (champ.value || '').trim();
+
+  if (!/^https?:\/\//i.test(modele)) {
+    boite.innerHTML = messageReglages('erreur',
+      'L\'adresse doit commencer par <code>https://</code>.');
+    return;
+  }
+
+  ecrireMemoire(CLE_SITE_ACCORDS, modele);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-act="site-accords"]'),
+    function (b) {
+      b.setAttribute('aria-pressed',
+        b.getAttribute('data-modele') === modele ? 'true' : 'false');
+    });
+  boite.innerHTML = messageReglages('ok', 'Adresse enregistrée.');
+}
+
 /* La date du jour dans un an, au format que comprend un champ « date ». */
 function dansUnAn() {
   var quand = new Date();
@@ -2388,6 +2508,31 @@ function afficherReglages() {
     '<button type="button" data-act="enregistrer-jeton">Vérifier et enregistrer</button>' +
     '</span></div>';
   html += '</div>';
+
+  html += '<h3 class="section-title">Où chercher les grilles</h3>';
+  html += '<p class="indice">Le bouton « Trouver la grille », sur une chanson sans ' +
+    'paroles, ouvre une recherche sur ce site.</p>';
+  html += '<div class="barre-actions"><span class="reglette">';
+  SITES_ACCORDS.forEach(function (site) {
+    html += '<button type="button" data-act="site-accords" ' +
+      'data-modele="' + txt(site.modele) + '" aria-pressed="' +
+      (modeleSiteAccords() === site.modele ? 'true' : 'false') + '">' +
+      txt(site.nom) + '</button>';
+  });
+  html += '</span></div>';
+
+  html += '<div class="formulaire">';
+  html += '<label class="champ"><span class="champ-nom">Adresse de recherche</span>' +
+    '<input id="champ-site" type="url" autocomplete="off" spellcheck="false" ' +
+    'value="' + txt(modeleSiteAccords()) + '"></label>';
+  html += '<p class="indice"><code>{recherche}</code> est remplacé par le titre et ' +
+    'l\'artiste. Si ce site change d\'adresse dans quelques années, corrigez-la ' +
+    'ici : il n\'y aura pas de code à toucher.</p>';
+  html += '<div class="barre-actions"><span class="reglette">' +
+    '<button type="button" data-act="enregistrer-site">Enregistrer l\'adresse</button>' +
+    '</span></div>';
+  html += '</div>';
+  html += '<div id="etat-site"></div>';
 
   html += '<h3 class="section-title">Où va ce jeton</h3>';
   html += '<p class="paragraphe">Il reste dans la mémoire de ce navigateur, sur ce ' +
@@ -2961,6 +3106,14 @@ document.addEventListener('click', function (ev) {
     case 'oublier-jeton':
       Depot.oublierJeton();
       majEtatJeton(messageReglages('ok', 'Jeton effacé de ce téléphone.'));
+      break;
+
+    case 'site-accords':
+      choisirSiteAccords(cible);
+      break;
+
+    case 'enregistrer-site':
+      enregistrerSiteAccords();
       break;
 
     case 'copier-pro':

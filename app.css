@@ -532,6 +532,7 @@ a { color: inherit; }
   text-transform: uppercase;
   letter-spacing: .14em;
   cursor: pointer;
+  text-decoration: none;              /* une cellule peut etre un lien */
   transition: background-color .12s, color .12s;
 }
 .reglette > *:last-child { border-right: 0; }

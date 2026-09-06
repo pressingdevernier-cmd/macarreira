@@ -428,3 +428,96 @@ haut de `outils/icones.html`.
 - **Ne pas ajouter de dépendance ni d'outil de construction.** Le site est
   volontairement fait de fichiers qu'un navigateur lit directement. C'est ce
   qui lui permettra de fonctionner encore dans dix ans.
+
+---
+
+## 15. Le jeton d'écriture
+
+Le jeton est un mot de passe à usage unique que GitHub vous donne, et que vous
+collez dans l'application. C'est lui qui lui permet d'enregistrer une chanson
+toute seule, sans passer par l'ordinateur.
+
+**Il faut en coller un sur chaque téléphone.** Le même jeton peut servir aux
+deux, ou vous pouvez en créer un par appareil — l'avantage du second choix,
+c'est qu'en cas de perte d'un téléphone, on ne coupe l'accès qu'à celui-là.
+
+### Le créer sur github.com
+
+À faire depuis un navigateur, sur le téléphone ou sur le PC.
+
+1. Allez sur **github.com** et connectez-vous.
+2. Touchez votre **photo de profil**, en haut à droite → **Settings**.
+3. Tout en bas du menu de gauche : **Developer settings**.
+4. **Personal access tokens** → **Fine-grained tokens**.
+   *Fine-grained*, pas « Tokens (classic) » : c'est ce qui permet de limiter
+   le jeton à ce seul dépôt.
+5. Bouton **Generate new token**.
+6. **Token name** : mettez de quoi le reconnaître, par exemple
+   `Macarreira iPhone` ou `Macarreira Android`.
+7. **Expiration** : prenez la durée la plus longue proposée (un an).
+   **Notez la date** : vous la saisirez dans l'application.
+8. **Repository access** : cochez **Only select repositories**, puis
+   choisissez **macarreira** dans la liste. Surtout pas « All repositories ».
+9. **Permissions** → **Repository permissions** → cherchez **Contents** →
+   mettez-le sur **Read and write**.
+   GitHub ajoute tout seul *Metadata : Read-only* : c'est normal, laissez.
+10. Descendez, bouton **Generate token**.
+11. **Le jeton s'affiche une seule fois.** Touchez l'icône de copie tout de
+    suite. Si vous quittez la page sans le copier, il faut en refaire un.
+
+> L'apparence de github.com change avec les années. Trois choses ne changent
+> pas : le jeton doit être **fine-grained**, limité au **seul dépôt
+> macarreira**, avec la permission **Contents : Read and write**.
+
+### Le coller dans l'application
+
+1. Ouvrez Macarreira, descendez tout en bas de n'importe quel écran, touchez
+   **RÉGLAGES** dans le pied de page.
+2. Collez le jeton dans **Jeton d'accès GitHub**.
+3. Dans **Date d'expiration**, mettez la date notée à l'étape 7. Elle ne sert
+   qu'à vous prévenir avant la panne : l'application ne peut pas la deviner,
+   GitHub ne laissant pas les pages web lire cette information.
+4. Touchez **Vérifier et enregistrer**.
+
+Si tout va bien : « Tout est en ordre : l'application peut enregistrer dans
+`pressingdevernier-cmd/macarreira` ». Sinon, le message dit quoi corriger.
+
+Le jeton reste dans la mémoire de ce navigateur, sur ce téléphone. Il n'est
+envoyé qu'à GitHub, **n'est écrit dans aucun fichier du dépôt** — qui est
+public — et n'est jamais réaffiché en entier.
+
+### Le renouveler
+
+Trois semaines avant l'échéance, un bandeau apparaît en haut de la
+bibliothèque : « Le jeton d'écriture expire dans 12 jours ». Refaites les
+étapes ci-dessus et collez le nouveau jeton par-dessus l'ancien. L'ancien
+peut être supprimé sur github.com, il ne sert plus.
+
+### En cas de perte d'un téléphone
+
+Sur github.com, **Settings → Developer settings → Fine-grained tokens**,
+touchez le jeton concerné, puis **Revoke**. Personne ne pourra plus s'en
+servir, et vos autres téléphones ne sont pas touchés.
+
+### Quand ça ne marche pas
+
+| Message dans l'application | Ce qu'il faut faire |
+|---|---|
+| « Ce jeton n'est pas accepté » | Il est mal collé, révoqué, ou expiré. Refaites-en un. |
+| « Le jeton est valide mais ne permet que la lecture » | La permission **Contents** est restée sur *Read-only*. Corrigez-la sur github.com. |
+| « Ce jeton ne permet pas d'écrire » | Le jeton ne vise pas le dépôt **macarreira**, ou n'a pas *Contents : Read and write*. |
+| « Pas de réseau : GitHub est injoignable » | Rien à faire, réessayez une fois connecté. |
+| « Ce fichier a été modifié entre-temps » | L'autre téléphone a touché la même chanson. Rechargez la page et recommencez ; votre texte est encore dans le presse-papiers. |
+| « Trop de demandes envoyées à GitHub » | Le quota est atteint. Une heure d'attente. |
+
+### Vérifier qu'aucun jeton n'a fui
+
+Le dépôt est public. Avant chaque publication depuis le PC :
+
+```
+python outils\verifier-secrets.py
+```
+
+Il doit répondre « Aucun secret trouve. Publication sans danger. » Si jamais il
+trouve quelque chose : ne publiez pas, retirez la ligne fautive, et révoquez le
+jeton concerné sur github.com par précaution.

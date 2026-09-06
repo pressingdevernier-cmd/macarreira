@@ -2496,7 +2496,8 @@ function afficherReglages() {
     'placeholder="github_pat_…"></label>';
   html += '<p class="indice">Il commence par <code>github_pat_</code> et ne s\'affiche ' +
     'qu\'une seule fois sur github.com : collez-le tout de suite. ' +
-    'La marche à suivre pour le créer est au chapitre 15 du GUIDE.md.</p>';
+    'La marche à suivre pour le créer est dans le GUIDE.md du dépôt, ' +
+    'chapitre « Le jeton d\'écriture ».</p>';
 
   html += '<label class="champ"><span class="champ-nom">Date d\'expiration</span>' +
     '<input id="champ-expiration" type="date" value="' + txt(dansUnAn()) + '"></label>';

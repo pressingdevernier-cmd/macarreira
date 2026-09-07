@@ -1,0 +1,85 @@
+{title: Nube De Colores}
+{artist: Alex Campos}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, latin christian, latin worship, mariachi cristiano, rap cristiano, reggaeton cristiano}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 53905
+# Empreinte source SHA256: a40fb775fee2fac61a88a87ec313dc6edc26c69bb4b5c5446713602dc221a0c4
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, ponctuation_chordpro_neutralisee, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            aki esta la rola para los ke
+la pidieron con errores pero ahi ta
+
+DESPUES LA CORRIJO BIEN ES KE LO SAKE A LA CARRERA
+FELIZ AÑO LES DESEA SU BROTHER IMMER NAHUN
+KE TODAS TU METAS SE CUMPLAN
+DUDAS SUGERENCIAS BURLAS CRITIKAS,ETC..
+# SOURCE A VERIFIER: LLEGUENLE A MI MAIL  [email protected] 
+LLEGUENLE A MI MAIL  ［email protected］
+
+{comment: À vérifier : INTRO: E-A-E-A}
+# SOURCE A VERIFIER: INTRO: E-A-E-A 
+[E]ESPERO EL MOMENTO, E[A]SPERO NUESTRO ENCUENTRO
+[E]ENCUENTRO QUE TE SUEÑO, QUE[A] SUEÑO CON TUS OJOS
+[E]QUE ME VEN SONRIENDO, TE M[A]IRO Y TIEMBLO
+[E]CUANDO VEO TU AMOR, CUANDO VEO TU AMOR
+
+[E]DONDE ESTA EL MOMENTO, NO EXIST[A]E HORA TIEMPO
+[E]SOLO SUS PROMESAS, PR[A]OMESAS QUE YO ESPERO
+[E]ESPERO PRONTO VERTE, V[A]ERTE CERKA
+[E]CUANDO VEO TU AMOR
+
+//PRECORO//
+[G#m]EL CIELO DE ABRIRA Y ENTONCES YO A[C#m]LLI TE VERE
+[G#m]SUBIRE A LO MAS ALTO Y A T[C#m]US BRAZOS CORRERÉ
+[A]NO HABRA NDA EN ESTE MUNDO QUE ME PU[E]EDA DETENER
+ALLI ES[B]TARE
+
+CORO
+Y EN [E]ESA NUBE DE COLORES TU SO[B]NRISA YO VERE
+N[E]O HABRA MAS LLANTOS NI TRISTEZAS TUS C[B]OSQUILLAS SENTIRE
+Y E[A]N ESA NUBE  YO TE VER[E]E
+
+(misma secuencia)
+ENCUENTRO TU MOMENTO, ENCUENTRO QUE ERES CIERTO
+QUEDO EN SILENCIO AL VER TU AMOR INMENSO
+NO ENCUENTRO PALABRAS CUANDO VEO TU AMOR
+CUANDO VEO TU AMOR
+
+Luego viene el precoro::
+
+CORO 2
+
+Y[E] EN ESA NUBE DE COLORES T[B]U SONRISA YO VERE
+N[E]O HABRA MAS LLANTOS NI TRISTEZAS TUS C[B]OSQUILLAS SENTIRE
+Y E[E]N ESA NUBE  DE COLORES TUS S[B]ECRETOS YO SABRE
+
+[G#m]NO HABRA LUGAR NINGUN LUGAR QUE[C#m] PUEDA REEMPLAZAR
+ES A[A]LLI DONDE MIS SUEÑOS SE ME HACE[E]N REALIDAD
+NO HAY QUE ESPE[B]RAR
+
+[G#m]NO HABRA NADIE EN ESTE MUNDO QUE [C#m]ME PUEDA DETENER
+[A]EN TU AMOR YO ESPERARE MIL A[E]ÑOS NO SÉ TALVEZ
+[B]LO QUE SÉEEEE     ALLI E[E]STARÉ AL[E]LI ESTARÉ
+
+UN SALUDO A YURI LA KE ME ROBO EL CORAZON A ELLA
+DEDICO ESTA ROLA.. Y TE DIGO KE ESTE AÑO SERA
+MEJOR,, TE AMO Y TU LO SABES ?NADA MAS CON VERTE
+ME DEVUELVES LAS ESPERANZAS DE VIVIR? UN DIA
+ESTAREMOS JUNTOS EN ESA NUBE DE COLORES
+
+A LOS BROTHERS Y SISTERS DE
+VILLA HERMOSA TABS(MUY PRONTO SALDRA ?KORBAN?)
+A MI MAESTRO KOKIN DE MINA VERACRUZ, PA´RRIBA MAN
+FELIZ AÑO Y SIGUE PEDALEANDO
+
+y a los de escuintla chiapas mex
+aki estamos los de la costa no solo
+la cumbia pega ni el reggaetton
+aki esta lo akustiko,,jaja
+
+///VOY VOLAR Y SIN ALAS///

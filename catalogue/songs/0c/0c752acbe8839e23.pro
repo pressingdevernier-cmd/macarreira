@@ -1,0 +1,38 @@
+{title: Extraño Sentimiento}
+{artist: Ricardo Montaner}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, latin, latin pop, tropical}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 24780
+# Empreinte source SHA256: 0c752acbe8839e23e2b5dc19385ffc7e013cea47fe8009b16771b8f0ca32627d
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+NO SE DONDE NI C[Bm7]UANDO DESPERTO ESTA SE[E7]NCACION TAL V[A]EZ E[F#7]N UN
+RESTAURANT[E7]E DE L[A]A C[F#7]IUDAD EN UN C[Bm7]INE O CON O[C#7]TRO POR LA C[F#7]ALLE,
+ABRAZA[B7]NDOTE [Bm7]AQUE[C#7]L DIA QUE LA [D]LLUV[B7/D#]IA MOJO TU [E7]PIEL.
+SIN Q[Bm7]UERER TROP[E7]ECE YO CON TU [A]MIR[F#7]ADA Q[Bm7]UEDE ANCLADO CON T[E7]U ROSE SI[A]N
+S[F#7]ABER [Bm7]UNA COSA RARA [C#7]ME SUCEDE, APODE[F#m]RANDOCE DE M[B7]I YO [Bm7]QUE SIEMPR[C#m]E
+NAUFRAG[D]ABA [B7/D#]CREYENDO V[E7]IVIR.
+EXTRAÑO [A]SENTIMIENTO, MI ENAMO[F#m]RAMIENTO DESD[Bm7]E CUANDO EXIST[C#m]ES
+TU EN[D] MI CIELO VEO L[E7]UZ.
+NO SE [Bm7]DONDE NI CUANDO ME ENG[E7]ACHASTE A TU [A]AM[F#7]OR DISTR[Bm7]AIDO,
+CAMINA[E7]NDO POR E[A]L BOULE[F#7]VARD ME[Bm7] GUSTAS TANTO QUE EN
+CUA[C#7]LQUIER PARTE ME [F#m]PUEDES ENAM[B7]ORAR HOY M[C#m]I BARCO T[D]IENE
+PU[B7/D#]ERTO DONDE AT[E7]RACAR.
+[A]EXTRAÑO SENTIMIENTO, MI[F#m] ENAMORAMIE[Bm7]NTO VINO COM[C#m]O EL AGUA F[D]RESCA
+A CALMAR MI SED INT[E7]ENSA.
+EXTRAÑO S[A]ENTIMIENTO, MI ENAMORA[F#m]MIENTO VINO [C#]COMO EL AGUA FR[D#m]ESCA A[E] CALMAR MI SE[F#7]D
+
+INTENSA.
+EXTRAÑO S[B]ENTIMIENTO, MI ENAMORA[G#m]MIENTO DESD[C#m7]E CUANDO EXISTE[D#m]S
+TU EN[E] MI CIELO VOE [F#]LUZ.
+
+SANDY TE AMO Y TODO LO QUE TENGO LO CAMBIARIA POR TI.
+
+AUNQUE LA DISTACIA QUE NOS SEPARE EN LA VIDA SEA GRANDE
+
+SE QUE YO ESTARE EN TU CORAZON COMO TU EN EL MIO.

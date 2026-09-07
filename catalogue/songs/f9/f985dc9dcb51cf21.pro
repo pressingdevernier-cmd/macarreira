@@ -1,0 +1,39 @@
+{title: Minha história (ver.2)}
+{artist: Chico Buarque}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, bossa nova, fado, mpb, samba, tropicalia}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 60271
+# Empreinte source SHA256: f985dc9dcb51cf212f59f40c3fe93f410809eb5991cf5fd767130ac98fecb900
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+ELE VINHA SE[F/G]M MUITA CONVERSA,SEM M[F5+/C#]UITO EXPLICAR [Gm/D][Eb6]
+EU SO [Em5-/7]SEI QUE FALAVA E CHE[C7]IRAVA E GOSTAVA DE M[F]AR
+SEI QUE [F/C]TINHA TATUAGEM NO [F5+/C#]BRACO E DOURADO NO [Gm/D]DENTE [Eb6]
+E MINHA [Em5-/7]MAE SE ENTREGOU A ESSE H[C7]OMEM PERDI[F]DAMENTE
+LAIA,LAIA,[Bb]LAIA,LAIA
+ELE A[F/C]SSIM COMO VEIO P[F5+/C#]ARTIU NAO SE SABE PRA O[Gm/D]NDE [Eb6]
+E DE[Em5-/7]IXOU MINHA MAE COM O O[C7]LHAR CADA DIA MAIS L[F]ONGE
+ES[F/C]PERANDPO PARADA P[F5+/C#]REGADA NA PEDRA DO P[Gm/D]ORTO [Eb6]
+COM SEU [Em5-/7]UNICO VELHO VEST[C7]IDO CADA DIA MAIS CU[F]RTO
+LAIA,LAIA[Bb],LAIA,LAIA
+QUANDO[F/C] ENFIM EU NASCI MINHA [F5+/C#]MAE EMBRULHOU-ME NU[Gm/D]M MAN[Eb6]TO
+ME V[Em5-/7]ESTIU COMO SE EU FOSSE AS[C7]SIM UMA ESPECIE DE S[F]ANTO
+MAS POR [F/C]NAO SE LEMBRAR DE AC[F5+/C#]ALANTO,A POBRE M[Gm/D]ULHER[Eb6]
+ME N[Em5-/7]INAVA CANTANDO CAN[C7]TIGAS DE CA[F]BARE
+LAIA,LAIA[Bb],LAIA,LAIA
+MINHA [F/C]MAE NAO TARDOU A A[F5+/C#]LERTA TODA VIZ[Gm/D]INHANCA
+A MO[Em5-/7]STRAR QUE ALI ESTAVA BEM M[C7]AIS QUE UMA SIMPLES
+ CRI[F]ANCA
+E [F/C]NAO SEI SE POR I[F5+/C#]RONIA OU SE POR [Gm/D]AMOR [Eb6]
+RE[Em5-/7]SOLVEU ME CHAMAR COM O N[C7]OME DE NOSSO SE[F]NHOR
+LAIA,LAIA,[Bb]LAIA,LAIA
+MINHA H[F/C]ISTORIA E ESSE NOME QUE A[F5+/C#]INDA HOJE CAR[Gm/D]REGO CO[Eb6]MIGO
+QUAND[Em5-/7]O VOU BAR EM BAR,VIRO A [C7]MESA,BERRO,BEBO E B[F]RIGO
+OS[F/C] LADOES OS AMANTES,MEUS C[F5+/C#]OLEGAS DE COPO E D[Gm/D]E CRU[Eb6]Z
+ME C[Em5-/7]ONHECEM SO PELO MEU N[C7]OME DE MENINO JE[F]SUS
+LAIA,LAIA[Bb],LAIA,LAI[F]A

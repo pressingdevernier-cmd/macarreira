@@ -1,0 +1,67 @@
+{title: Muy Lejos De Tí}
+{artist: Alejandro Fernández}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, latin, latin arena pop, latin pop, mariachi, mexican pop, ranchera, regional mexican}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 9089
+# Empreinte source SHA256: 4c7dd42b6303f40a21c941d81d538fd25233b6fe922e8508074da61c3ba6798b
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            HOLA, ESPERO LES GUSTE ESTA CANCION QUE PIENSO SUENA MEJOR ASI,
+PERO USTEDES CHEQUENLA Y CUALQUIER COMENTARIO ME AVISAN A MI
+CORREO.
+
+EL INTRO COMIENZA HASTA QUE EMPIEZA EL ACOMPAÑAMIENTO NO EL
+INSTRUMENTAL.
+
+{start_of_part: INTRO}
+[A#] [Am] [A#] [Am] [A#] [Am] [A#] [C]
+
+[F]ANTES ERA TODO DIS[Dm]TINTO,TU NO [A#]PODIAS ESTAR S[C]IN MI
+Y M[F]IRA COMO CAMBIAN LAS [Dm]COSAS QUE AHORA SO[A#]Y YO
+QUIEN SE MUERE POR [C]TI.
+
+ME AL[A#]EJE POR NO QUERER LAST[C]IMARTE POR QUE[F] PENSE
+QUE JAMAS TE QUE[Dm]RRIA, SIN SABER QUE AL [A#]FINAL
+SERIA [F]YO QUIEN NO P[A#]ODRIA VIVIR SIN TU[C] AMOR.
+
+ CORO
+HACE TANTAS MUJ[F]ERES QUE TE EXTRAÑO
+HACE TANTAS CAR[Dm]ICIAS QUE NO ESTAS
+HACE YA TANTA [A#]PIEL QUE NO TENGO TU [F]PIEL
+QUE NO PUEDO ESP[C]ERAR UN DIA MAS.
+
+HACE TANTAS MUJ[F]ERES QUE TE EXTRAÑO
+HACE MILES DE B[Dm]ESOS QUE NO ESTAS
+HACE TANTOS TE QU[A#]IEROS QUE NO PUDE [F]DECIR
+POR QUE ESTABA MUY L[C]EJOS DE TU AMOR
+MUY LEJOS [F]DE TIII.[A#] [Am][A#][Am][A#][Am][A#][C]
+
+[F]ERAMOS EL DIA Y LA [Dm]NOCHE, TU TAN S[A#]EGURA, YO TAN[C] FUGAZ
+SO[F]ÑABAS CON MI AMOR PARA S[Dm]IEMPRE Y YO NO[A#] SABIA POR DONDE[C] EMPEZAR
+DESC[A#]UBRI QUE ME CRECIAN LAS [C]ALAS NEC[F]ESITE VER DE CERCA L[Dm]A VIDA
+
+Y AL FINAL DES[A#]CUBRIR QUE ESTABAS[F] TU EN LO MAS[A#] HONDO DE MI C[C]ORAZON.
+[A#]Y CON CADA AVE[C]NTURA DE[Am]SCUBRI, QUE NO HABRIA EN [Dm]MI VIDA OT[A#]RA MUJER
+y AL FINAL DEL CA[Dm]MINO ESTABA [A#]PARADO FRENTE [C]A TI.
+
+CORO
+
+HACE TANTAS MUJ[F]ERES QUE TE EXTRAÑO
+HACE TANTAS CAR[Dm]ICIAS QUE NO ESTAS
+HACE YA TANTA [A#]PIEL QUE NO TENGO TU [F]PIEL
+QUE NO PUEDO ESP[C]ERAR UN DIA MAS.
+
+HACE TANTAS MUJ[F]ERES QUE TE EXTRAÑO
+HACE MILES DE B[Dm]ESOS QUE NO ESTAS
+HACE TANTOS TE QU[A#]IEROS QUE NO PUDE [F]DECIR
+POR QUE ESTABA MUY L[C]EJOS DE TU AMOR
+{comment: À vérifier : F A# Am A# C F FINAL.}
+# SOURCE A VERIFIER:           F       A# Am A# C F FINAL. 
+MUY LEJOS DE TIII.
+
+{end_of_part}

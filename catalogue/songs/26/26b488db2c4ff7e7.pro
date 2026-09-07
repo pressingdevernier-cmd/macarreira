@@ -1,0 +1,50 @@
+{title: Show Biz Kids}
+{artist: Steely Dan}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, art rock, classic rock, country rock, folk, folk rock, mellow gold, psychedelic rock, rock, roots rock, soft rock, yacht rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 32530
+# Empreinte source SHA256: 26b488db2c4ff7e72b9fcd14c97c88b129b2dc8b390ee35a349293c37e049b79
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+Tune played in Am7 throughout .
+
+Note :
+
+(*)  = verse 1
+(**) = verse 2
+
+[Am7]Go to Las Vegas, Las Vegas, go to Las Vegas. While the
+
+[Am7]Poor people sleeping with the shade on the light, with the
+
+[Am7]Poor people sleeping, all the stars come out at night, while the
+
+[Am7]Poor people sleeping with the shade on the light, with the
+
+[Am7]Poor people sleeping, all the stars come out at night.
+
+[Am7]*-- -- After  closing    time at the Guernsey Fair,
+**They got the house on the corner,with the rug inside;they got the
+
+[Am7]*I detect the El Supremo from the room at the top of the stairs
+**booze they need -----   all  that money  can buy.
+
+[Am7]*-----Well I have been around the world, and I have
+**  They got the shape -- ly bodies,    they got the
+
+[Am7]*been in the Washington Zoo;   and in
+**Steely  Dan    T -- shirts;and for the
+
+[Am7]* all my travels as the facts unravel, I have found this to be true
+**Coup de Grace --- They're outrageous. Honey let me tell you, while the
+
+[Am7]Show Business kids making movie of themselves; you know they
+
+[Am7]don't give a f*** about anybody else. You know you
+
+[Am7]Go to Las Vegas, Las Vegas, go to Las Vegas. ( Repeat )

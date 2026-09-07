@@ -1,0 +1,56 @@
+{title: Crônica (Acústico)}
+{artist: Engenheiros Do Hawaii}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, brazilian rock, mpb, pop rock brasileiro, rock gaucho, rock nacional brasileiro}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 133498
+# Empreinte source SHA256: 8a3a4163e675ed1022c02011416a726d6ff398e5bd703e5852d2587ad642ad80
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ponctuation_chordpro_neutralisee, tablature_conservee_en_commentaire, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            hide this tab Intro:
+# TAB: e|-----------------------------------| 
+# TAB: b|-5-----5-----5---8------8------8---| 
+# TAB: G|---6-----6---------9------9--------| 
+# TAB: D|-----7-----7---7------10-----10----| 
+# TAB: A|-7---------------10----------------| 
+# TAB: E|-----------------------------------| 
+
+# TAB: e|-------------------------------------| 
+# TAB: b|-5-----5-----5---8------8------8-----| 
+# TAB: G|---6-----6---------9------9----------| 
+# TAB: D|-----7-----7---7------10-----10--10--| 
+# TAB: A|-7---------------10------------------| 
+# TAB: E|-------------------------------------| 
+
+[A]Ja nao passa nenhum c[C]arro por ai
+[B]Ja nao passa nenhum f[Bb]ilme na TV
+[A]Voce que enrola outro cig[C]arro por ai
+[B]E nao da bola pro que [Bb]vai acontecer
+[A]Mais um pouco mais um [C]seculo termina
+[B]Mais um louco pede [Bb]troco na esquina
+[A]Tudo isso ja faz p[C]arte da rotina
+[B]E a rotina ja faz p[Bb]arte de vo[F#m]ce
+Que tem ideias tao m[A]odernas
+E' o mesmo [Bm]homem que vivia nas ca[F#m]vernas [B]
+Vo[F#m]ce que tem ideias tao mo[A]dernas
+E' o mesmo [B]homem que vivia nas ca[F#m]vernas [B]
+[A]Todo mundo ja tom[C]ou a coca-cola
+[B]E a coca-cola ja to[Bb]mou conta da China
+[A]Todo cara luta [C]por uma menina
+[B]E a Palestina luta [Bb]pra sobrevi[A]ver
+E a cidade cada [C]vez mais violenta
+[B]Tipo Chicago [Bb]nos anos 40
+[A]E voce cada [C]vez mais violenta
+[B]No seu aparta[Bb]mento ninguem fala com vo[F#m]ce
+Que tem ideias tao m[A]odernas
+E' o mesmo [Bm]homem que vivia nas ca[F#m]vernas [B]
+Vo[F#m]ce que tem ideias tao mo[A]dernas
+E' o mesmo [B]homem que vivia nas ca[F#m]vernas
+
+_______________________________________________________
+# SOURCE A VERIFIER: Contribuição: VELHO (GUITARRISTA DO VM) ([email protected]) 
+Contribuição: VELHO (GUITARRISTA DO VM) (［email protected］)

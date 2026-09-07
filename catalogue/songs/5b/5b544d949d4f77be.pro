@@ -1,0 +1,69 @@
+{title: Grace Wins}
+{artist: Matthew West}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, anthem worship, ccm, christian alternative rock, christian music, worship}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 56445
+# Empreinte source SHA256: 5b544d949d4f77beaf59108662a82c44a42a6af3b19085fd46befb6f7613c282
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{comment: À vérifier : 4/4 INTRO | Cm | Cm | Ab | Ab |}
+# SOURCE A VERIFIER:             4/4 INTRO |   Cm              |  Cm                  |  Ab                    |  Ab                    | 
+             [Bb]                    [Bb]                       [Fm]                 In my we[Fm]akest moment I see...
+
+{start_of_verse: verse 1}
+ ...[Cm]You       shaking y[Cm]our head in disgrace   [Ab]                I can rea[Ab]d the...
+...disapo[Bb]intment written all o[Bb]ver your face. Here come[Fm]s those whispers in [Fm]my
+ ...[Cm]ear saying who do y[Cm]ou think you are looks lik[Ab]e you're on your own from[Ab]
+...[Bb]here cause grace could never r[Bb]each that far     [Fm]                      [Fm]       But...
+
+{end_of_verse}
+{start_of_part: Pre-Chorus}
+ ..[Ab].in the shadow of that shame beat [Eb]down by all the...
+...[Cm]blame I hear you call my name sayin i[Bb]t's not over and...
+...[Ab]my heart starts to beat So loud now, dro[Eb]wning out the...
+...[Cm]doubt I'm down but I'm not out         [Bb]       there's a...
+
+...w[Eb]ar between guilt and[Eb] grace and they're fighting for a s[Ab]acred space but I'm...[Ab]
+...l[Bb]iving proof            [Bb]grace wins       e[Ab]very         t[Eb]ime               [Eb]              No more...
+...l[Eb]ying down       in d[Eb]eath's defeat       Now I'm r[Ab]ising up      in v[Ab]ictory      Singing...
+...H[Bb]allelujah            g[Bb]race wins        e[Ab]very           [Eb]time   words can't[Eb] describe the way it...
+
+{end_of_part}
+{start_of_verse: verse 2}
+ ...[Cm]feels when mercy floods[Cm] a thirsty soul        [Ab]               A broken s[Ab]ide begins to...
+...[Bb]heal and grace          re[Bb]turns        what guilt has s[Fm]tole [Fm]
+
+{end_of_verse}
+{start_of_part: Pre-Chorus}
+ ..[Ab].in the shadow of that shame beat [Eb]down by all the...
+...[Cm]blame I hear you call my name sayin i[Bb]t's not over and...
+...[Ab]my heart starts to beat So loud now, dro[Eb]wning out the...
+...[Cm]doubt I'm down but I'm not out         [Bb]       there's a...
+
+...w[Eb]ar between guilt and[Eb] grace and they're fighting for a s[Ab]acred space but I'm...[Ab]
+...l[Bb]iving proof            [Bb]grace wins       e[Ab]very         t[Eb]ime               [Eb]              No more...
+...l[Eb]ying down       in d[Eb]eath's defeat       Now I'm r[Ab]ising up      in v[Ab]ictory      Singing...
+...H[Bb]allelujah            g[Bb]race wins        e[Ab]very           [Eb]time   words can't[Eb] describe the way it...
+
+{end_of_part}
+{start_of_bridge: BRIDGE}
+For the pr[Eb]odigal son, g[Eb]race wins  For the [Ab]woman at the well, g[Ab]race wins
+For the b[Cm]lind man and the beggar, [Cm]grace wins  for [Ab]always and forever, g[Ab]race wins
+For the l[Eb]ost out on the street, g[Eb]race wins for the w[Ab]orst part of you and me, g[Ab]race wins
+For the [Cm]thief on the cross, g[Cm]race wins for a w[Ab]orld that is lost [Ab]
+
+...w[Eb]ar between guilt and[Eb] grace and they're fighting for a s[Ab]acred space but I'm...[Ab]
+...l[Bb]iving proof            [Bb]grace wins       e[Ab]very         t[Eb]ime               [Eb]              No more...
+...l[Eb]ying down       in d[Eb]eath's defeat       Now I'm r[Ab]ising up      in v[Ab]ictory      Singing...
+...H[Bb]allelujah            g[Bb]race wins        e[Ab]very           [Eb]time              [Eb]        every...
+
+{comment: À vérifier : END TAG | Ab | Ab | Bb | Ab | Eb ||}
+# SOURCE A VERIFIER: END TAG   |   Ab            |  Ab            |   Bb            |   Ab             |    Eb        || 
+          ...time                       yeah I'm living proof      grace wins every    time
+
+{end_of_bridge}

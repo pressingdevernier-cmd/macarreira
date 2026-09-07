@@ -1,0 +1,40 @@
+{title: Another You}
+{artist: Loretta Lynn}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country, country rock, nashville sound}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 97581
+# Empreinte source SHA256: c766da16a5c1f8fca7615333f9654a750594a8bcbaf482aad646a4ca5c742d2d
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[G]His eyes may be a deeper blue but they [C]remind me so much of you
+
+He may [G]even comb his hair a little [D7]different
+
+And [G]when he's walkin' by my side and tells [C]me his love will never die
+
+Then it's [G]plain to see [D7]I found me another [G]you
+
+I never wanted it this way but [C]there's one thing I can say
+
+He has [G]givin' all the love I wanted [D7]you to
+
+When we're [G]alone each night in bed
+
+He speaks the [C]same words you once said
+
+Oh [G]can it really be [D7]I found me another [G]you
+
+He [G7]looks like you he talks like you and when he [C]whispers my name
+
+It [A7]sounds so much like you talkin' I feel you [D7]holdin' me again
+
+There's a [G]feeling with him I found that makes your [C]memory stay around
+
+Yes it [G]just might be [D7]I found me another [G]you
+
+[C]Oh yes it [G]just might be [D7]I found me another [G]you

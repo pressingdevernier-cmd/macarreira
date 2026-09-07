@@ -1,0 +1,58 @@
+{title: In My Next Life}
+{artist: Merle Haggard}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, bakersfield sound, country, country rock, nashville sound, outlaw country}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 134475
+# Empreinte source SHA256: e0db880a8ca03856e0e4e212c635f34f0881b05d9b70656f65ebde21cacf1d26
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            In My Next Life
+By Merle Haggard
+
+Tabbed by Matellmon
+
+[C] [F] [G7] [C] [G7]
+
+THE [C]BLOOD RED SUN BEAT DOWN AND [F]BAKED THE RED CLAY GROUND
+[G7]DUST KICKED UP AROUND HIS JOHN DEERE [C]WHEELS
+NO TRACE OF RAIN IN SIGHT A[F]GAIN HE'LL LOSE THE FIGHT
+AND [G7]HAVE TO WATCH HIS CROPS DIE IN THE [C]FIELDS
+
+THEY STOOD THERE BOTH IN TEARS,HIS [F]WIFE OF MANY YEARS
+SAID [G7]JOHN YOU KNOW I HATE TO LOSE OUR [C]FARM
+HE LOOKED INTO HER EYES THEN [F]LOOKED UP AT THE SKIES
+AND [G7]TOLD HER AS HE HELD HER IN HIS [C]ARMS [G7]
+
+IN MY [C]NEXT LIFE I WANT TO BE YOUR [F]HERO
+SOMETHI[G7]NG  BETTER THAN I TURNED OUT T[C]O BE [G7]
+I'VE LIVED [C]THIS LIFE BEHIND THE [C7]PLOUGH AND [F]HAY ROW
+IN MY [G7]NEXT LIFE I'LL MAKE YOU PROUD OF [C]ME [F][G7]
+
+THE [C]MUSCLES IN HIS ARMS JUST [F]LIKE HIS RUN DOWN FARM
+SOON [G7]WITHERED AND SLOWLY DISAP[C]PEARED
+ONE HARD WORKIN' MAN, [F]TWO HARD WORKIN' HANDS
+WERE [G7]GIVIN' UP AFTER ALL THESE [C]YEARS [G7]
+
+HIS [C]AGING EYES GREW DIM AND THE [F]LADY THAT WORSHIPPED HIM
+SAT [G7]CRYIN' ON A CHAIR BESIDE HIS [C]BED
+HER HANDS CARESSED HIS BROW AND SHE [F]SAID IT'S ALRIGHT NOW
+AND [G7]AS HE SLOWLY SLIPPED AWAY HE [C]SAID [G7]
+
+IN MY [C]NEXT LIFE I WANT TO BE YOUR [F]HERO
+SOMETHI[G7]NG  BETTER THAN I TURNED OUT T[C]O BE [G7]
+I'VE LIVED [C]THIS LIFE BEHIND THE [C7]PLOUGH AND [F]HAY ROW
+IN MY [G7]NEXT LIFE I'LL MAKE YOU PROUD OF [C]ME [F][G7]
+
+Key change
+
+IN MY [D]NEXT LIFE I WANT TO BE YOUR [G]HERO
+SOMETHIN'[A7]  BETTER THAN I TURNED OUT TO [D]BE [A7]
+I'VE LIVED [D]THIS LIFE BEHIND THE [D7]PLOUGH AND [G]HAY ROW
+IN MY [A7]NEXT LIFE I'LL MAKE YOU PROUD OF [D]ME
+
+IN MY [A7]NEXT LIFE I'LL MAKE YOU PROUD OF [D]ME

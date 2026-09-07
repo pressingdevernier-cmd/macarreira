@@ -1,0 +1,94 @@
+{title: Amenaza De Lluvia}
+{artist: Alejandro Fernández}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, latin, latin arena pop, latin pop, mariachi, mexican pop, ranchera, regional mexican}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 9018
+# Empreinte source SHA256: bcaf85df6096e4b8f711a69b7c699281a27b42e44b1aa004eeaf3241ecadb4d4
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, tablature_conservee_en_commentaire, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            a♥j
+ESPERO SEA DE SU AGRADO ESTA VERSION, ESCUCHENLA CON LA
+CANCION ORIGINAL Y SUENA MUY BIEN, SOLO TIENE ALGUNAS FALLAS :P
+PARA TODOS LOS QUE HAN SENTIDO AMENAZAS DE LLUVIA EN SU CORAZON.
+
+[C#]
+[E---4--]
+[A---6--]
+[D---6--]
+[G---6--]
+[B---4--]e---4--
+
+{start_of_part: intro}
+[G#] [C#] [C#] [G#]
+[G#] [C#] [C#]
+# TAB: e--4--6-8-  -9--9-8--6-8-- X2 
+
+[G#]UNA VEZ MAS AMANECIO NUBLADO
+[Fm]MI CORAZON ESTA DESORIENTADO
+[C#]Y ESQUE A PESAR DE LA PRIMAVERA
+[D#]HAY NUBES NEGRAS POR DONDE QUIERA
+
+[G#]LA SOLEDAD ME TIENE ACORRALADO
+[Fm]COMO UN GUARDIAN ME SIGUE A TODOS LADOS
+[C#]Y ESQUE LAS FLECHAS DE TU RECUERDO
+[D#]SIGUEN CLAVANDOSE AQUI EN MI PECHO
+
+[C#]DESDE AQUEL DIA DE TU PARTIDA
+[D#]ME ESTA VENCIENDO LA COBARDIA
+
+CORO
+HAY AMENAZA DE L[G#]LUVIA AQUI EN MI CORAZON
+POR TODAS LAS INCLEM[Fm]ENCIAS QUE DEJO TU AMOR
+HAY AMENAZA DE F[C#]UERTES VIENTOS
+DE TEMPESTADES Y S[D#]UFRIMIENTOS
+HAY AMANEZA DE L[G#]LUVIA AQUI EN MI CORAZON
+POR ESTE CIELO TAN T[Fm]RISTE QUE DEJO TU ADIOS
+HAY AMENAZA DE Q[C#]UE MI VIDA
+SE MUERA POR EL DO[D#]LOR, COMO SE MUERE EL DIA
+
+{end_of_part}
+{start_of_part: intro}
+[G#] [C#] [C#] [G#]
+[G#] [C#] [C#]
+
+[G#]LA REALIDAD ME SIGUE DESAFIANDO
+[Fm]NUNCA CREI QUE ME DOLIERAS TANTO
+[C#]Y ESQUE A PESAR DE QUE TE HAYAS IDO
+[D#]SIGO INVENTANDO QUE ESTAS CONMIGO
+
+[C#]DESDE AQUEL DIA DE TU PARTIDA
+[D#]ME ESTA VENCIENDO LA COBARDIA
+
+CORO
+HAY AMENAZA DE L[G#]LUVIA AQUI EN MI CORAZON
+POR TODAS LAS INCLEM[Fm]ENCIAS QUE DEJO TU AMOR
+HAY AMENAZA DE F[C#]UERTES VIENTOS
+DE TEMPESTADES Y S[D#]UFRIMIENTOS
+HAY AMANEZA DE L[G#]LUVIA AQUI EN MI CORAZON
+POR ESTE CIELO TAN T[Fm]RISTE QUE DEJO TU ADIOS
+HAY AMENAZA DE Q[C#]UE MI VIDA
+SE MUERA POR EL DO[D#]LOR, COMO SE MUERE EL DIA
+
+MUSCIAL
+[G#] [Fm] [C#] [D#]
+
+CORO
+HAY AMENAZA DE L[A#]LUVIA AQUI EN MI CORAZON
+POR TODAS LAS INCLEM[Gm]ENCIAS QUE DEJO TU AMOR
+HAY AMENAZA DE F[D#]UERTES VIENTOS
+DE TEMPESTADES Y S[F]UFRIMIENTOS
+HAY AMANEZA DE L[A#]LUVIA AQUI EN MI CORAZON
+POR ESTE CIELO TAN T[Gm]RISTE QUE DEJO TU ADIOS
+HAY AMENAZA DE Q[D#]UE MI VIDA
+SE MUERA POR EL DO[F]LOR, COMO SE MUERE EL DIA
+{comment: À vérifier : A# *D# D# A#}
+# SOURCE A VERIFIER: A#   *D#  D#   A# 
+A#   *D#   D#               *(D#  ES LA MISMA PISADA QUE C#
+                              PERO A PARTIR DEL 6TO TRASTE)
+
+{end_of_part}

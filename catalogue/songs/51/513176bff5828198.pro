@@ -1,0 +1,47 @@
+{title: Yo Vine Al Mundo A Adorar A Las Mujeres}
+{artist: Alejandro Fernández}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, latin, latin arena pop, latin pop, mariachi, mexican pop, ranchera, regional mexican}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 9150
+# Empreinte source SHA256: 513176bff582819837b6c33c448cae441f92a2a48261c598f4937a6fd8da0aba
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+YO VINE AL M[G]UNDO A ADORAR A LAS M[D7]UJERES [G]
+Y DE MUJER ESTA RODEADO MI DES[D7]TINO
+
+AUNQUE HAY ALGUNAS QUE CONMIGO HAN SIDO CRUELES
+OTRAS EN CAMBIO ME HAN LLENADO DE C[G]ARIÑO.
+
+DESDE EL MOMENTO EN QUE MI[D7] MADRE A LUZ ME D[G]IERA
+Y ME ARRULLARA CARI[G7]ÑOSA ENTRE SUS BR[C]AZOS
+SON LAS MUJERES PARA [D7]MI LA VIDA ENTE[G]RA
+PARTE IMPORTA[D7]NTE DE MIS TRIUNFOS Y FR[G]ACASOS.
+
+ES LA MU[D7]JER DIVINO SER QUE DIOS AL HO[G]MBRE
+CONCEDIO PARA ALE[D7]GRARLE EL CORAZON CON SU PRES[G]ENCIA
+Y HASTA LA FEC[D7]HA NO HAY PLACER
+COMO EL QUE BRI[G]NDA UNA MUJER
+CUANDO SE ENTR[D7]EGA SIN MEDIDAS NI RES[G]ERVAS.
+
+YO NO SOY DE E[D7]SOS QUE SE SIENTEN SUPER[G]IOR A LA MUJER
+YO ME DECL[D7]ARO DÓCILMENTE DOM[G]INADO
+Y COMO DI[D7]CE LA CANCIÓN NO HAY EN EL MU[G]NDO NI UN VARON
+QUE POR AM[D7]OR A UNA MUJER NO HALLA LL[G]ORADO.
+
+ES LA MUJER CLARO EJE[D7]MPLAR DE LOS MIS[G]TERIOS
+JAMAS SE SABE CUAL SERA SU TRAYE[D7]CTORIA
+
+TIENEN LA GRACIA DE MANDARNOS AL INFIERNO
+PERO SI QUIEREN CON AMOR NOS DAN LA GL[G]ORIA.
+
+YO SOY FELIZ CON SOLO VE[D7]RLAS DE CER[G]QUITA
+PUES TODAS TIENEN DE MI M[G7]AL LA MEDI[C]CINA
+CUALQUIER DOLOR PENA O [D7]CORAJE SE ME QU[G]ITAN
+TENIENDO ENFRE[D7]NTE UNA SILUETA FEMEN[G]INA.
+
+ES LA MUJER DIVINO SER QUE DIOS AL HOMBRE...

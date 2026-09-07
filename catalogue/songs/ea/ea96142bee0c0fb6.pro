@@ -1,0 +1,39 @@
+{title: When Your Lover Has Gone}
+{artist: Billie Holiday}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, harlem renaissance, jazz, jazz blues, lounge, soul, torch song, vocal jazz}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 39815
+# Empreinte source SHA256: ea96142bee0c0fb6abd91621aabbdea41c3d38f33393afe04ae6bba7f48aa2e8
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tonalite_absente
+
+Recitative
+[Gm]For ages and ages,[Cm/G]     the poet[Gm]s and sages [Ebm6]
+[Cdim]Of    [Gm]  love won d love      [D7/13-]always [D7]sing [Gm][D7/13-]
+But ask[G7] any lover [C9]and   [Cdim] you s[Bb7]oon discover [Bbdim]
+[A7]The heart[D]aches that romance[A7] ca[Bbdim]n bring [Cm6]
+What good [Gm]is the scheming[Cm/G], the planning and[Gm] dreaming [Ebm6]
+[Cdim]That  [Gm]comes with each new   [D7/13-]   love[D7] affair [Gm][D7/13-]
+The love[G7] that you cherish, so[C9]        [Cdim]often [Bb7]might perish [Bbdim]
+[A7]And leav[D]es you with castles  [A7]   [Bbdim]   in air[Cm6]
+{start_of_chorus: Chorus}
+[G]Wh[Bm]en  you're alo[G7]ne,[G6]   [Gm]   [Bb5+]   who care[Bb]s for st[C7]arlit [C]skies
+[A7]When you're    [Bbdim]  alon[A7]e, [Cm]   [Eb5+]   th[Cm7]e magic mo[Cm6]onlight di[G]es
+At break of [B7]  da[Em]wn, t[A7]here is no sunri[F#m]se, [A7]  w[G]hen your l[A9]over h[D5+]as gone [G][Abm6][D7][F#7/13-][G]
+What[Bm] lonely [G7]hour[G6]s,   [Gm]   [Bb5+] the e[Bb]vening shado[C7]ws bri[C]ng
+[A7]What lonely  [Bbdim]     ho[A7]urs,[Cm]    [Eb5+]   with [Cm7]mem ling[Cm6]ering
+[G]Like faded [B7]flow[Em],      [Cm6] life can[D7]'t me[Cdim]an  a[E7M]nyth[E7]ing
+[Am]When your lover [Eb7] has  [D7/13-]    gon[G]e [Eb7][D9][D5+]
+[G]Wh[Bm]en  you're alo[G7]ne,[G6]   [Gm]   [Bb5+]   who care[Bb]s for st[C7]arlit [C]skies
+[A7]When you're    [Bbdim]  alon[A7]e, [Cm]   [Eb5+]   th[Cm7]e magic mo[Cm6]onlight di[G]es
+At break of [B7]  da[Em]wn, t[A7]here is no sunri[F#m]se, [A7]   [G]when your [A9]lover [D5+]has gone [G][Abm6][D7][F#7/13-][G]
+What[Bm] lonely [G7]hour[G6]s,   [Gm]   [Bb5+] the e[Bb]vening shado[C7]ws bri[C]ng
+[A7]What lonely  [Bbdim]     ho[A7]urs,[Cm]    [Eb5+]   with [Cm7]memories[Cm6] lingering
+[G]Like faded [B7]flow[Em],      [Cm6] life can[D7]'t me[Cdim]an  a[E7M]nyth[E7]ing
+[Am]When your lover [Eb7] has  [D7/13-]    gon[G]e [G7][A7][Eb7][G]
+
+{end_of_chorus}

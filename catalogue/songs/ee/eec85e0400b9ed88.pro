@@ -1,0 +1,38 @@
+{title: Arrombou A Festa - (ver.2)}
+{artist: Rita Lee}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, bossa nova, brazilian rock, mpb, nova mpb, tropicalia}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 132541
+# Empreinte source SHA256: eec85e0400b9ed88eb5b8b05087c042be6001aaf92b80dda1e2a79c26ae73080
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+AI, AI MEU D[G7]EUS, O QUE FOI QUE ACONTECEU. COM A MÚSICA POPULAR BRASILEIRA. [A7][C][Dm][G7][C7][C#7][D7]
+QUANDO[G7] A GENTE FALA MAL, A TURMA TODA CAI DE PAU.
+DIZEN[A7]DO QUE ESSE PAPO É BESTEIRA. [C][Cm][G7]
+
+NA OND[C7]A DISCOTHEQUE DA AMÉRICA DO SUL.?LENILDA? É MISS LANE,  [D7]
+?ZULEIDE? É LADY ZU. PRA DEFENDER O SAMBA CONTRATARAM ALCI[C7]ONE.
+É BOA D[D7]E PISTON, MAS BOTA A BOCA NO TROMBONE. NO MEIO DISSO TUDO  [C7]
+A FAFÁ VEM DAR UM JEITO. ALÉM DE MUITA VOZ, ELA TAMBÉM [D7]TEM MUITO PEITO.
+E A MÚSICA [C7]PARECE BRINCADEIRA DE GAROTO.
+POIS QUANDO[D7] LIGO O RÁDIO OUÇO ATÉ CAUBY PEIXOTO! CANTANDO:CONCEIÇÃO...
+
+ESTRIBILHO
+O SIDIN[C7]EY MAGAL REBOLA MAIS QUE O MATOGROSSO. CIGANO DE ARAQUE, [D7]
+FABRICADO ATÉ O PESCOÇO. E O CHICO NA PISCINA GRITA LOGO PRO GARÇO[C7]N.
+AFA[D7]STA ESSE CÁLICE E ME TRAZ MOET CHANDON. COM TANTO BRASILEIRO POR AÍ METIDO  [C7]
+A BAMBA. SUCESSO NO ESTR[D7]ANGEIRO AINDA É CARMEN MIRANDA.
+E A RIT[C7]A LEE PARECE QUE NÃO VAI SAIR MAIS DESSA.
+POIS PRA F[C7]AZER SUCESSO ARROMBOU DE NOVO A FESTA!
+ZIR[G7]I, ZIRIGUIDUM, SKINDÔ, SKINDÔ, LELÊ. SAI DA FRENTE QUE EU QUERO É COMER  [A7][C][Cm][G7]
+A MÚ[A7]SICA POPULAR BRASILEIRA.[C]  LADY LAURA,[Cm] A MÚS[G7]ICA POPULAR... [A7][C][Cm]
+PARABÉNS A VO[G7]CÊ, PARABÉNS PAR[D7]A A MÚSICA POPULAR... [A7][C][Cm][G][F][C]
+A MÚSIC[A7]A POPULAR, AH, EU TE[C] A[Cm]MO. AH, EU TE AMO, MEU[G7] AMOR. [Cm]
+AI, SANDRA ROSA MADALENA AH, AH, AH, AH. O MEU[G7] SANGUE FERVE PELA MÚSICA  [A7]
+POPULAR.OH, [C]FR[Cm]ICOTE, EU F[Gm7]IZ XIXI, FRICOTE[C], EU FIZ X[Gm7]IXI. [C][Gm7]
+NA MÚSICA [A7]POPULAR BRASILEIRA,   [C]      [Cm]           COR[G]RE[F/G] QUE[C/G] LÁ [G]VEM OS HÔMI! [A][G]

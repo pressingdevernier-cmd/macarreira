@@ -1,0 +1,36 @@
+{title: The Look Of Love}
+{artist: Andy Williams}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, brill building pop, easy listening, lounge}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 92210
+# Empreinte source SHA256: 174aaec693485167ce83901b43d9acd6a95b9f9f7243b4cfe7273dc419db4557
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tonalite_absente
+
+{comment: À vérifier : Introdução: Dm7 F E7 Am7 E7}
+# SOURCE A VERIFIER: Introdução: Dm7  F  E7  Am7  E7 
+
+The l[Am7]ook of lo[D]ve is [G/B]in your e[Dm7]yes
+A [F]look your [Dm7]smile can´t di[E4/7]sguise [E7]
+The l[Am]ook o[A4/7]f     lov[A7]e    [Dm] is saying [Dm7]so m[Dm5-/7]uch more[G7]
+Than just w[C7M]ords could [C7]ever s[C9]ay [F7M]
+And what my h[Dm7]eart has heard, well it[E4/7] takes my breath aw[E7]ay
+[G7]I can [C7M]hardly wait to [Am7]hold yo[Dm7]u, feel my [G7]arms aroun[Dm7]d you
+How lo[G7]ng I have [Dm7]waited [G7]
+[C7M]Waited just to [Am7]love you, [Dm7]now that I have f[G7]ound y[E7]ou
+[E5-/7]You´ve got [E7]the loo[Am]k of love[D], it´ on [G/B]your face[Dm7]
+A [F]look that t[Dm7]ime can´t [E4/7]erase [E7]
+Be m[Am]ine to[A4/7]night,   [A7]     [Dm]let this be ju[Dm7]st t[Dm5-/7]he start[G7]
+Of so [C7M]many n[C7]ights like th[C9]is [F7M]
+Let´ take a lo[Dm7]ver´ vow and then s[E4/7]eal it with a kiss.[E7]
+[G7]I can [C7M]hardly wait to [Am7]hold you[Dm7], feel my a[G7]rms aroun[Dm7]d you
+How l[G7]ong I have [Dm7]waited [G7]
+[C7M]Waited just to l[Am7]ove you, [Dm7]now that I have [G7]found y[Dm7]ou
+[Dm]Don´t [D9]ever [Dm6]  go [Am][Am7][D]
+[Dm]Don´t [D9]ever [Dm6]  go [Am][Am7][D]
+[Dm]I  l[D9]ove [Dm6]you [Am]so, [Am7]     [D]
+[Dm]Don´t [D9]ever [Dm6]  go [Am][Am7][D]

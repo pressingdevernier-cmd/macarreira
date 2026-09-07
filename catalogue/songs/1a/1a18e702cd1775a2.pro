@@ -1,0 +1,44 @@
+{title: Darkest Day}
+{artist: Loretta Lynn}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country, country rock, nashville sound}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 97593
+# Empreinte source SHA256: 1a18e702cd1775a2a303b1806330203a71499d0bdb0a7c9d5b34b885f5f070e2
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[G]Darling when you [G7]told me you were [C]leaving
+
+I [G]thought that you were only fooling [D7]me
+
+[G]But here I am to [G7]face old blue [C]tomorrow
+
+With [G]a broken heart that's [D7]filled with mise[G]ry
+
+It [D7]seems that my world is to an [G]end
+
+[A7]Just dreaming of things that might have [D7]been
+
+Oh [G]why don't that [G7]old sun shine [C]bright
+
+[G]Today's the darkest [D7]day of my [G]life
+
+Oh how I wish that [G7]old saying is [C]true
+
+[G]It's always darkest just before [D7]dawn
+
+[G]Then I know soon I'm [G7]gonna see the [C]sunshine
+
+I [G]just can't take this [D7]darkness on and [G]on
+
+It [D7]seems that my world is to an [G]end
+
+[A7]Just dreaming of things that might have [D7]been
+
+Oh [G]why don't that [G7]old sun shine [C]bright
+
+[G]Today's the darkest [D7]day of my [G]life

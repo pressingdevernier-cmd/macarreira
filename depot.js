@@ -139,6 +139,9 @@ var Depot = (function () {
     }
 
     options = options || {};
+    var controle = new AbortController();
+    var delai = setTimeout(function () { controle.abort(); }, 30000);
+    options.signal = controle.signal;
     options.headers = enTetes();
     if (options.corps !== undefined) {
       options.headers['Content-Type'] = 'application/json';
@@ -174,7 +177,7 @@ var Depot = (function () {
 
     }, function () {
       throw souci('reseau', 'Pas de réseau : GitHub est injoignable.');
-    });
+    }).finally(function () { clearTimeout(delai); });
   }
 
   /* ---------------------------------------------------------------------
@@ -258,6 +261,37 @@ var Depot = (function () {
       '/blob/' + BRANCHE + '/' + chemin;
   }
 
+  /* Plusieurs fichiers, un seul commit. La référence n'avance que si aucun
+     autre commit ne l'a devancée (jamais de force). Le demandeur recompare
+     les révisions des chansons avant toute nouvelle tentative. */
+  async function instantane() {
+    var ref = await appel('/repos/' + PROPRIETAIRE + '/' + NOM_DEPOT + '/git/ref/heads/' + BRANCHE);
+    var commit = await appel('/repos/' + PROPRIETAIRE + '/' + NOM_DEPOT + '/git/commits/' + ref.object.sha);
+    return { sha: ref.object.sha, tree: commit.tree.sha };
+  }
+  async function lireA(chemin, ref) {
+    var headers = enTetes(); headers.Accept = 'application/vnd.github.raw+json';
+    var controle = new AbortController(), timer = setTimeout(function () { controle.abort(); }, 30000);
+    try {
+      var r = await fetch(API + baseContenu + chemin.split('/').map(encodeURIComponent).join('/') + '?ref=' + encodeURIComponent(ref), { headers: headers, signal: controle.signal });
+      if (r.status === 404) return null;
+      if (!r.ok) throw souci('autre', 'Lecture GitHub refusée (' + r.status + ').');
+      return await r.text();
+    } finally { clearTimeout(timer); }
+  }
+  async function ecrireLot(base, fichiers) {
+    var prefixe = '/repos/' + PROPRIETAIRE + '/' + NOM_DEPOT + '/git/';
+    var tree = await appel(prefixe + 'trees', { method: 'POST', corps: {
+      base_tree: base.tree,
+      tree: fichiers.map(function (f) { return { path: f.path, mode: '100644', type: 'blob', content: f.texte }; })
+    }});
+    var commit = await appel(prefixe + 'commits', { method: 'POST', corps: {
+      message: 'Songbook : sauvegarde des grilles', tree: tree.sha, parents: [base.sha]
+    }});
+    await appel(prefixe + 'refs/heads/' + BRANCHE, { method: 'PATCH', corps: { sha: commit.sha, force: false } });
+    return commit.sha;
+  }
+
   return {
     estConfigure: estConfigure,
     enregistrerJeton: enregistrerJeton,
@@ -270,6 +304,9 @@ var Depot = (function () {
     lire: lire,
     ecrire: ecrire,
     supprimer: supprimer,
+    instantane: instantane,
+    lireA: lireA,
+    ecrireLot: ecrireLot,
     adresseFichier: adresseFichier,
     depot: PROPRIETAIRE + '/' + NOM_DEPOT,
     branche: BRANCHE

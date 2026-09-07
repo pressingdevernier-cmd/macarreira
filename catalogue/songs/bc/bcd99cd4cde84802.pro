@@ -1,0 +1,60 @@
+{title: In My Arms}
+{artist: Gentleman}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, cologne hip hop, german reggae, reggae fusion}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 48196
+# Empreinte source SHA256: bcd99cd4cde848026084b3977fe4a00b2fcee31aeb944db478c05b189a54f22d
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: aucun_accord_converti, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            For the verse repeat: D#m|B x3 F#|C#
+{comment: À vérifier : For the Chorus repeat: D#m|B|F#|C#}
+# SOURCE A VERIFIER: For the Chorus repeat: D#m|B|F#|C# 
+
+PREHOOK:
+SO MUCH THINGS WE VE BEEN WAITING FOR
+OBSTACLES COME AROUND WHAT DEM HATING FOR
+YOU AND I TOGETHER THERE S NO BREAKING CAUSE WE OVERJOYED
+{start_of_chorus: Chorus}
+WHEN I HOLD YOU IN MY ARMS
+I M SO CAPTIVATED SO FASCINATED BY YOUR CHARM
+AND NO ONE CAN BREAK IT
+AND JAH JAH WILL TAKE US THROUGH THE STORM
+AND EVEN WHEN IT S COLD OUTSIDE I LL BE THERE TO KEEP YOU WARM
+VERSE1:
+HEY BABY GIRL YOU KNOW THAT I LOVE YOU
+HEY CAN YOU FEEL THE CHEMISTRY WHEN I HUG YOU
+YOU KNOW I LL NEVER PUT ANOTHER GIRL ABOUGH YOU
+AND I KNOW I LL NEVER FIND ANOTHER LOVE LIKE YOU
+AND IF I M GONE FOR A MINUTE OR FEW
+NOBADDA THINK ME AGO LEAVE YOU OUT IN THE DEW
+I LL NEVER LEAVE YOU LONELY GIRL I LL NEVER MAKE YOU BLUE
+YOU KNOW I D LOVE TO
+{end_of_chorus}
+{start_of_chorus: Chorus}
+VERSE2:
+REMEMBERING THOSE DAYS WHAT WE CALL THE UNDERCOVER TIME
+WE COULDN T MAKE A LINK WE COULDN T SAY SEE YOU ANOTHER TIME
+BACK IN THE DAYS WHEN I WISH YOU WERE MINE
+AND I WOULD HAVE BEEN IN CUSTODY IF LOVING WAS A CRIME
+WE PERSEVERE AND NOW WE PUSH IT INTO OVERTIME
+SONGS AND SECRET LETTERS ADD UP MORE THAN TO A THOUSAND LINES
+RING PON YOUR FINGER NOW LOOK HOW IT A SHINE
+I M GLAD TO SAY
+{end_of_chorus}
+{start_of_chorus: Chorus}
+VERSE3:
+YOU RE BEAUTIFUL AND SKIN SOFT LIKE A COTTON
+FOR YOU I FIGHT A WAR I WOULDA FIGHT ANY BATTLE
+AND NUFF A TRY FI TEAR WE DOWN BUT THAT NUH GO HAPPEN
+AND THIS LOVE WON T BE FORGOTTEN
+WE LIVE THE LIFE WE LOVE AND LOVE THE LIFE WE A LIVE
+AND WHAT S INTERESTING ABOUT US WE LEARN TO FORGIVE
+WE COMING FROM A FAR AND NOW WE CROSS OVER THE BRIDGE
+AND THAT S JUST THE WAY IT IS
+
+{end_of_chorus}

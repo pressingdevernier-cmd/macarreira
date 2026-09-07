@@ -1,0 +1,44 @@
+{title: More Than I Can Say}
+{artist: Sammy Kershaw}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country, country road, country rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 96429
+# Empreinte source SHA256: f166a378e758e777d38473ee6cd27731714ffc100bf0200b612e8737f9e0f9ce
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[C]Oh oh yeah yeah I love you more than I can [Am]say
+
+I love you twice as much [G7]tomorrow  [F]I love you more than I can [C]say
+
+Oh oh yeah yeah I'll miss you every single [Am]day
+
+Why must my life be filled with [G7]sorrow  [F]I love you more than I can [C]say
+
+Ah don't you know I need you [F]so tell me please I got to [C]know
+
+Do you mean to make me [D7]cry or am I just another [G7]guy
+
+Oh [C]oh yeah yeah I miss you more that I can [Am]say
+
+Why must my life be filled with [G7]sorrow  [F]I love you more than I can [C]say
+
+Ah don't you know I need you [F]so please tell me I gotta [C]know
+
+Do you mean to make me [D7]cry or am I just another [G7]guy
+
+Oh [C]oh yeah yeah I love you more than I can [Am]say
+
+I love you twice as much [G7]tomorrow  [F]I love you more than I can [C]say
+
+I [F]love you more than I can [C]say  I [F]love you more than I can [C]say
+
+O-oh I love you more than I can [Am]say  [C]ooh I love you more than I can [Am]say
+
+[C]O-oh I love you twice as much [Am]tomorrow
+
+[C]O-oh I love you twice as much [Am]tomorrow

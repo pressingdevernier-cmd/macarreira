@@ -1,0 +1,45 @@
+{title: You'll Think Of Me}
+{artist: Elvis Presley}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, rock-and-roll, rockabilly}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 128627
+# Empreinte source SHA256: e13b907d1330d47326fa945af25b4c4442d35421c95dd34c82b0b4537a28c136
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[C]I'm sorry now girl but I must [F]leave you
+There's something [C]deep inside my [Am]soul keeps calling me
+The winter [F]wind girl will not [G7]deceive you
+And in your [E7]cold and empty [Am]bed you'll think of [E7]me
+Oh [F]yes you'll think of [C]me
+
+You'll see me coming you'll see me [F]going
+Don't ask me [C]why I'm just the [Am]kind needs to be free
+Just like that [F]outlaw wind keeps on a [G7]blowing
+Yeah in your [E7]cold and empty [Am]bed you'll think of [E7]me
+Oh [F]yes you'll think of [C]me
+
+Now I know you loved me just like I [F]wanted
+I know you'd [C]follow me a[Am]cross an angry sea
+But baby [F]I've got a heart that's [G7]haunted
+Yeah in your [E7]cold and empty [Am]bed you'll think of [E7]me
+Oh [F]yes you'll think of [C]me
+
+Ah but you should know girl that I'll be [F]crying
+Out on that [C]lonely road where [Am]not a soul can see
+I'll shed my [F]tears for a love that's [G7]dying
+Yeah in your [E7]cold and empty [Am]bed you'll think of m[E7]e
+Oh [F]yes you'll think of [C]me
+
+The summer sun girl will bring a [F]stranger
+And he'll be [C]better to you [Am]than I used to be
+And when he [F]takes you into his [G7]arms girl
+Well in your [E7]warm and loving [Am]bed you won't think of [E7]me
+No [F]no you won't think of [C]me
+
+Then in your [E7]warm and loving [Am]bed you won't think of [E7]me
+No [F]no you won't think of [C]me

@@ -1,0 +1,44 @@
+{title: Thirty-nine And Holding}
+{artist: Jerry Lee Lewis}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, brill building pop, piano rock, rock-and-roll, rockabilly}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 80940
+# Empreinte source SHA256: 6a85780f8c0e2f63736b590868bae9b86d68241deb21c795b2b6a0c997a90f67
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[G]He's out there somewhere every night
+[C]Where the music's playing [G]loud
+
+He's doing all those fifty's steps
+[A7]He's in a 1980 [D7]crowd
+
+[G]Dim lights hide the mileage line
+The [C]Clairol hides the [G]gray
+And [C]he won't mention [G]anything
+To [D7]give his old age [G]away
+
+Oh he's [C]thirty-nine and [G]holding
+[D7]Holding everything he [G]can
+From [C]seventeen to [G]twenty-five
+To [A7]prove he's still a [D7]man
+
+[G]He's holding to a candle
+And [C]it's a-burning at both [G]ends
+He's [C]thirty-nine and [G]holding
+[D7]Holding everything he [G]can
+
+You can bet he'll never see
+[C]Thirty-nine a[G]gain
+
+He should have turned loose long ago
+[A7]But still he a hanging it [D7]in
+
+[G]He still thinks that he's the man
+That [C]he once used to [G]be
+He's [C]thirty-nine and [G]holding
+And [D7]acting twenty-[G]three

@@ -1,0 +1,93 @@
+{title: Where's my boy?}
+{artist: Coldplay}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, permanent wave, pop}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 2557
+# Empreinte source SHA256: 5e402094ca253e82fb5a411c79269bd809e39388eae587aa0a9078f9369d3f13
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+[Am] [C] [Dm] [Am] [Em] [G]
+
+Where is my boy?
+I saw you come out of a scene
+Maybe in some kind of dream
+Something that never comes
+
+Time that I take...
+See over in arms I'll raise
+I'll race in to find you
+I'll race in to find you
+
+Time stands
+I open your eyes to my world
+I see you come out of it all
+Unharmed and unscathed
+And shouting, oh
+
+Come on in
+In houses I live in
+And changes you're making
+To the state of affairs
+
+Calling "where is my boy?"
+I have seen you so often
+I cry "where is my boy?"
+Oh, have you all forgotten?
+
+And in some kind of dream
+Have I seen you before
+Oh, have I seen you before?
+Oh, where is my boy?
+
+So come all the way
+Changing your number
+Changing the house where you live
+Change your lines
+
+Have I seen you before?
+In some kind of a dream?
+In a place you've forgotten
+A place I've forgotten
+
+So where is my boy?
+When I kneel in your arms
+I flew awry
+Where is my boy?
+
+Have I seen you before?
+In some kind of a dream?
+Have I seen you before?
+In some kind of a dream?
+
+In my hands you'll fall
+Open in as it seems
+Have I seen you before?
+
+Oh baby, your arms and your legs are shattered
+Where is my boy?
+Where is my boy?
+
+I said "where is my boy?"
+Have you seen me before?
+When I look in your eyes
+Tell me "he had to go"
+
+Said "I seen you before
+In some kind of dream"
+Seems I've seen you before
+In some kind of a dream
+
+I say "where is the boy?"
+Have I seen you before?
+Yeah, I saw you before
+In some kind of a dream
+
+I say "where was my head?
+When I needed it most?"
+Oh, I stayed here before
+Yes I stay in the place I know

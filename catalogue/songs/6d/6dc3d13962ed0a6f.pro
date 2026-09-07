@@ -1,0 +1,81 @@
+{title: Mamá}
+{artist: La Rondalla De Saltillo}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, bolero, lldm, ranchera}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 123935
+# Empreinte source SHA256: 6dc3d13962ed0a6f0014d3995a34232bb9a71d4a9c5e09635c4ca9cd41e92b46
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+            ESTA CANCION SE LA DEDICO OBVIAMENTE A MI JEFA QUE
+ES ANA MARIA DIAZ FLORES DE TAXCO GUERRERO Y PUES SI LA
+CONOCEN DIGANLE..
+LA NETA ESA FACILISIMA
+
+G Em C D7  (Y ES UN CIRCULO CON ESAS NOTAS TODA LA CANCION)
+
+[G]MAMA VEN A SENTARTE AQUI
+[Em]DESPUES PREPARAS LA CENA
+[C]EN ESTA NOCHE NO SALDRE
+[D7]HAY TIEMPO VEN Y CONVERSEMOS
+
+[G]MAMA VEN A SENTARTE AQUI
+[Em]QUE QUIERO ACARICIAR TU PELO
+[C]TOMARTE ENTRE MIS BRAZOS HOY
+[D7]DECIRTE QUE TE QUIERO
+
+MAMA, NO QUISIERA PENSAR
+
+QUE ME PUEDES FALTAR
+
+QUE ME QUEDE SIN NIDO
+
+HOY YO TE PIDO PERDON
+
+POR QUE NO FUI MEJOR
+
+COMO HUBIERAS QUERIDO
+
+MAMA LARA LAI LARA LA
+
+LARA LAI LARA LA
+
+LARA LAI LARA RA RA
+
+A VECES TE MIRE LLORAR
+
+Y NO TE PREGUNTE EL MOTIVO
+
+NO SE SI ESTOY A TIEMPO AUN
+
+QUISIERA SER TU AMIGO
+
+MAMA VEN A SENTARTE AQUI
+
+QUE QUIERO ACARICIAR TU PELO
+
+TOMARTE ENTRE MIS BRAZOS HOY
+
+DECIRTE QUE TE QUIERO
+
+MAMA, NO QUISIERA PENSAR
+
+QUE ME PUEDES FALTAR
+
+QUE ME QUEDE SIN NIDO
+
+HOY YO TE PIDO PERDON
+
+POR QUE NO FUI MEJOR
+
+COMO HUBIERAS QUERIDO
+
+MAMA LARA LAI LARA LA
+
+LARA LAI LARA LA
+
+LARA LAI LARA RA RA

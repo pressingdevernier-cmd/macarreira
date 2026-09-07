@@ -1,0 +1,47 @@
+{title: Wildflowers}
+{artist: Dolly Parton}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic country pop, country, country dawn}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 19819
+# Empreinte source SHA256: 33d4824028358c0bff986e8c47597bbefd79be6339883d6cc605282cf03333da
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[G]The hills were alive with wild [C]flowers and [G]I
+Was as wild even [D7]wilder than [G]they
+For at least I could run they just [C]died in the [G]sun
+And I refused to just [D7]wither in p[G]lace
+
+Just a [C]wild mountain rose needing [G]freedom to grow
+So I [C]ran fearing not where I'd [G]go-o-[D7]o
+When a [G]flower grows wild it can [C]always sur[G]vive
+Wildflowers don't [D7]care where they [G]grow
+
+And the flowers I knew in the [C]fields where I [G]grew
+Were content to be [D7]lost in the [G]crowd
+They were commonly close I had [C]no room to [G]grow
+And I wanted so [D7]much to branch [G]out
+
+So I [C]uprooted myself from my [G]home ground and left
+Took [C]my dreams and I took to the [G]road-o-[D7]oad
+When a [G]flower grows wild it can [C]always sur[G]vive
+Wildflowers don't [D7]care where they [G]grow
+
+I grew up fast and wild and I [C]never felt [G]right
+In a garden so [D7]different from [G]me
+I just never belonged I just [C]longed to be [G]gone
+So the garden one [D7]day set me [G]free
+
+I hitched a [C]ride with the wind and [G]since he was my friend
+I [C]just let him decide where we'd [G]go-o[D7]-o
+When a [G]flower grows wild it can [C]always sur[G]vive
+Wildflowers don't [D7]care where they [G]grow
+
+Just a [C]wild mountain rose seeking [G]mysteries untold
+No [C]regrets for the path that I [G]chose-o-[D7]ose
+When a [G]flower grows wild it can [C]always sur[G]vive
+Wildflowers don't [D7]care where they [G]grow

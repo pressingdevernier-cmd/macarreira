@@ -1,0 +1,36 @@
+{title: Impossible Dream}
+{artist: Andy Williams}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, brill building pop, easy listening, lounge}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 92115
+# Empreinte source SHA256: e5615eee96f48ed7800429e5f1ac23d7df605e7b21797ff93260d1e0c2326aff
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+To  dream...[D] the[G] impossible  dr[D]eam... [G]
+To [C]fight... the un[G]beatable  [C]foe.[Am]..
+To [Bm]bear with unbearable [C]sorrow...
+and to [Am]run... where the brave dare not [D]go...
+
+To [G]right... the un[D]rightable [G]wrong...
+   and to [C]love... pure and [G]chaste from a[Am]far...
+To [Bm]try... when your arms are too [C]weary...
+and to [Am]reach... the unreachable [D]star...
+
+This is my [G]quest, to follow that [Em]star...
+No matter how [Bm]hopeless, no matter how [C]far...
+To  fight for the [Em]right, without question or [C]pause
+To be willing to [G]march into [Em]Hell, for a [C]Heavenly [F]cause...
+and I [Am]know if I'll only be [F]true, to this glorious [Bm]quest,
+that my [C]heart will lie peaceful and [Am]calm,
+when I'm laid to my [B]rest______[D] [D7]
+
+__And the__ [G]world will be [D]better for [Bm]this:
+That one [C]man, scorned and [G]covered with [Am]scars,
+still [Bm]strove, with his last ounce of [C]courage...
+__To [G]reach__... the un[D]reachable [Em]star...[D]
+To [G]reach... the un[D]reachable [G]star...

@@ -1,0 +1,69 @@
+{title: Back of your hand}
+{artist: Dwight Yoakam}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, bakersfield sound, country, country rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 72874
+# Empreinte source SHA256: c4e5b4f8130a11b996f649157d28fe224a8989a0c0ae1ff63ea20c9e55abb445
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+WHEN YOU GIV[E]E IT UP FOR GONE
+[A]BUT YOUR STILL DIGGING IN THE MIND
+[E]AND YOUR STARING OUT THE WINDOW
+[B7]SAYING EVERYTHING WIL BE JUST FINE
+
+[E]KEEPIN WITH WHOLE AFFAIR
+[A]EVERY WORD SEEMS OUT OF LINE
+[E]NO MATTER WHAT ANGLE YOU GET
+[B7]ITS POLLISHED TILL IT SHINES
+{comment: À vérifier : A B7 E (BASS RUN)}
+# SOURCE A VERIFIER: A          B7           E    (BASS RUN) 
+TAKE A GUESS AT WHERE I STAND
+[A]PICK A NUMBE[B7]R ONE TO [E]TWO
+{comment: À vérifier : A B7 E (BASS RUN)}
+# SOURCE A VERIFIER: A         B7                    E  (BASS RUN) 
+TAKE A LOOK AT THE BACK OF YOUR HAND
+JUST LIKE YOU [A]KNOW IT
+[B7]YOU KNOW ME TO[E]O
+AND WHEN YOU SAY WHO THE HELL AM I LIVING WITH
+WHAT JUST WENT DOWN
+WHERE DID THIS COME FROM
+WHY ARE ALL MY COLORS FADED BROWN
+WHEN DID IT CHANGE
+WHATS WITH THE RAGE
+WHOS THE DUDE WITH THE EXTRA ROLL
+WHATS THE VERSE THE LINE THE CHAPTER THE PAGE
+
+(Chorus)
+
+TAKE A GUESS AT WHERE I STAND
+PICK A NUMBER ONE TO TWO
+TAKE A LOOK AT THE BACK OF YOUR HAND
+JUST LIKE YOU KNOW IT
+YOU KNOW ME TOO
+
+[A]YOU THINK YOUR [B7]ALONE WITHOUT ANY [A]PLACE LEFT
+TO [E]GO
+LIKE YOU NEED [A]ONE OF THOSE [B7]KISSES [A]LONG AND
+
+[E]FIRST GLANCE IS NOT WHAT IT S[B7]EEMS
+BUT THERES [A]SOME THINGS I JUST [B7]KNOW
+LIKE YOU TAKE[A] TWO SUGARS WITH A [E]SPLASH OF
+
+CREAM
+YOU TAKE A [A]GUESS [B7]WHERE I [E]STAND
+OH PICK A NUMBER ONE TO TWO
+THEN TAKE A LOOK BACK OF YOUR HAND
+JUST LIKE YOU KNOW IT
+YOU KNOW ME TOO
+YEAH LIKE YOU KNOW IT
+YOU KNOW ME TOO
+JUST LIKE YOU KNOW IT
+YOU KNOW ME TOO
+
+BY DOUG THE ONE
+WWW.BUSCAMP3.COM.BR/DOUGTHEONE

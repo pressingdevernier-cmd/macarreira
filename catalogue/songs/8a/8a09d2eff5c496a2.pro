@@ -1,0 +1,50 @@
+{title: How Close They Must Be}
+{artist: Dolly Parton}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic country pop, country, country dawn}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 19780
+# Empreinte source SHA256: 8a09d2eff5c496a21ab2973c9127452c1d67ad7fb60ac83091bd39bb1693dd2c
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+On a park be[C]nch one su[G7]nny afternoon  [C]
+
+Sat a [G7]young boy and a girl about seven[C]teen
+
+As we stood so closely [C7]by watched [F]them hold each other's hands
+
+On their [G7]faces love had written we're making [C]plans
+
+Then he [F]said to her you're my guiding [C]light
+
+Then she [D7]said to him you make my whole [G7]world seem so bright
+
+Then we [C]saw their books of Braille and [F]that neither one could see
+
+And I [G7]thought how close they must [C]be
+
+Such [G7]tenderness my eyes have never [C]seen
+
+Two young [G7]lovers both just in their [C]teens
+
+Though their world gives them no [C7]light
+
+They see [F]much more than you and me
+
+Don't you [G7]know how close they must [C]be
+
+Then a [F]car stopped just a few steps [C]away
+
+And a [D7]voice said Jim and Jeannie it's [G7]time to go
+
+With their [C]hands still clutched so [C7]tight
+
+Helping [F]each other to the car
+
+Can you [G7]imagine just how close they [C]are
+
+Don't you [G7]know how close they must [F]b--[C]e

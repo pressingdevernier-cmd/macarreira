@@ -1,0 +1,64 @@
+{title: Hush Little Babybrahms Lullaby}
+{artist: Anne Murray}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, canadian country, canadian pop, folk, mellow gold, soft rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 80501
+# Empreinte source SHA256: 75f8864eb78214bf7686f5edd08d22b61b2265b6f8d34f3e668c6f612e1f5744
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+Hush little [G]baby don't say a word [D7]
+
+Papa's gonna buy you a [G]mockingbird
+
+If that mocking[D7]bird won't sing
+
+Papa's gonna buy you a [G]diamond ring
+
+And if that diamond [D7]ring is brass
+
+Papa's gonna buy you a [G]looking glass
+
+And if that looking [D7]glass gets broke
+
+Papa's gonna buy you a [G]billy goat
+
+And if that billy [D7]goat won't pull
+
+Papa's gonna buy you a [G]cart and bull
+
+And if that cart and [D7]bull turn over
+
+Papa's gonna buy you a [G]dog named Rover
+
+And if that dog named [D7]Rover won't bark
+
+Papa's gonna buy you and [G]horse and cart
+
+And if that horse and [D7]cart fall down
+
+You'll still be the sweetest little [G]baby in town
+
+Sleep child and [D7]when you do
+
+Dream a [Em]dream to drift you [C]through the [G]night
+
+That [D7]lingers through the [G]day
+
+Tonight if [D7]dreams are few
+
+I'll [Em]sing this lulla[C]by for you
+
+[G]Sleep child for [D7]dreams always come [G]true [D7]
+
+Lulla[G]by and goodnight may sleep softly [D7]surround you
+
+While your dreams fill your eyes with a melody of [G]love
+
+May the [C]moonlight [G]embrace you the [D7]starlight [G]caress you
+
+May the [C]sunlight still [G]sing you this [D7]lullaby of [G]love

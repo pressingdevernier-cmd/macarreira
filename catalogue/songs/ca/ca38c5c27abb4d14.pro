@@ -1,0 +1,46 @@
+{title: Bring Some Of It Home}
+{artist: Loretta Lynn}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country, country rock, nashville sound}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 97587
+# Empreinte source SHA256: ca38c5c27abb4d14dcec7fbec2a8dee20ab1010bbd980a5299d2518e238a43db
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[C]Today is payday and to[C7]night will be [F]long
+
+Don't [G7]sit at the bar till all your money is [C]gone
+
+The baby get hungry when [C7]you drink too [F]long
+
+So [G7]remember bring some of it [C]home
+
+Honey [F]you know I'm jealous cause [C]you're all my man
+
+I [D7]know you get restless but [G7]I understand
+
+[C]Ah but darling time is precious so [C7]before the nightâ??[F]s gone
+
+Think [G7]of me and bring some of it [C]home
+
+Tonight when the barmaid sits [C7]down on your [F]knees
+
+I [G7]know that it's easy to say that you're [C]free
+
+When your love appetite starts [C7]coming on [F]strong
+
+Don't [G7]forget me bring some of it [C]home
+
+Honey [F]you know I'm jealous cause [C]you're all my man
+
+I [D7]know you get restless but [G7]I understand
+
+[C]Ah but darling time is precious so [C7]before the nightâ??[F]s gone
+
+Think [G7]of me and bring some of it [C]home
+
+I need [G7]loving and bring some of it [C]home

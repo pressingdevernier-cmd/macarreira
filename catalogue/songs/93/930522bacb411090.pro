@@ -1,0 +1,144 @@
+{title: It's Alright, Ma}
+{artist: Bob Dylan}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, classic rock, country rock, folk, folk rock, mellow gold, rock, roots rock, singer-songwriter}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 18069
+# Empreinte source SHA256: 930522bacb411090be3afaab2024b69adcaae5e2522d6b155e051738bb548f19
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+Darkness at [G/B]the break of noon
+[D]Shadows even the silver spoon
+The [Csus2]handmade blade, the child's balloon
+[G/B]Eclipses both the sun and moon
+To [Bb6]understand you know too soon
+There is no sense in [D]trying.
+
+Pointed threats, they bluff with scorn
+Suicide remarks are torn
+From the fool's gold mouthpiece
+The hollow horn plays wasted words
+Proves to warn
+That he not busy being born
+Is busy dying.
+
+Temptation's page flies out the door
+You follow, find yourself at war
+Watch waterfalls of pity roar
+You feel to moan but unlike before
+You discover
+That you'd just be
+One more person crying.
+
+So don't [D]fear if you [A]hear
+A [D]foreign sound to your [G/B]ear
+[D]It's [A]alr[G/B]ight, [A]Ma, I'm only [D]sighing.
+
+As some warn victory, some downfall
+Private reasons great or small
+Can be seen in the eyes of those that call
+To make all that should be killed to crawl
+While others say don't hate nothing at all
+Except hatred.
+
+Disillusioned words like bullets bark
+As human gods aim for their mark
+Made everything from toy guns that spark
+To flesh-colored Christs that glow in the dark
+It's easy to see without looking too far
+That not much
+Is really sacred.
+
+While preachers preach of evil fates
+Teachers teach that knowledge waits
+Can lead to hundred-dollar plates
+Goodness hides behind its gates
+But even the president of the United States
+Sometimes must have
+To stand naked.
+
+An' though the rules of the road have been lodged
+It's only people's games that you got to dodge
+And it's alright, Ma, I can make it.
+
+Advertising signs that con you
+Into thinking you're the one
+That can do what's never been done
+That can win what's never been won
+Meantime life outside goes on
+All around you.
+
+You lose yourself, you reappear
+You suddenly find you got nothing to fear
+Alone you stand with nobody near
+When a trembling distant voice, unclear
+Startles your sleeping ears to hear
+That somebody thinks
+They really found you.
+
+A question in your nerves is lit
+Yet you know there is no answer fit to satisfy
+Insure you not to quit
+To keep it in your mind and not fergit
+That it is not he or she or them or it
+That you belong to.
+
+Although the masters make the rules
+For the wise men and the fools
+I got nothing, Ma, to live up to.
+
+For them that must obey authority
+That they do not respect in any degree
+Who despise their jobs, their destinies
+Speak jealously of them that are free
+Cultivate their flowers to be
+Nothing more than something
+They invest in.
+
+While some on principles baptized
+To strict party platform ties
+Social clubs in drag disguise
+Outsiders they can freely criticize
+Tell nothing except who to idolize
+And then say God bless him.
+
+While one who sings with his tongue on fire
+Gargles in the rat race choir
+Bent out of shape from society's pliers
+Cares not to come up any higher
+But rather get you down in the hole
+That he's in.
+
+But I mean no harm nor put fault
+On anyone that lives in a vault
+But it's alright, Ma, if I can't please him.
+
+Old lady judges watch people in pairs
+Limited in sex, they dare
+To push fake morals, insult and stare
+While money doesn't talk, it swears
+Obscenity, who really cares Propaganda, all is phony.
+
+While them that defend what they cannot see
+With a killer's pride, security
+It blows the minds most bitterly
+For them that think death's honesty
+Won't fall upon them naturally
+Life sometimes
+Must get lonely.
+
+My eyes collide head-on with stuffed graveyards
+False gods, I scuff
+At pettiness which plays so rough
+Walk upside-down inside handcuffs
+Kick my legs to crash it off
+Say okay, I have had enough
+What else can you show me?
+
+And if my thought-dreams could be seen
+They'd probably put my head in a guillotine
+But it's alright, Ma, it's life, and life only.

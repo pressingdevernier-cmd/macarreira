@@ -1,0 +1,54 @@
+{title: The Traveling Kind}
+{artist: Emmylou Harris}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country rock, folk, folk rock, lilith, melancholia, mellow gold, roots rock, singer-songwriter}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 65687
+# Empreinte source SHA256: 34404a85664b3ed84b54041ecf0e1369b06362c61a5977f24cef5bd22108e8f5
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+We don't all[C] die youn[Am]g to sav[G7]e our spa[F]rk [G7][C]
+
+From the [Am]ravag-[G7]es of [F]time
+
+But the [Am]first and [G7]last to [F]leave [G7]their [C]mark
+
+Some-[F]day [C]be-[Am]come the [G7]traveling [C]kind
+
+In the [Am]wind are [G7]names of [F]po-[G7]ets [C]past
+
+Some were [Am]friends of [G7]yours and [F]mine
+
+And to [Am]those un-[G7]sung we [F]lift [G7]our [C]glass
+
+May their [F]songs [C]be-[Am]come the [G7]traveling [C]kind
+
+We were [Am]born to [G7]brave this [F]til[G7]ted [C]world
+
+With our [Am]hearts laid [G7]on the [F]line
+
+Be it [Am]way crossed [G7]boy or [F]red [G7]dirt [C]girl
+
+The [F]song [C]be-[Am]comes the [G7]traveling [C]kind
+
+There are [Am]mountains [G7]worth their [F]weight [G7]in [C]gold
+
+Mere [Am]mortals [G7]dare not [F]climb
+
+Come ye [Am]tipsy [G7]sainted [F]sin-[Am]ners [C]both
+
+And [F]claim [C]them [Am]for the [G7]traveling [C]kind
+
+When the [Am]music [G7]slowly [F]starts [G7]to [C]fade
+
+Into the [Am]light's last [G7]soft de[F]cline
+
+Let us [Am]lie down [G7]in that [F]evening [C]shade
+
+And [F]rest [C]a [Am]mooing the [G7]traveling [Am]kind
+
+And the [F]song [C]goes [Am]on for the [G7]traveling [C]kind

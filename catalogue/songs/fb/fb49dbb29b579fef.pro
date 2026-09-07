@@ -1,0 +1,57 @@
+{title: Luna Hermosa}
+{artist: Bersuit Vergarabat}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, argentine rock, latin alternative, latin rock, rock en espanol, rock nacional, ska argentino}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 57790
+# Empreinte source SHA256: fb49dbb29b579feff7b3b681dda2e4ee59e11a0f59b6b5c0ae4e9d983ab98a61
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{comment: À vérifier : introducción: G}
+# SOURCE A VERIFIER:             introducción: G 
+
+ESTA [G]LUNA ES PURA [Dm7/6]BELLEZA DE UNA I[Am]MPOSIBLE PERFECCION
+Y [D7]CARGA UNA LUZ MILENARIA QUE NO SE [G]AGUANTA,
+LA DIV[E]INA SABE LA RECETA PARA UN [Am]AMOR BIEN ANIMAL
+E INVITA A BE[G]BER A LOS HOMBR[Am]ES CUANDO ES[D7]TA LLENA.
+
+ESTA [G]LUNA ES UNA LOCA[Dm7/6] ALEGRE Y ME [Am]SONRIE SOLO A MI,
+[D7]SIENTO UNA EXTRAÑA COSQUILLA EN EL MEDIO DEL [G]PECHO
+Y MI [E]ALMA SE MUERE DE GANAS DE ESTE CUE[Am]RPITO ABANDONAR,
+EN UNA FE[G]ROZ IMPLOSI[Am]ON QUE PUEDE RE[G]SULTAR
+DESPIA[Am]DADAMENTE [D7]VITA[E]L,
+PORQUE YO SI[Am]EMPRE FUI UN L[D7]UNATICO T[G]OTAL?
+
+[G]MIRA, MIRA, MI[E]RA QUE LUNA [Am]HERMOSA,
+[D7]MIRA, MIRA, ME DA COMO UNA[G] COSA,
+PERO MI[E]RA, MIRA, MIRA QUE LUNA[Am] HERMOSA,
+TAN ESCANDO[G]LOSA[D7] Y YO SOLIT[G]O ACA...
+
+ESTA [G]LUNA ES UNA LOC[Dm7/6]A ALEGRE Y S[Am]E ARREGLA PARA SALIR,
+SE [D7]VISTE CON ROPA PLATEADA Y ME D[G]ESEA;
+ME ILU[E]MINA TODA LA NOCHE CON SU [Am]ENORME SEGUIDOR,
+PORQUE SOY EL AC[G]TOR PREFERI[Am]DO EN SU[D7] NOVELA.
+
+ESTA [G]LUNA SABE LOS [Dm7/6]SECRETOS QUE MI[Am] MEMORIA YA OLVIDO,
+[D7]ES COMO UN MOUNSTRUO SAGRADO Y PRIM[G]ITIVO;
+[E]DEBO VIOLAR SUS SECRETOS PARA R[Am]OBARLE ALGO DE LUZ
+EN UNA FE[G]ROZ IMPLOSI[Am]ON QUE PUEDE RE[G]SULTAR
+DESPIA[Am]DADAMENTE V[D7]ITAL[E],
+PORQUE YO [Am]SIEMPRE FUI UN L[D7]UNATICO [G]TOTAL?
+
+[G]MIRA, MIRA, MI[E]RA QUE LUNA [Am]HERMOSA,
+[D7]MIRA, MIRA, ME DA COMO UNA[G] COSA,
+PERO MI[E]RA, MIRA, MIRA, QUE LUNA HE[Am]RMOSA,
+TAN ESCANDA[G]LOSA,[D7] Y ME VINO A [G]BUSCAR...
+
+MI[G]RA, MIRA, MI[E]RA QUE LUNA [Am]HERMOSA,
+MI[D7]RA, MIRA, ME DA COMO UNA[G] COSA,
+MI[E]RA, MIRA, MIRA QUE LUNA HE[Am]RMOSA,
+TAN ESCANDA[G]LOSA[D7] Y ME VINO A [G]BUSCAR...
+
+[D7]SI!!! ME VINO A BU[G]SC[D7]AR Y YO SOLI[G]TO ACA? EH...
+[D7]NO SE PUEDE[G] MAS!!! (QUE LUNA [D7]HERMOSA MIRA[G], MIRA...)

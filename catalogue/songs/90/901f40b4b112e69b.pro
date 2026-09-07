@@ -1,0 +1,65 @@
+{title: Steady}
+{artist: Rob Thomas}
+{capo: 1}
+{x_source_capo: 1}
+{x_chord_convention: concert; formes source transposees du capo}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, neo mellow, pop rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 43755
+# Empreinte source SHA256: 901f40b4b112e69b46acdae8b10617d6afcdbb37e5f3e24198437f218cc4ad28
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, capo_source_interprete_formes, tonalite_absente
+
+{start_of_part: Intro}
+[Eb] [Gm] [Eb] [Gm]
+
+{end_of_part}
+{start_of_verse: verse 1}
+
+[Eb]TAKE BACK THAT FACE YOU MADE YOUR BED I GOT NOTHING ON ME I CAN [Gm]LOAN YOU
+[Eb]WELL I GUESS YOU?RE LOST I CALLED YOUR NUMBER YOU DON?T WANT NO ONE ELSE TO [Gm]FIND YOU
+YOU?RE [Eb]ALL ALONE IN A QUIET ROOM BREAKING OFF THE PIECES YOU CAN?T USE
+[Gm]REALIZE YOU?LL MAKE IT THROUGH, [F]YOU KNOW THE WAY, YOU JUST CAN?T BELIEVE IT
+
+[Gm]GROWN UP AND YOU STILL DON?T GET IT,[Eb]  LIFE GOES THE W[Bb]AY YOU LET IT
+YOU?LL [Gm]NEVER GET STRAIGHT IF YOU CAN?T GET STEADY,[Eb]  STAND UP,[Bb]  YOU?RE READY
+[Gm]BREAK DOWN IT?S A LITTLE TOO HEAVY,[Eb]  MAN, YOU FEEL [Bb]LOST ALREADY
+YOU?LL [Gm]NEVER GET STRAIGHT IF YOU CAN?T GET STEADY,[Eb]  LIFE GOES THE W[Bb]AY YOU LET IT
+
+[Gm]
+
+{end_of_verse}
+{start_of_verse: verse 2}
+
+[Eb]TAKE BACK YOUR WORDS AND ALL YOU?VE GOT ARE SOME HALF ASSED THOUGHTS YOU LET DE[Gm]FINE YOU
+[Eb]I JUST CAN?T WAIT TIL YOU REMEMBER, I CAN?T WAIT TIL IT UN[Gm]WINDS YOU
+YOU?RE [Eb]COMING DOWN NOW YOU GOTTA CHOOSE, A BETTER LIFE OR A TIGHTER NOOSE
+[Gm]DON?T WAIT SOON YOU?LL DISCOVER, [F]ONE OF THESE THINGS IS NOT LIKE THE OTHER
+
+[Gm]GROWN UP AND YOU STILL DON?T GET IT,[Eb]  LIFE GOES THE W[Bb]AY YOU LET IT
+YOU?LL [Gm]NEVER GET STRAIGHT IF YOU CAN?T GET STEADY,[Eb]  STAND UP,[Bb]  YOU?RE READY
+[Gm]BREAK DOWN IT?S A LITTLE TOO HEAVY,[Eb]  MAN, YOU FEEL [Bb]LOST ALREADY
+YOU?LL [Gm]NEVER GET STRAIGHT IF YOU CAN?T GET STEADY,[Eb]  LIFE GOES THE W[Bb]AY YOU LET IT
+
+{end_of_verse}
+{start_of_bridge: Bridge}
+[Eb]AND YOU?LL NEVER GET STRAIGHT IF YOU CAN?T GET STEADY [Gm]
+SHED ALL YOUR SK[F]IN SWALLOW YOUR PR[Bb]IDE
+RUN TO YOUR FU[Eb]TURE WITH NOTHING TO HIDE [Gm]
+THE DEMON WITH[F]IN THE BEAUTIFUL LI[Bb]E
+IS ALL AN ILLU[Eb]SION YOUR LIFE PASSED YOU BY
+
+[Gm]GROWN UP AND YOU STILL DON?T GET IT,[Eb]  LIFE GOES THE W[Bb]AY YOU LET IT
+YOU?LL [Gm]NEVER GET STRAIGHT IF YOU CAN?T GET STEADY,[Eb]  STAND UP,[Bb]  YOU?RE READY
+[Gm]BREAK DOWN IT?S A LITTLE TOO HEAVY,[Eb]  MAN, YOU FEEL [Bb]LOST ALREADY
+YOU?LL [Gm]NEVER GET STRAIGHT IF YOU CAN?T GET STEADY,[Eb]  LIFE GOES THE W[Bb]AY YOU LET IT [Gm]
+YOU?LL [Eb]NEVER GET STRAIGHT IF YOU [Bb]CAN?T GET STEADY [Gm]
+YOU?LL [Eb]NEVER GET STRAIGHT IF YOU [Bb]CAN?T GET STEADY [Gm]
+[Eb]  STAND UP,[Bb]  STAND UP [Gm][Eb]
+YOU [Bb]CAN?T GET STEADY [Gm]
+
+{end_of_bridge}

@@ -1,0 +1,61 @@
+{title: Te echo de menos}
+{artist: Chayanne}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, latin, latin pop, puerto rican pop, tropical}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 23117
+# Empreinte source SHA256: 6ab7a0ae73ebc4087c5577bf9daca8d70fb17d0daf22a82b0c3e3bb195fbcdb3
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{comment: À vérifier : INTRO F# C# B - F# C# B- B C# F}
+# SOURCE A VERIFIER:             INTRO F# C# B - F# C# B- B  C#  F 
+
+[F#]HOY ESTOY PENSANDO EN TO[C#]DO AQUELLO QUE PE[B]RDÍ
+BAJAN LÁGRIMAS DEL CIELO PORQUE NO ESTÁS CERCA
+
+[A]SE QUE YA NO TE [E]MEREZCO, SE QUE TE ME[F#m]NTÍ
+SE QUE TU CON[Dm]FIANZA NO CONFÍA EN [A]MI, PERDÓNA[A]ME.[B]  [C#]
+
+[F#]HOY ME AHOGO EN LAS PROM[C#]ESAS QUE NUNCA CU[B]MPLÍ
+Y A LA COMPASIÓN LE PIDO QUE ME COMPADEZCA
+
+[A]SI NACÍ PARA QUE[E]RERTE, COMO PUEDE[F#m] SER
+QUE SIN TU MIR[Dm]ADA YA NO PUEDO [A]VER.
+([E]TE ECHO DE ME[A]NOS)
+TANTO QUE CADA MO[E]MENTO QUE NO ESTAS CON[D]MIGO, ES UN DESAFÍO.
+([E]VUELVE CONMI[A]GO)
+VUELVE QUE NO HAY [E]OTRO ABRAZO QUE ME DE[D]SAHOGUE,QUE ME QUITE EL FRÍO.
+
+([E]TE ECHO DE M[A]ENOS)
+TANTO ES EL DOLOR QUE SIEN[E]TO Y SIENTO QUE REV[D]IENTO, EL CIELO ES MI TESTIGO.
+[E](LO [A]PIDO)
+Y POR ESTE AMOR, TE P[E]IDO, OTRA OPORTUN[D]IDAD.  [C#][B][C#]
+[F#]HOY ESTOY PERDIENDO T[C#]ODO POR LO QUE [B]VIVÍ
+CONVERSANDO CON LA PENA Y SU AMIGA TRISTEZA,
+
+[A]EL CAMINO DE EST[E]A HISTORIA NO TER[F#m]MINA ASÍ
+DALE MORALEJA [Dm]Y UN FINAL FELIZ[A].
+([E]TE ECHO DE ME[A]NOS)
+TANTO QUE CADA MO[E]MENTO QUE NO ESTAS CON[D]MIGO, ES UN DESAFÍO.
+([E]VUELVE CONMI[A]GO)
+VUELVE QUE NO HAY [E]OTRO ABRAZO QUE ME DE[D]SAHOGUE,QUE ME QUITE EL FRÍO.
+
+([E]TE ECHO DE M[A]ENOS)
+TANTO ES EL DOLOR QUE SIEN[E]TO Y SIENTO QUE REV[D]IENTO, EL CIELO ES MI TESTIGO.
+[E](LO [A]PIDO)
+Y POR ESTE AMOR, TE [E]PIDO, OTRA OPORTUNI[D]DAD.
+([E]TE ECHO DE ME[A]NOS)
+TANTO QUE CADA MO[E]MENTO QUE NO ESTAS CON[D]MIGO, ES UN DESAFÍO.
+([E]VUELVE CONMI[A]GO)
+VUELVE QUE NO HAY [E]OTRO ABRAZO QUE ME DE[D]SAHOGUE,QUE ME QUITE EL FRÍO.
+([E]TE ECHO DE M[A]ENOS)
+TANTO ES EL DOLOR QUE SIEN[E]TO Y SIENTO QUE REV[D]IENTO, EL CIELO ES MI TESTIGO.
+[E](LO [A]PIDO)
+Y POR ESTE AMOR, TE[E] PIDO, OTRA OPORTUNI[D]DAD.  [E][A]
+THIS IS NEW HIT FROM CHAYANNE 2006
+HOPE YOU GUYS LIKE IT
+* DOUG THE ONE

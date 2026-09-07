@@ -1,0 +1,67 @@
+{title: Siempre A Lo Mismo}
+{artist: Ricardo Arjona}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, cantautor, latin, latin arena pop, latin pop, rock en espanol, tropical}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 12002
+# Empreinte source SHA256: aa0dea55db153c6d49e77bb2b41158ffca31c2965b560b211cb732c4f8bc0328
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, repetition_ou_jeu_source, tabulations_interpretees_4_colonnes, tonalite_absente
+
+SIN MAS QUE HACER PRENDO EL TELEVISOR, [A]
+ME HACE LLORAR UN PROGRAMA DE [F#m]HUMOR,
+PRENDO LA RADIO Y LA PUB[Bm]LICIDAD,
+ME VENDE UN LIBRO, UNA N[Bm]EVERA,
+Y HASTA PASTILLAS QUE DETIENEN LA E[A]DAD.
+
+*
+EL MATUTINO DICE NO HAY SOLUCION
+EL VESPERTINO HABLA DE LA POLUCION,
+UN BOXEADOR CON CALAMBRE,
+UN NIÑO MUERE DE HAMBRE,
+OTROS HABLAN DE DESARME...
+
+*
+EN LA COCINA EL ARROZ SE INCENDIO,
+TODA LA NOCHE ESE PERRO LADRO,
+EL MUNDO VA DANDO TUMBOS,
+CADA QUIEN A SU RUMBO,
+Y MIENTRAS TANTO YO...
+
+# SOURCE A VERIFIER: **             A          Bm                F#m 
+SIEMPRE A LO MI[A]SMO, A TRAT[Bm]AR DE SOBREVIVIR S[F#m]IN TI,
+A LUCHAR POR NO SENTIRME ASI, VOY A LA DISCO[Bm]TECA,
+AL CONCIERTO DE ROCK, O A LA MISMA BIBLIO[A]TECA...
+SIEMPRE A LO MI[A]SMO, A TRAT[Bm]AR DE SOBREVIVIR S[F#m]IN TI,
+A LUCHAR POR NO SENTIRME ASI, TAN DESESPER[Bm]ADO,
+SUPLICANDO OLVIDAR[Bm]TE,
+Y SIN EMBARGO TERMINO AMANDOTE MUCHO M[E]AS,
+SIEMPRE A LO MI[A]SMO.
+
+*
+ME SIENTO MAL Y DESPUES, MUCHO PEOR,
+EL QUE NO ESTES NO ME HACE NINGUN FAVOR,
+COMO EXPLICARLE AL CEREBRO,
+QUE LE DIGA AL AMOR QUE DE INMEDIATO TE OLVIDE,POR FAVOR...
+*
+TRAS LA VENTANA SE ME ASOMA LA LUNA,
+CREO QUE SE RIE DE MI MALA FORTUNA,
+OIGO AL VECINO GRITARLE A LA MUJER,
+ESTA LE LANZA UN SARTEN,
+Y MIENTRAS TANTO YO.
+
+**
+SIEMPRE A LO MISMO, A TRATAR DE SOBREVIVIR SIN TI,
+A LUCHAR POR NO SENTIRME ASI, VOY A LA DISCOTECA,
+AL CONCIERTO DE ROCK, O A LA MISMA BIBLIOTECA...
+SIEMPRE A LO MISMO, A TRATAR DE SOBREVIVIR SIN TI,
+A LUCHAR POR NO SENTIRME ASI, TAN DESESPERADO,
+SUPLICANDO OLVIDARTE,
+Y SIN EMBARGO TERMINO AMANDOTE MUCHO MAS,
+SIEMPRE A LO MISMO.
+
+Si hay algun error por favor avisame.
+Desde COLOMBIA, Tato.

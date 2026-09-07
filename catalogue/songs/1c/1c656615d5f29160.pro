@@ -1,0 +1,74 @@
+{title: Shameless}
+{artist: Garth Brooks}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country, oklahoma country}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 107728
+# Empreinte source SHA256: 1c656615d5f291605af261e3aceec30513311abf291e61e0903a7d0c1969efa2
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tonalite_absente
+
+{start_of_part: Intro}
+[G] [D] [Em] [C] [Bb]
+
+{comment: À vérifier : 1. G D}
+# SOURCE A VERIFIER: 1.        G                          D  
+Well, I'm shameless when it comes to loving you.
+I'll do anything you [Em]want me to, I'll do anything at[C] all,[Bb]
+And I'm [G]standing here for all the [D]world to see.
+Oh, baby, that's what's[Em] left of me. Don't have very far t[C]o fal[Bb]l.
+
+{comment: À vérifier : 2. D B}
+# SOURCE A VERIFIER: 2.           D                   B  
+You know now I'm not a man who's ever been
+Inse[Em]cure about the world I've been[Am7] living in.[G]
+I [D]don't break easy, I[B] have my pride,
+But if [Em]you need to be [F]satis[F#]fied,
+
+(chords like section 1.)
+I'm shameless. Baby, I don't have a prayer.
+Every time I see you standing there I go down upon my knees,
+And I'm changing, swore I'd never compromise,
+Aw, but you convinced me otherwise. I'll do anything you please.
+
+(chords like section 2. except as noted)
+You see, in all my life I've never found
+What I couldn't resist, what I couldn't turn down.
+I could walk away from anyone I ever knew
+But I [Em]can't walk away from [F]you, [Gm] [F]
+
+I have [Bb]never let anything have this much [Am]control over me.
+I [Ab]worked too hard to call my life my [Eb]own,
+And I've [Bb]made myself a world and it's worked [Am]so perfectly,
+But it's [Ab]your world now I can't refuse.
+[Am]I've never had so [D7]much to lose.
+
+Oh, I'm [G]shameless (guitar solo - chords like section 1.)
+
+(chords like section 2. except as noted)
+You know, it should be easy for a man who's strong
+To say he's sorry or admit when he's wrong.
+I never lost anything I ever missed,
+But [Em]I've never been in [F]love like this.   It's out of my hands.
+
+(chords like section 1.)
+I'm shameless, I don't have the power now.
+I don't want it anyhow so I've got to let it go.
+I'm shameless, shameless as a man can be.
+You could make a jealous fool of me, I just wanted you to know.
+
+(vocal ad lib over guitar solo outro - chords like intro)
+
+This song is really fun with barre chords. I'm not including how I
+play those for several reasons: I change each time I play it,
+those of you comfortable with barre chords can probably figure it
+out on your own, and those who aren't comfortable with barre chords
+would ignore it anyway. If you fall between the cracks, e-mail me
+and I'll be happy to help. I'm including fingering diagrams for a
+couple of the chords that you really have to do at least partial
+barres for and may not be in an elementary chord chart.
+
+{end_of_part}

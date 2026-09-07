@@ -1,0 +1,104 @@
+{title: Shelter from the storm}
+{artist: Bob Dylan}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, classic rock, country rock, folk, folk rock, mellow gold, rock, roots rock, singer-songwriter}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 18153
+# Empreinte source SHA256: 08f3febac4447011230e30f37643c4203fa4a195ab2a5a19533875b739a624cf
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: aucun_accord_converti, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            F C Bb F (UNTIL THE END OF THE SONG)
+
+I was in another lifetime;
+One of toil and blood
+When blackness was a virtue
+And the road was full of mud.
+I come in from the wilderness,
+A creature void of form.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+And if I pass this way again
+You can rest assured
+I'll always do my best for her,
+On that I give my word.
+In a world of steel-eyed death
+And men who are fighting to be warm,
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+Not a word was spoke between us.
+There was little risk involved.
+Everything up to that point
+Had been left unresolved.
+Try imagining a place where
+It's always safe and warm.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+I was burned out from exhaustion.
+Buried in the hail.
+Poisoned in the bushes
+And blown out on the trail.
+Hunted like a crocodile
+Ravaged in the corn.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+Suddenly I turned around
+And she was standing there
+With silver bracelets on her wrists
+And flowers in her hair.
+She walked up to me so gracefully
+And took my crown of thorns.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+Now there's a wall between us.
+Something there's been lost.
+I took too much for granted;
+Got my signals crossed.
+Just to think that it all began
+On a non-eventfull morn.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+Well, the deputy walks on hard nails
+And the preacher rides a mount,
+But nothing really matters much.
+It's doom alone that counts
+And the one-eyed undertaker;
+He blows a futile horn.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+I've heard newborn babies
+Wailing like a mourning dove
+And old men with broken teeth
+Stranded without love.
+Do I understand your question, man?
+Is it hopeless and forlorn?
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+In a little hilltop village
+They gambled for my clothes.
+I bargained for salvation
+And she gave me a lethal dose.
+I offered up my innocence
+And got repaid with scorn.
+"Come in" she said, "I'll give you
+Shelter from the storm".
+
+Well, I'm living in a foreign country,
+But I'm bound to cross the line.
+Beauty walks a razor's edge.
+Someday I'll make it mine.
+If I could only turn back the clock
+To when God and her were born.
+"Come in" she said, "I'll give you
+Shelter from the storm".

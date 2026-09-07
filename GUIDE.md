@@ -1,5 +1,11 @@
 # Guide de Macarreira
 
+> **Version catalogue / songbook (septembre 2026)** : le mode d’emploi actuel
+> est dans [CATALOGUE.md](CATALOGUE.md). Les chapitres ci-dessous décrivent le
+> recueil historique, notamment la configuration du jeton. Les nouvelles
+> chansons partagées sont dans `book/songs/`, et non plus `songs/`. Une modification
+> non synchronisée reste uniquement sur l’appareil : exporter des sauvegardes.
+
 Tout ce qu'il faut savoir pour faire vivre le recueil sans aide.
 Écrit pour être relu dans deux ans, quand plus rien ne sera frais dans la tête.
 

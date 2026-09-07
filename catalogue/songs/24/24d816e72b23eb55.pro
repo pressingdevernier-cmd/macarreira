@@ -1,0 +1,42 @@
+{title: I dont want to miss a thing}
+{artist: Mark Chesnutt}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, contemporary country, country, country road, country rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 82854
+# Empreinte source SHA256: 24d816e72b23eb555c0edf92754c4dc390323f0df0ef93200f7c74c5beb62d42
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+I COULD STAY[G] AWAKE JUST TO HEA[D/F#]R YOU BREATHING, WATCH[Em] YOU SM[C]ILE WHILE YOU ARE SLEEPING [G]
+[Am]WHILE YOU'RE FAR AWAY AND DREAMING
+[G]I COULD SPEND MY LI[D/F#]FE IN THIS SWEET S[Em]URRENDER, [C]I COULD STAY LOST IN TH[G]IS MOMENT FO[Am]REVER
+[Bm]WHERE EVERY MO[C]MENT SPENT WITH YOU, [D]IS A MOMENT I TREASURE
+
+[G]I DON'T WANNA CLOSE [D/F#]MY EYES, [Am]I DON'T WANNA FALL [C]ASLEEP
+[G]'CAUSE I'D MISS YOU, [D]AND I DON'T WANNA MISS A THING[G] [D]
+[G]'CAUSE EVEN WHEN I DREAM OF YO[D/F#]U,   [Am]THE SWEETEST DREAM WILL NEVER DO [C]
+[G]I'D STILL MISS YOU, [D]AND I DON'T WANNA MISS A THIN[G]G [D/F#][Am]
+
+[G]LYING CLOSE TO YOU, [D/F#]FEELING YOUR HEART BEATI[Em]NG, [C]AND I'M WONDERING WHAT YOUR DREAM[G]ING
+[Am]WONDERING IF IT'S ME YOUR SEEING
+[G]AND THEN I KISS YOUR EYES, AND[D/F#] THANK GOD WE'RE TOGETHE[Em]R
+[Bm]I JUST WANNA [C]STAY WITH YOU, [D]IN THIS MOMENT FOREVER
+
+[G]I DON'T WANNA CLOSE [D/F#]MY EYES, [Am]I DON'T WANNA FALL [C]ASLEEP
+[G]'CAUSE I'D MISS YOU, [D]AND I DON'T WANNA MISS A THING[G] [D]
+[G]'CAUSE EVEN WHEN I DREAM OF YO[D/F#]U,   [Am]THE SWEETEST DREAM WILL NEVER DO [C]
+[G]I'D STILL MISS YOU, [D]AND I DON'T WANNA MISS A THIN[G]G [D/F#][Am]
+
+[F]I DON'T WANNA MISS ONE SMILE, [C]I DON'T WANNA MISS ONE KISS
+[Eb]WELL, I JUST WANNA BE WITH YOU, RIGHT HERE WITH YOU, [Bb]JUST LIKE THIS
+[F]I JUST WANNA HOLD YOU CLOSE, [C]FEEL YOUR HEART SO CLOSE TO MINE
+[Gm]AND JUST STAY HERE IN THIS MOMENT, [D]FOR ALL THE REST OF TIME
+
+[G]I DON'T WANNA CLOSE [D/F#]MY EYES, [Am]I DON'T WANNA FALL [C]ASLEEP
+[G]'CAUSE I'D MISS YOU, [D]AND I DON'T WANNA MISS A THING[G] [D]
+[G]'CAUSE EVEN WHEN I DREAM OF YO[D/F#]U,   [Am]THE SWEETEST DREAM WILL NEVER DO [C]
+[G]I'D STILL MISS YOU, [D]AND I DON'T WANNA MISS A THIN[G]G [D/F#][Am]

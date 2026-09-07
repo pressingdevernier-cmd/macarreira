@@ -1,0 +1,29 @@
+{title: Tea For Two}
+{artist: Frank Sinatra}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, easy listening, lounge}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 15238
+# Empreinte source SHA256: 16d72b7b882be0ab34176d34713a68a9ca374e776c40a58bee1b6324b47e3db8
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tonalite_absente
+
+{comment: À vérifier : Introdução: A7 Em7 Adim A7}
+# SOURCE A VERIFIER: Introdução: A7 Em7 Adim A7 
+
+[Em7]Picture you[A7] upon my[Em7] knee [A7]
+[D7M]Tea for [D6]two and [D7M]two for [D6]tea
+Just [Em7]me for [A7]you and [Em7]you for [A7]me alone[D] [D6]
+[G#m7]Nobody near u[C#7]s to see u[G#m7]s or hear u[C#7]s
+[F#]No friends or relat[F#6]ions on weekend[F#] vacations [F#6]
+We [G#m7]won't have it k[C#7]nown, dear
+That[G#m7] we own a [C#7]telephone,[F#] dear [Fm7]
+[Em7]Day will br[A7]eak, and [Em7]you'll awake[A7]
+And s[D7M]tart to b[D6]ake a [D7M]sugar cake [D6]
+For [Em7]me to t[A7]ake for [Em7]all the [A7]boys to [B7]see [Gdim][B7]
+[Em]We will [F#m7]raise a [B+]family [B7]
+A[Cdim] boy for [Em]you, a [Gm]girl for[A7] me
+Oh, c[G]an't you [A7]see how [Em7]happy we [A7]would be [D]

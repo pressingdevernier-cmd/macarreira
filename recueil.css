@@ -1,0 +1,26 @@
+/* Prolonge les deux thèmes existants, sans remplacer leur identité. */
+.recueil-nav { display:flex; flex-wrap:wrap; gap:.7rem 1.4rem; padding:1rem 0; border-bottom:1px solid var(--filet); font-size:1rem; }
+.recueil-nav a, .recueil-actions a { color:var(--accent); text-underline-offset:.2em; }
+.recueil-actions { gap:.7rem; align-items:center; flex-wrap:wrap; margin:1rem 0; }
+.recueil-actions button, .pagination button, .langues button, .import-label, [data-local] {
+  font:inherit; font-size:1rem; color:var(--encre); background:var(--surface); border:1px solid var(--filet);
+  padding:.65rem .85rem; border-radius:4px; cursor:pointer; min-height:44px;
+}
+[data-local]:disabled { opacity:.45; cursor:default; }
+[data-local]:focus-visible, .recueil-nav a:focus-visible, .import-label:focus-within { outline:2px solid var(--accent); outline-offset:3px; }
+.langues { display:flex; flex-wrap:wrap; gap:.65rem 1rem; border:0; padding:.7rem 0; margin:0; }
+.langues legend { font-size:.9rem; padding:0; color:var(--secondaire); }
+.langues label { display:flex; align-items:center; gap:.3rem; min-height:44px; }
+.langues input, #economie { accent-color:var(--accent); width:1.1rem; height:1.1rem; }
+.pagination { display:flex; justify-content:space-between; gap:.5rem; align-items:center; margin:1rem 0; flex-wrap:wrap; }
+.pagination span { font-size:.9rem; }
+.local-badge { font-size:.8rem; color:var(--secondaire); text-align:right; margin-left:.7rem; flex-shrink:0; }
+.grille-editeur { width:100%; box-sizing:border-box; font:1rem/1.6 'Courier Prime',monospace; color:var(--encre); background:var(--surface); border:1px solid var(--filet); padding:1rem; resize:vertical; tab-size:4; }
+.import-label { position:relative; overflow:hidden; display:inline-flex; align-items:center; box-sizing:border-box; }
+.import-label input { position:absolute; inset:0; opacity:0; width:100%; cursor:pointer; }
+#grille-apercu, #grille-historique { overflow-wrap:anywhere; }
+#grille-apercu:not(:empty) { border-top:1px solid var(--filet); margin-top:1.5rem; padding-top:1rem; }
+#sync-status, #local-notice { overflow-wrap:anywhere; }
+#maj-app { position:sticky; bottom:0; background:var(--surface); border-top:1px solid var(--filet); padding:.75rem; z-index:40; }
+@media(max-width:480px) { .local-badge { font-size:.75rem; max-width:5.5rem; } .pagination button { font-size:.85rem; padding:.5rem; } .recueil-nav { gap:.65rem 1rem; } }
+@media print { .recueil-nav,.recueil-actions,.pagination,#sync-status,#maj-app { display:none !important; } }

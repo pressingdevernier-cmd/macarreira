@@ -1,0 +1,79 @@
+{title: Years Years Bears}
+{artist: Tom Rosenthal}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, british singer-songwriter}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 48291
+# Empreinte source SHA256: 046b205061cd24f24936be38feb6b1781efd027f5047dc7af0877290e47a3c8a
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, tonalite_absente
+
+{start_of_part: Intro}
+[Am] [G] [F] [D]
+
+[Am]YOU'LL PROBABLY GET A COLD
+[G]YOU'll DEFINITELY GET OLD
+[F]YOUR BATHROOM HAD MOLD
+[D]YEARS YEARS BEARS
+
+[Am]YOU MIGHT MEET A LOVER
+[G]OR SOMETHING OTHER
+[F]YOU NEED TO CALL YOUR MOTHER
+[D]YEARS YEARS BEARS
+
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+AND IVE [F#m]WRITTEN THINGS DOWN SO NOW I GOT A [D]PLAN
+
+[Am]OOH [G]OOH[F] OO[D]H
+
+[Am]YOURE GONNA NEED A FRIEND
+[G]SOME THINGS ARE GONNA END
+[F]ITS ALL JUST PRETEND
+[D]YEARS YEARS BEARS
+
+[Am]YOURE GOING TO LOSE YOUR KEYS
+[G]YOU HAVE TO CALL THE LOCKSMITH
+[F]BUT YOU DONT HAVE HER NUMBER
+[D]YEARS YEARS BEARS
+
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+AND IVE [F#m]WRITTEN THINGS DOWN SO NOW I GOT A [D]PLAN
+
+[Am]YOURE GONNA ASK WHY
+[G]YOU MAY AS WELL TRY
+[F]THE LIGHTS ARE IN THE SKY
+[D]YEARS YEARS BEARS
+
+[Am]SOME THINGS ARE GONNA CHANGE
+[G]SOME THINGS WILL STAY THE SAME
+[F]IT'S ALL FUNNY GAMES
+[D]YEARS YEARS BEARS
+
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+AND IVE [F#m]WRITTEN THINGS DOWN SO NOW I GOT A [D]PLAN
+
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+[F#m]IM GONNA BE [D]BETTER HUMAN IF I [A]CAN
+AND IVE [F#m]WRITTEN THINGS DOWN SO NOW I GOT A [D]PLAN
+
+{comment: À vérifier : Am G D?}
+# SOURCE A VERIFIER: Am               G           D? 
+ALL THE WORLDS A MESS AND IT ALWAYS HAS BEEN
+BUT I [Am]HOPE FOR [G]BETTER FOR [D]YOU AND ME
+
+{comment: À vérifier : Am G D?}
+# SOURCE A VERIFIER: Am               G           D? 
+ALL THE WORLDS A MESS AND IT ALWAYS HAS BEEN
+BUT I [Am]HOPE FOR [G]BETTER FOR [D]YOU AND ME
+
+{end_of_part}

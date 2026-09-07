@@ -1,0 +1,76 @@
+{title: Gangsta´s Paradise}
+{artist: Coolio}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, g funk, gangster rap, hip hop, rap, west coast rap}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 38421
+# Empreinte source SHA256: c3f350baf5a9f3c680aa1cab29f01c269eea9bf0bfe1005a797333e03820ae07
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ponctuation_chordpro_neutralisee, tabulations_interpretees_4_colonnes, tonalite_absente
+
+# SOURCE A VERIFIER:             { O lance dessa música é tocar os acordes em pestana, na 8ª e 7ª casas } 
+            ｛ O lance dessa música é tocar os acordes em pestana, na 8ª e 7ª casas ｝
+
+{start_of_part: INTRO}
+[Fm7] [Fm] [Em7] [Cm7]
+
+A[Fm7]s I w[Fm]alk [Em7]throu[Cm7]gh the valley of the shadow of death
+I take a look at my life and realize there's not much left
+coz I've been blastin and laughin so long, that
+even my mama thinks that my mind is gone
+but I ain't never crossed a man that didn't deserve it
+me be treated like a punk you know that's unheard of
+you better watch how you're talking, and where you're walking
+or you and your homies might be lined in chalk
+I really hate to trip but i gotta, loc
+As I Grow I see myself in the pistol smoke, fool
+I'm the kinda g the little homies wanna be like
+on my knees in the night, saying prayers in the streetlight
+
+B[Fm7]een s[Fm]pend[Em7]ing m[Cm7]ost their lives, living in the gangsta's paradise (2X)
+Keep spending most their lives, living in the gangsta's paradise (2x)
+
+T[Fm7]hey g[Fm]ot t[Em7]he si[Cm7]tuation, they got me facin'
+I can't live a normal life, I was raised by the stripes
+so I gotta be down with the hood team
+too much television watching got me chasing dreams
+I'm an educated fool with money on my mind
+got my ten in my hand and a gleam in my eye
+I'm a loc'd out gangsta set trippin' banger
+and my homies is down so don't arouse my anger, fool
+death ain't nothing but a heartbeat away,
+I'm living life, do or die, what can I say
+I'm twenty-three now, but will I live to see twenty-four
+the way things are going I don't know
+
+{end_of_part}
+{start_of_chorus: REFRÃO 2}
+T[Fm7]ell m[Fm]e wh[Em7]y are[Cm7] we, so blind to see
+That the one's we hurt, are you and me
+
+{end_of_chorus}
+{start_of_chorus: REFRÃO}
+
+P[Fm7]ower [Fm]in t[Em7]he mo[Cm7]ney, money in the power
+minute after minute, hour after hour
+everybody's running, but half of them ain't looking
+what's going on in the kitchen, but I don't know what's kickin'
+they say I gotta learn, but nobody's here to teach me
+if they can't undersstand it, how can they reach me
+I guess they can't, I guess they won't
+I guess they front, that's why I know my life is out of luck, fool
+
+{end_of_chorus}
+{start_of_chorus: REFRAO}
+
+{end_of_chorus}
+{start_of_chorus: REFRÃO 2 (2x)}
+
+_______________________________________________________
+# SOURCE A VERIFIER: Contribuição: Alexandre Mateus([email protected]) 
+Contribuição: Alexandre Mateus(［email protected］)
+
+{end_of_chorus}

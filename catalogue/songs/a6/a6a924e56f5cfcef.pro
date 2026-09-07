@@ -1,0 +1,59 @@
+{title: Siento Que Te Estoy Perdiendo}
+{artist: Luis Eduardo Aute}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, cantautor, nueva cancion, spanish pop, trova}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 105299
+# Empreinte source SHA256: a6a924e56f5cfcef6ade60f4eb86e428f7d4f0ff6f0ee1b572bb91bd4ac5d2aa
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+DESDE HACE A[D]LGÚN TIEMPO
+TE SIENTO DIS[G]TINTA [A][D]
+NO SÉ QUE [G]SERÁ [A][D]
+
+PERO NO ERES LA MISMA
+
+[Bm]OBSERVO EN [E]TUS OJOS MIRADAS
+QU[A]E ESQUIVAN[D] LA MIA
+[Bm]CANSADA DE TANTO BUSCAR TUS PUPILAS
+P[E]IDEIEND[D]O RESPUESTAS A CADA PORQUE
+
+PERO ADIVINO EN TI ALGO QUE EMPIEZA A HUIR
+
+Y NO QUIERO ENTENDER
+
+CUANDO UN PRESENTIMIENTO NO CREA RAZÓN
+
+SOLO INFUNDE TERROR
+
+SIENTO QUE TE ESTOY PERDIENDO
+SIENTO QUE TE ESTOY PERDIENDO
+SIENTO QUE TE ESTOY PERDIENDO
+PERDIÉNDOTE
+
+Y CON MONOSILAVOS ADORMECIDOS
+PRETENDES DECIR QUE DIALOGAS CONMIGO
+TUS GESTOS SON MÁS ELOCUENTES
+AL MENOS SON SIGNOS
+DE TU INDIFERENCIA POR TODO LO MIO
+Y MÁS SI MI AFÁN ES HACERTE FELIZ
+QUE FUE LO QUE PASO
+DONDE ESTUVO EL ERROR
+QUE NO PUDE IMPEDIR
+AUUNQUE SÉ QUE NO ES FACIL DECIR LA VERDAD
+NO LA DIGAS JAMAS
+
+MIS LABIOS NO ENCUENTRAN TU BESO OPORTUNO
+NI ENCUENTRA MI CUERPO EN TU CUERPO REFUGIO
+TAN SOLO PASIVO ABANDONO
+INSTANTE DESNUDO
+QUE ENTREGAS COMO ALGO QUE NO FUERA TUYO
+DEJÁNDOTE HACER EN AUSENTE ACTITUD
+QUE MORTAL DESAZON ES HACERTE EL AMOR
+CUANDO YA NO ERES TU
+NO QUISIERA SABER CUANDO SUELES LLORAR
+EN QUE BRAZOS ESTAS

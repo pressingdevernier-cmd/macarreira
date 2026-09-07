@@ -1,0 +1,188 @@
+{title: El Neyer}
+{artist: Natanael Cano}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-es, corrido, corridos tumbados, nuevo regional mexicano, regional mexican, sierreno}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 10466
+# Empreinte source SHA256: 3c217beab298ca49a77b8db76d08a87f990f3bc2ca42fa3eb7f981942625e565
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, tablature_conservee_en_commentaire, tonalite_absente
+
+hide this tab
+# TAB: E|---9/11--9---8--8/9---8--6--6/8--8--6--4-- 
+# TAB: B|--11/13--11--9--9/11--9--8--8/9--9--8--6-- 
+# TAB: G|------------------------------------------ 
+# TAB: D|------------------------------------------ 
+# TAB: A|------------------------------------------ 
+# TAB: E|------------------------------------------
+
+# TAB: E|--3/4--4-4--3-4/--11---9/119---9---9--9--9--- 
+# TAB: B|--5/6--6-6--5-6/--13--11/1311--11--11-11-11-- 
+# TAB: G|---------------------------------------------- 
+# TAB: D|---------------------------------------------- 
+# TAB: A|---------------------------------------------- 
+# TAB: E|---------------------------------------------- 
+
+# TAB: E|---9/11--9---8--8/9---8--6--6/8--8--6--4-- 
+# TAB: B|--11/13--11--9--9/11--9--8--8/9--9--8--6-- 
+# TAB: G|------------------------------------------ 
+# TAB: D|------------------------------------------ 
+# TAB: A|------------------------------------------ 
+# TAB: E|------------------------------------------ 
+
+# TAB: E|--3/4--4--4--4--4/--11---9/119---9---9--9--9--- 
+# TAB: B|--5/6--6--6--6--6/--13--11/1311--11--11-11-11-- 
+# TAB: G|------------------------------------------------ 
+# TAB: D|------------------------------------------------ 
+# TAB: A|------------------------------------------------ 
+# TAB: E|------------------------------------------------ 
+{comment: À vérifier : Intro Acordes:}
+# SOURCE A VERIFIER: Intro Acordes: 
+
+[Bbm] [C7] [Fm]
+
+[Bbm] [C7] [Fm]
+
+[Bbm]Levantand
+
+[C7]o el
+
+[Fm]vuelo voy
+toda mi gente esta al
+
+[Bbm]erta
+para cual
+
+[C7]quier punta o
+
+[Fm]vergazos
+Soy el Neyer pa que
+
+[Bbm]sepan
+por aqui no
+
+[C7]existe
+
+[Fm]la traicion
+envidiosos pelan
+
+[Bbm]verga
+Cada pas
+
+[C7]o que yo
+
+[Fm]pego voy
+pensando en como ganar
+
+[Bbm]feria
+Page 2
+y no me
+
+[C7]gusta que se
+
+[Fm]metan
+porque el trabajo aqui es derecho y es la
+
+[Bbm]neta
+
+[C7]y cargo bien la cami
+
+[Fm]seta
+tatuando maquina sonando a ti te in
+
+[Bbm]yecta
+
+[C7]con mis amigos de ade
+
+[Fm]veras
+y con la fuerza tocandome por la
+
+[Bbm]izquierda
+
+[C7]y mis tatuajes marcan
+
+[Fm]lo que soy
+y no me gusta andar hablando porque
+
+[Bbm]asi no soy
+Con mis dia
+
+[C7]mantes me distingo siempre a
+
+[Fm]donde voy
+y con las mas lindas mujeres siempre
+
+[Bbm]aqui yo estoy
+(requinto con intro acordes)
+
+[Bbm]Levantand
+
+[C7]o el
+
+[Fm]vuelo voy
+toda mi gente esta al
+
+[Bbm]erta
+con mi carn
+
+[C7]al estoy
+
+[Fm]al million pa la chamba y lo que
+
+[Bbm]venga
+Grafittian
+
+[C7]do bardas
+
+[Fm]creci yo
+soy el Neyer pa que
+
+[Bbm]sepan
+hoy me encuentr
+
+[C7]o donde
+
+[Fm]quize voy por todo y andamos en
+
+[Bbm]esta
+Y si hay env
+
+[C7]idia me la
+
+[Fm]pelan
+sigo en lo mio tinta corre y se ace
+
+[Bbm]leran
+
+[C7]mis pulsaciones se pre
+
+[Fm]sentan
+y con un gallo me las calmo y no es lo
+
+[Bbm]quera
+
+[C7]Y traigo bien la cami
+
+[Fm]seta
+rayando maquina sonando a ti te in
+
+[Bbm]yecta
+
+[C7]y mis tatuajes marcan
+
+[Fm]lo que soy
+Page 3
+y no me gusta andar hablando porque
+
+[Bbm]asi no soy
+Con mis diam
+
+[C7]antes me distingo siempre a
+
+[Fm]donde voy
+y con las mas lindas mujeres siempre
+
+[Bbm]asi me voy

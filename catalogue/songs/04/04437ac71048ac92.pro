@@ -1,0 +1,118 @@
+{title: Novembre}
+{artist: Giusy Ferreri}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic italian pop, italian adult pop, italian pop}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 94985
+# Empreinte source SHA256: 04437ac71048ac923af2b4111915af51f3155d3cbbc6bf3ccd3b09b90a0f1210
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+OUH OUH OUH OU[F#m]H
+
+[D]OUH OUH OUH [Bm]OUH OUH OUH
+
+[C#]HO [F#m]DIFESO LE MIE SCELTE IO [D]HO
+
+CREDUTO NELLE ATTESE IO [Bm]HO
+
+SAPUTO DIRE SPESSO DI [C#]NO
+
+CON TE NON CI RIUSCIVO
+
+HO [F#m]INDOSSATO LE CATENE IO [D]HO
+
+I SEGNI DELLE PENE LO [Bm]SO
+
+CHE NON VOLENDO RICORDE[C#]RO'
+
+QUEL PUGNO NELLO STOMACO
+
+[F#m]
+{comment: À vérifier : A NOVEMBRE}
+# SOURCE A VERIFIER: A NOVEMBRE 
+
+LA CITTA' SI SPENSE IN UN ISTAN[D]TE
+
+TU DICEVI BASTA ED IO RESTAVO I[Bm7]NERME
+
+IL TUO [Bm]EGO E' STATO SEMPRE
+
+PIU' [C#]FORTE DI OGNI MIA CONVINZIONE
+
+ORA A [F#m]NOVEMBRE
+
+LA CITTA' SI ACCENDE IN UN ISTAN[D]TE
+
+IL MIO CORPO NON SI VESTE PIU' DI [Bm7]VOGLIE
+
+E TU NON SEMBRI NEANCHE PIU'
+
+COSI' [C#]FORTE COME TI CREDEVO UN ANNO FA
+
+NOVEMBRE
+
+[F#m]HO DATO FIDUCIA AL BUIO
+
+MA ORA [D]STO IN PIENA LUCE E IN BILI[Bm]CO
+
+TRA ESTRANEI CHE MI CONTENDO[C#]NO
+
+LA VOGLIA DI RINASCERE
+
+[F#m]
+{comment: À vérifier : A NOVEMBRE}
+# SOURCE A VERIFIER: A NOVEMBRE 
+
+LA CITTA' SI SPENSE IN UN ISTAN[D]TE
+
+TU DICEVI BASTA ED IO RESTAVO I[Bm7]NERME
+
+IL TUO [Bm]EGO E' STATO SEMPRE
+
+PIU' [C#]FORTE DI OGNI MIA CONVINZIONE
+
+ORA A [F#m]NOVEMBRE
+
+LA CITTA' SI ACCENDE IN UN ISTAN[D]TE
+
+IL MIO CORPO NON SI VESTE PIU' DI [Bm7]VOGLIE
+
+TU NON SEMBRI NEANCHE PIU'
+
+COSI' [C#]FORTE COME TI CREDEVO UN ANNO FA
+
+[F#m9]NOVEMBRE
+
+E [F#m]TU PARLAVI SENZA DIRE NIEN[D]TE
+
+CERCAVO INVANO DI ADDOLCI[A]RE QUEL RETROGUSTO AMARO
+
+DI UNA PREAN[C#]NUNCIATA FINE OH...
+
+[F#m]
+{comment: À vérifier : A NOVEMBRE}
+# SOURCE A VERIFIER: A NOVEMBRE 
+
+LA CITTA' SI SPENSE IN UN ISTAN[D]TE
+
+TU DICEVI BASTA ED IO RESTAVO I[Bm7]NERME
+
+IL TUO [Bm]EGO E' STATO SEMPRE
+
+PIU' [C#]FORTE DI OGNI MIA CONVINZIONE
+
+ORA A [F#m]NOVEMBRE
+
+LA CITTA' SI ACCENDE IN UN ISTAN[D]TE
+
+IL MIO CORPO NON SI VESTE PIU' DI [Bm7]VOGLIE
+
+E TU NON SEMBRI NEANCHE PIU'
+
+COSI' [C#]FORTE COME TI CREDEVO UN ANNO FA
+
+[F#m9]NOVEMBRE[F#m]

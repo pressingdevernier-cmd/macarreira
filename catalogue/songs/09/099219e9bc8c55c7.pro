@@ -1,0 +1,46 @@
+{title: Once}
+{artist: Pearl Jam}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, alternative rock, grunge, permanent wave, pop rock, rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 13781
+# Empreinte source SHA256: 099219e9bc8c55c77439ff8ff7c0ee60a7a51f1c5fb4f749e788400b00e32346
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+{start_of_part: Intro}
+[A]
+
+I[A] a[C]dm[D]it it...what's to say...yeah...
+I'll relive it...without pain...mmm...
+[A]Backstreet lover on the side of the road
+I got a bomb in my temple that is gonna explode
+I got a sixteen gauge buried un[Bb]der my clothes, I play...
+
+O[G]nc[A]e [Bb]upo[C]n a time I could control myself
+Ooh, once upon a time I could lose myself, yeah...
+
+O[A]h,[C] t[D]ry and mimic what's insane...ooh, yeah...
+I am in it...where do I stand?
+[A]Oh, Indian summer and I hate the heat
+I got a backstreet lover on the passenger seat
+I got my hand in my pocket, so determined, discreet...I [Bb]pray...
+
+O[G]nc[A]e [Bb]upo[C]n a time I could control myself
+Ooh, once upon a time I could lose myself, yeah, yeah...
+
+You think I got my eyes closed
+But I'm lookin' at you the whole fuckin' time...
+Ooh, once upon a time I could control myself, yeah...
+Once upon a time I could lose myself, yeah, yeah, yeah...
+Once, upon a time I could love myself, yeah...
+Once upon a time I could love you, yeah, yeah, yeah...
+
+Once (x4)
+Yeah...once, once...yeah, yeah...
+Yeah...yeah, yeah...yeah, yeah...oww...
+
+{end_of_part}

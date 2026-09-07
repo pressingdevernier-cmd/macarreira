@@ -1,0 +1,75 @@
+{title: Anybody Seen my Baby}
+{artist: Mick Jagger}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic rock, dance rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 103020
+# Empreinte source SHA256: 5dacdfdb66ea070090134940c4ce8f0d274835e91e5e7c147d20ec643d17b169
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+            SHE CONFESSED HER LOVE TO ME
+THEN SHE VANISHED ON THE BREEZE
+TRYING TO HOLD ON TO THAT
+WAS JUST IMPOSSIBLE.
+
+SHE WAS MORE THAN BEAUTIFUL
+CLOSER TO ETHEREAL
+WITH A KIND OF DOWN TO EARTH FLAVOR.
+
+[Am]CLOSE  MY  EYES
+IT'S  THREE IN THE  AFTERNOON
+THEN I  REALIZE THAT SHE'S REALLY
+GONE FOR[Em]  GOOD.
+
+ANYBODY[C] SEE[D]N [B7]MY BA[Em]BY
+ANYBODY[C] SEE[D]N HER AROU[Em]ND
+
+LOVE HAS GONE
+AN MA[C]DE ME BLI[D]ND
+I?VE [B7]LOOKED BUT I JUST CA[Em]N?T FIND
+SHE HAS GOTT[C]EN LOST
+[D]IN THE[Em] CROWD
+
+I WAS FLIPPIN? MAGAZINES
+IN THE PLACE OF MERCER STREET
+WHEN I THOUGHT I SPOTTED HER.
+
+GETTING ON A MOTOR BIKE
+LOOKING RATHER LADY LIKE
+DIDN?T SHE JUST GIVE ME A WAVE
+
+SALTY TEARS
+IT?S THREE IN THE AFTERNOON
+HAS SHE DISAPPEARED
+IS SHE REALLY GONE FOR GOOD
+
+{start_of_chorus: Chorus}
+ANYBODY SEEN MY BABY
+ANYBODY SEEN HER AROUND
+IF I JUST CLOSE MY EYES
+I REACH OUT
+AND TOUCH THE PRIZE
+ANYBODY SEEN HER AROUND
+
+(RAP)
+
+ANYBODY SEEN MY BABY
+ANYBODY SEEN HER AROUND
+IF I JUST CLOSE MY EYES
+I REACH OUT
+AND TOUCH THE PRIZE
+ANYBODY SEEN HER AROUND
+
+LOST, LOST AND NEVER FOUND
+I MUST HAVE CALLED HER
+A THOUSAND TIMES
+SOMETHING I THINK
+SHE?S JUST IN MY IMAGINATION
+
+?LOST IN THE CROWD?
+
+{end_of_chorus}

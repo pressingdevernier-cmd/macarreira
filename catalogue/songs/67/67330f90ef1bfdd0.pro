@@ -1,0 +1,74 @@
+{title: Ela é Bamba}
+{artist: Ana Carolina}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, mpb, musica juiz-forana, nova mpb}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 92401
+# Empreinte source SHA256: 67330f90ef1bfdd073b08f8720a5fa77c6d1538a2a659a67dc81cdc38df8e69a
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            ENTÃO VAMO LÁ:  ANA RITA JOANA IRACEMA CAROLINA (FALADO)
+RA, RA, RA, RA, RA
+RA, RA, RA, RA, RA
+[A7]ELA É BAMBA, ELA É BAMBA, ELA É BAMBA
+ELA É BAMBA, ELA É BAMBA, ELA É BAMBA (2 X)
+
+[D7]ELA É BAMBA ESSA PRETA DO PONTAL
+CINCO FILHOS PEUQENOS PRA CRIAR
+PASSA O DIA NO TRAMPO PAU E PAU
+AINDA ARRANJA UM TEMPINHO PRA SAMBAR
+QUANDO [G#7]CÁI NA AVENIDA ELA É DEMAIS
+TODO MUNDO DE OLHO ELA NEM [G7]AÍ
+FANTASIA BONITA ELA MESMO FAZ
+MANDA TODAS NÃO ERRA A MIRA
+
+[C7]MÃE, PASSISTA, ATLETA, MANICURE, DIPLOMATA
+DONA DA BOTIQUE, INFERMEIRA, ACROBATA
+
+[A7]PARA BAILAR
+BAMBA, ELA É BAMBA, ELA É BAMBA, ELA É BAMBA
+PARA BAILAR, NAH   (BAMBA)
+PARA BAILAR IÊ, HÊ, IÊIHÊ
+[D7]ELA É BAMBA ESSA ÍNDIA DA CENTRAL
+VAI NO OMBRO UM CESTINHO COM NENÉM
+OITO KILOS DE ROUPA NO VARAL
+AINDA VENDE COCADA NESSE TREM
+
+TODA [G#]SEXTA ELA FICA MAIS FELIZ
+VAI DANÇAR NUMA BOATE DO JA[G7]Ú
+FAZ UM JEITO E JÁ PENSA QUE É ATRIZ
+CADA DIA INVENTA UM NOME
+
+DORA[C7] ISAURA EMÍLIA TERESINHA E MARINA
+ANA RITA JOANA IRACEMA E CAROLINA
+ELA É [A]BAMBA, ELA É BAMBA, ELA É BAMBA
+                                                                   BRIDGE / PASSAGEM
+ELA É BAMBA, ELA É BAMBA, ELA É BAMBA   (D7   A  A  A#  B   C)
+DOR[C7]A ISAURA EMÍLIA TERESINHA E MARINA
+ANA RITA JOANA IRACEMA E CAROLINA         PASSAGEM
+LAURA LÍGIA LUMA LUCINEIDE LUCIANA[B7][C7]
+
+QUE[C7]R SEU NOME ESCRITO NUMA LETRA BEM BACANA
+
+{comment: À vérifier : (SOLO VOZ A)}
+# SOURCE A VERIFIER: (SOLO VOZ  A)
+
+ELA[D7] É BALA A MESTIÇA É TODO GÁS
+CADA BRAÇO É UMA VIGA DO PAÍS
+ABRE O OLHO COM ELA MEU RAPAZ
+ELA É QUASE TUDO O QUE[G#] SE DIZ
+QUANDO COMPRA UMA BRIGA ELA É DEMAIS
+VAI NO GROOVE E NÃO DEIXA DESAND[G7]AR
+ELA É POP, ELA É RAP, ELA É BLUES E JAZZ
+E NO SAMBA É PRIMEIRA LINHA
+[C7]LAURA LÍGIA LUMA LUCINEIDE LUCIANA
+QUER SEU NOME ESCRITO NUMA LETRA BEM BACANA
+[A7]ELA É BAMBA, ELA É BAMBA, ELA É BAMBA
+ELA É BAMBA, ELA É BAMBA, ELA É BAMBA (2 X)
+{comment: À vérifier : SOLO VOCAL}
+# SOURCE A VERIFIER: SOLO VOCAL
+[C7] [C] [B] [Bb] [A]

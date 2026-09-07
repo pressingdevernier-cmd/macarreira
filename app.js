@@ -226,14 +226,30 @@ function transposerAccord(nom, ecart, tonCible) {
   if (!ecart || !CSJ || !nom) return nom;
   try {
     var accord = CSJ.Chord.parse(nom);
-    if (!accord) return nom;
+    if (!accord) return transposerNotationImportee(nom, ecart, tonCible);
     // normalize() sans argument remplace les noms impossibles (E#, Cb...)
     // par leur equivalent simple (F, B).
     var deplace = accord.transpose(ecart).normalize().toString();
     return reecrireAlterations(deplace, coteDuTon(tonCible));
   } catch (e) {
-    return nom;
+    return transposerNotationImportee(nom, ecart, tonCible);
   }
+}
+
+/* Repli conservateur pour les suffixes importés non compris par ChordSheetJS.
+   Déplacer la fondamentale et la basse nommée, sans inventer de diagramme. */
+function transposerNotationImportee(nom, ecart, tonCible) {
+  if (!/^[A-G][#b]?/.test(nom || '') || /^[A-G][#b]{2}/.test(nom)) return nom;
+  var noms = coteDuTon(tonCible) === 'b' ? BEMOLS : DIESES;
+  function deplacer(note) {
+    var m = /^([A-G])([#b]?)$/.exec(note);
+    if (!m) return note;
+    var n = { C:0, D:2, E:4, F:5, G:7, A:9, B:11 }[m[1]];
+    n += m[2] === '#' ? 1 : (m[2] === 'b' ? -1 : 0);
+    return noms[((n + ecart) % 12 + 12) % 12];
+  }
+  return String(nom).replace(/^[A-G][#b]?/, deplacer)
+    .replace(/\/[A-G][#b]?$/, function (basse) { return '/' + deplacer(basse.slice(1)); });
 }
 
 /* --------------------------------------------------------------------------
@@ -467,8 +483,8 @@ function chargerTextes() {
     return Promise.all(chansons.map(function (c) {
       var slug = slugDe(c);
       if (!slug || textesChansons[slug] !== undefined) return null;
-      return fetch('songs/' + encodeURIComponent(slug) + '.pro')
-        .then(function (r) { return r.ok ? r.text() : ''; })
+      return Carnet.get('chansons', slug)
+        .then(function (c) { return c ? c.texte : ''; })
         .then(function (t) {
           textesChansons[slug] = sansAccents(t);
           // On en profite : savoir si la chanson a des paroles sert a
@@ -490,14 +506,9 @@ function chargerIndex() {
   if (indexChansons) return Promise.resolve(indexChansons);
   if (chargementIndex) return chargementIndex;
 
-  chargementIndex = fetch('songs/index.json', { cache: 'no-cache' })
-    .then(function (r) {
-      if (!r.ok) throw new Error('index introuvable');
-      return r.json();
-    })
+  chargementIndex = Recueil.fiches()
     .then(function (donnees) {
-      // On accepte soit un tableau simple, soit un objet { songs: [...] }.
-      indexChansons = Array.isArray(donnees) ? donnees : (donnees.songs || []);
+      indexChansons = donnees;
       majCompteur();
       return indexChansons;
     })
@@ -696,6 +707,7 @@ var etatChanson = null;
 var modeChant = false;
 
 function chargerChanson(slug) {
+  if (Recueil.local(slug) || Recueil.cat(slug)) return Recueil.charger(slug);
   if (cacheChansons[slug]) return Promise.resolve(cacheChansons[slug]);
   return fetch('songs/' + encodeURIComponent(slug) + '.pro', { cache: 'no-cache' })
     .then(function (r) {
@@ -752,6 +764,7 @@ function etatPour(slug, chanson) {
 }
 
 function afficherChanson(slug, idSetlist) {
+  var routeTicket = Recueil.epoch();
   vue.innerHTML = '<p class="message">Un instant…</p>';
 
   // Une chanson ouverte depuis une setlist a besoin de l'index et des
@@ -761,6 +774,7 @@ function afficherChanson(slug, idSetlist) {
     : Promise.resolve(null);
 
   contexte.then(function () { return chargerChanson(slug); }).then(function (chanson) {
+    if (routeTicket !== Recueil.epoch()) return;
     var m = chanson.meta;
     var fil = filDeSetlist(slug, idSetlist);
 
@@ -769,7 +783,7 @@ function afficherChanson(slug, idSetlist) {
     var html = fil
       ? '<a class="back-link" href="#/setlist/' + encodeURIComponent(fil.id) + '">← ' +
         txt(fil.nom) + '</a>'
-      : '<a class="back-link" href="#/">← Le recueil</a>';
+      : '<a class="back-link" href="' + (Recueil.cat(slug) ? '#/catalogue' : '#/') + '">← ' + (Recueil.cat(slug) ? 'Le catalogue' : 'Le songbook') + '</a>';
 
     html += '<header class="song-header">';
     html += '<h2>' + txt(m.title || slug) + '</h2>';
@@ -811,7 +825,8 @@ function afficherChanson(slug, idSetlist) {
 
     // Modifier les notes, le statut, ou retirer la chanson : seulement si
     // l'application a le droit d'ecrire dans le depot.
-    if (Depot.estConfigure()) {
+    html += Recueil.actions(slug);
+    if (Depot.estConfigure() && !Recueil.local(slug) && !Recueil.cat(slug)) {
       html += '<p class="lien-ajouter"><button type="button" class="lien-plat" ' +
         'data-act="ouvrir-edition">Modifier cette chanson</button></p>';
     }
@@ -829,9 +844,10 @@ function afficherChanson(slug, idSetlist) {
     // On prepare la base de l'instrument en tache de fond : au premier
     // accord tape, le panneau s'ouvre sans attente.
     Accords.charger(instrumentChoisi()).catch(function () { /* hors ligne */ });
-  }).catch(function () {
-    vue.innerHTML = '<p class="message">Chanson introuvable : <code>songs/' +
-      txt(slug) + '.pro</code>.<br><a href="#/">Retour au recueil</a></p>';
+  }).catch(function (erreur) {
+    if (routeTicket !== Recueil.epoch()) return;
+    vue.innerHTML = '<p class="message">' + txt(erreur.message || 'Chanson indisponible.') +
+      '<br>Une fiche non conservée peut nécessiter une connexion.<br><a href="#/catalogue">Retour au catalogue</a> · <a href="#/">Songbook hors ligne</a></p>';
   });
 }
 
@@ -949,7 +965,7 @@ function faitsChanson() {
       '<span class="fact-value">' + txt(m.tempo) + '</span></span>');
   }
   if (m.status) bouts.push(badgeStatut(m.status));
-  if (m.listen) {
+  if (/^https?:\/\//i.test(m.listen || '')) {
     bouts.push('<a class="lien-ecoute" href="' + txt(m.listen) + '" target="_blank" ' +
       'rel="noopener">Écouter ↗</a>');
   }
@@ -999,13 +1015,20 @@ function chargerPartition() {
   if (!cadre || !etatChanson || cadre.getAttribute('data-charge') === 'oui') return;
 
   var fichier = etatChanson.meta.x_score;
-  var adresse = 'scores/' + fichier;
+  if (!/^[a-zA-Z0-9_.-]+\.pdf$/i.test(fichier) || fichier.includes('..')) {
+    cadre.textContent = 'Nom de partition invalide.'; return;
+  }
+  var adresse = 'scores/' + encodeURIComponent(fichier);
   cadre.innerHTML = '<p class="message">Ouverture de la partition…</p>';
 
   // On demande le fichier avant de l'afficher : cela verifie qu'il existe
   // et, au passage, le met en cache pour le hors ligne.
-  fetch(adresse).then(function (r) {
+  fetch(adresse).then(async function (r) {
     if (!r.ok) throw new Error('partition absente');
+    var copie = r.clone();
+    var octets = await r.arrayBuffer();
+    if (new TextDecoder().decode(octets.slice(0,5)) !== '%PDF-') throw new Error('PDF invalide');
+    await (await caches.open('macarreira-pdf-v1')).put(adresse, copie);
     cadre.setAttribute('data-charge', 'oui');
     cadre.innerHTML =
       '<div class="cadre-pdf"><iframe src="' + txt(adresse) + '" ' +
@@ -1035,7 +1058,7 @@ function majAstuce() {
   boite.hidden = false;
 
   // Avec un jeton, un seul appui suffit : l'application ecrit elle-meme.
-  if (Depot.estConfigure()) {
+  if (Recueil.local(e.slug)) {
     boite.innerHTML = 'Nous chantons maintenant en ' + txt(entendu) + ' ?' +
       '<button type="button" data-act="retenir-ton">Retenir cette tonalité</button>';
     return;
@@ -2178,6 +2201,7 @@ function memeFiche(a, b) {
 /* Remet l'index a jour si la fiche de la chanson a change. Renvoie true si
    un commit a ete necessaire. */
 function majIndexDansLeDepot(nomFichier, meta) {
+  if (Recueil.local(nomFichier.replace(/\.pro$/, ''))) { Recueil.invalider(); return Promise.resolve(false); }
   var fiche = ficheIndex(nomFichier, meta);
 
   return Depot.lire('songs/index.json').then(function (trouve) {
@@ -2611,6 +2635,7 @@ function verifierJeton(vientDEtreColle) {
     majEtatJeton(messageReglages('ok',
       'Tout est en ordre : l\'application peut enregistrer dans ' +
       '<code>' + txt(infos.depot) + '</code>.'));
+    Synchro.lancer();
   }).catch(function (souci) {
     // Un jeton refuse ou sans droits ne sert a rien : on ne le garde pas.
     // Une panne de reseau, en revanche, ne dit rien sur sa validite.
@@ -2674,6 +2699,7 @@ function ecrireDirective(texte, cle, valeur) {
 /* Relit la chanson dans le depot, y applique les changements, la renvoie.
    Renvoie le nouveau texte du fichier. */
 function modifierChanson(slug, changements, messageCommit) {
+  if (Recueil.local(slug)) return Recueil.modifier(slug, changements);
   var chemin = 'songs/' + slug + '.pro';
 
   return Depot.lire(chemin).then(function (trouve) {
@@ -3150,6 +3176,7 @@ document.addEventListener('change', function (ev) {
    -------------------------------------------------------------------------- */
 
 function router() {
+  if (!Recueil.preparerRoute()) return;
   var chemin = window.location.hash.replace(/^#\/?/, '');
 
   fermerPanneau();
@@ -3162,7 +3189,9 @@ function router() {
     else lienAccords.removeAttribute('aria-current');
   }
 
-  if (chemin.indexOf('song/') === 0) {
+  if (chemin === 'catalogue' || chemin === 'songbook' || chemin.indexOf('editer/') === 0) {
+    Recueil.route(chemin);
+  } else if (chemin.indexOf('song/') === 0) {
     // « song/nom-fichier » ou « song/nom-fichier/dans/identifiant-setlist »
     var bouts = chemin.slice(5).split('/dans/');
     afficherChanson(decodeURIComponent(bouts[0]),
@@ -3172,13 +3201,13 @@ function router() {
   } else if (chemin === 'accords') {
     afficherDictionnaire();
   } else if (chemin === 'completer') {
-    afficherAjouter();
+    Recueil.route('editer/nouveau');
   } else if (chemin === 'imprimer') {
     afficherImpression();
   } else if (chemin === 'reglages') {
     afficherReglages();
   } else {
-    afficherBibliotheque();
+    Recueil.route('');
   }
 }
 
@@ -3200,10 +3229,30 @@ function initHorsLigne() {
   // ne fonctionne : on n'essaie meme pas.
   if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
 
-  navigator.serviceWorker.addEventListener('controllerchange', afficherVersion);
+  var activationDemandee = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    afficherVersion();
+    if (activationDemandee) window.location.reload();
+  });
 
   navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
     .then(function (enregistrement) {
+      function proposer() {
+        if (!enregistrement.waiting || document.getElementById('maj-app')) return;
+        var b = document.createElement('aside'); b.id = 'maj-app'; b.setAttribute('role','status');
+        b.innerHTML = 'Une mise à jour est prête. <button type="button">Installer quand vous avez terminé</button>';
+        b.querySelector('button').onclick = function () {
+          if (Recueil.dirty()) { alert('Enregistrez votre grille avant d’installer la mise à jour.'); return; }
+          if (etatChanson && !confirm('Installer la mise à jour et recharger l’application ?')) return;
+          activationDemandee = true; enregistrement.waiting.postMessage({type:'activer'});
+        };
+        document.body.appendChild(b);
+      }
+      proposer();
+      enregistrement.addEventListener('updatefound', function () {
+        var installe = enregistrement.installing;
+        if (installe) installe.addEventListener('statechange', proposer);
+      });
       enregistrement.update();
       // A chaque fois qu'on revient sur l'application, on regarde s'il y a du neuf.
       document.addEventListener('visibilitychange', function () {
@@ -3239,11 +3288,7 @@ function demanderAuServiceWorker(message) {
    Si oui, il a deja range les nouveaux dans son cache : il ne reste qu'a
    recharger la page une fois pour les utiliser. */
 function verifierLesMisesAJour() {
-  demanderAuServiceWorker({ type: 'verifier' }).then(function (reponse) {
-    if (!reponse || !reponse.codeAChange) return;
-    if (!peutRecharger()) return;
-    window.location.reload();
-  });
+  // La mise à jour est proposée par initHorsLigne, jamais imposée pendant le jeu.
 }
 
 /* Garde-fou : jamais deux rechargements coup sur coup, meme si quelque
@@ -3265,6 +3310,7 @@ function afficherVersion() {
   if (!boite) return;
 
   demanderAuServiceWorker({ type: 'version' }).then(function (reponse) {
+    if (reponse && reponse.version) { boite.textContent = 'Version ' + reponse.version; return; }
     if (!reponse || !reponse.date) return;
     var lisible = dateLisible(reponse.date);
     if (lisible) boite.textContent = 'Version du ' + lisible;
@@ -3288,6 +3334,7 @@ recupererTextePartage();
 if (lireMemoire(CLE_TRI) === 'artiste') triActif = 'artiste';
 router();
 initHorsLigne();
+Synchro.lancer();
 
 // Le nombre de chansons s'affiche en pied de page des le depart, meme si on
 // arrive directement sur une chanson ou sur le dictionnaire.

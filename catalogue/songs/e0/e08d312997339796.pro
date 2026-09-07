@@ -1,0 +1,40 @@
+{title: Have You Met Miss Jones}
+{artist: Sarah Vaughan}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, adult standards, cool jazz, jazz, lounge, soul, swing, torch song, vocal jazz}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 94118
+# Empreinte source SHA256: e08d3129973397966c340867c30cd2a165dd1d7e904ec27ab65db4b237cb1e3c
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tonalite_absente
+
+{comment: À vérifier : Introd.: A7/13- D F#m7 Em7 A7/13- D F#m7 Em7 A7/13 D6}
+# SOURCE A VERIFIER: Introd.: A7/13- D F#m7 Em7 A7/13- D F#m7 Em7 A7/13 D6 
+
+[D7M]"Have you met Miss [Cdim]Jones"
+[Em7]Someone [G/B]said as[A4/7]  we  shook hand[A7]s
+She was [F#m7]just Miss J[Bm7]ones to [Em7]me  [A7]
+And [D7M]then I said, "Miss [Cdim]Jones
+[Em7]You're a[G/B] girl wh[A4/7]o understan[A7]ds
+[D]I'm a[F#m7] man who [Bm7]must [Gm7]be f[A7]ree"
+{start_of_bridge: Bridge}
+And [Gdim]all at o[D7M]nce I [F#m7]lost my br[Bb7]eath
+And all at [Gm7]once was [C#m5-/7]scared to de[F#7]ath
+And [A7]all at [D]once I [F#m7]owned the e[Bm7]arth [F7]and [A7]sky [G/B] [A7]
+[A7/13-]And  no[D7M]w I've met Miss Jon[Cdim]es
+[Em7]And we'll [G/B]keep on[A4/7] meeting [A7]till we[B7] die  [Em7]
+Miss [A7/13-]Jones and I [D] [Cdim][G/B][A7]
+{end_of_bridge}
+{start_of_part: Interlude}
+[D7M] [Cdim] [Em7] [G/B] [A4/7] [A7] [F#m7] [Bm7] [Em7] [A7] [D7M] [Cdim] [Em7] [G/B] [A4/7] [A7] [D] [F#m7] [Bm7] [Gm7] [A7]
+And [Gdim]all at o[D7M]nce I [F#m7]lost my br[Bb7]eath
+And all at [Gm7]once was [C#m5-/7]scared to de[F#7]ath
+And [A7]all at [D]once I [F#m7]owned the e[Bm7]arth [F7]and [A7]sky [G/B] [A7]
+[A7/13-]And  no[D7M]w I've met Miss Jon[Cdim]es
+[Em7]And we'll [G/B]keep on[A4/7] meeting [A7]till we[B7] die  [Em7]
+Miss [A7/13-]Jones and I,[D]  [F#m7]      [Em7] Miss Jo[A7/13-]nes and I[D], [F#m7]    M[Em7]iss Jone[A7/13]s and [D6]I
+
+{end_of_part}

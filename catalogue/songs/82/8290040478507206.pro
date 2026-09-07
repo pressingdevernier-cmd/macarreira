@@ -1,0 +1,103 @@
+{title: Packard Goose}
+{artist: Frank Zappa}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, art rock, experimental, instrumental rock, jazz fusion, jazz rock, progressive rock, psychedelic rock, rock, symphonic rock, zolo}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 75446
+# Empreinte source SHA256: 82900404785072068319af1c0794b8f465b5e9fe0bb0f2ca1ab4156a027eff52
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, ponctuation_chordpro_neutralisee, tabulations_interpretees_4_colonnes, tonalite_absente
+
+MAYBE YOU TH[A]OUGHT I WA[D]S THE PACKARD [E]
+GOOSE [C#m][B]
+OR THE [A]RONALD [D]MCDONALD OF THE
+[E]NOUVEAU-ABSTRUSE [C#m][B]
+WELL FUCK [A]ALL THEM PEOPLE, I DON'T[D] NEED [E]
+NO EXCUSE F[A]OR BEING WHAT [G]I AM [D][E]
+[C#m]DO YOU HEAR ME, T[B]HEM?
+ALL THEM ROCK 'N'[A] ROLL WRITERS IS THE [D]
+[E]WORST KIND OF SLEEZE [A][B]
+SELLING PUNK L[A]IKE SOME NEW KIND OF [D]
+[E]ENGLISH DISEASE [A][B]
+IS THAT THEM WAVE OF TH[A]E FUTURE [D]
+[G]AW, S[D]PARE ME PLEASE [E]
+
+C#m         B    (CHORD SET 1)
+OH NO YOU GOTTA GO
+[C#m]WHO DO YOU WRITE FOR,[B]I WANNA KNOW
+I B[A]ELIEVE YOU I[B]S THE GOVE[C#m]RNMENT'S
+WHORE
+[F#]AND KEEPING PEOPLES DUMB IS WHERE
+[A]YOU'RE COMING FROM
+(TWICE)
+
+[A]FUCK ALL THEM WRITER WITH[D] THE PEN IN [E]
+THEIR HAND [C#m][B]
+I WILL BE MO[A]RE SPECIFIC SO T[D]HEY MIGHT [E]
+ UNDERSTAND [C#m][B]
+THEY CAN ALL KISS MY[A] ASS [D]
+BUT BECA[E]USE IT'S SO GRAND [A]
+THEY BEST[G] JUST STAY AWAY, [D]HEY, HE[E]Y,
+HEY.
+
+(CHORD SET 1)
+HEY JOE WHO DID YOU BLOW?
+MOE PUSHED THE BUTTON BOY
+AND YOU WENT TO THE SHOW
+BETTER SUCK A LITTLE HARDER OR THE
+SHEKELS WONT FLOW
+AND I DON'T MEAN YOU THUMB
+SO ON YOUR KNEES YOU BUM
+JUST TELL YOURSELF IT'S YUM
+AND SUCK IT TILL ITS NUMB
+
+[F#]JOURNALISM'S KINDA SCARY
+[A]AND OF IT WE SHOULD BE WARY
+[F#]WONDER WHAT BECAME OF MARY?
+A etc. . .
+HI! IT'S ME. THE GIRL FROM THE BUS
+REMEMBER THE LAST TOUR, WELL
+INFORMATION IS NOT KNOWLEDGE
+WISDOM IS NOT TRUTH
+TRUTH IS NOT BEAUTY
+BEAUTY IS NOT LOVE
+LOVE IS NOT MUSIC
+MUSIC IS THE BEST
+WISDOM IS THE DOMAIN OF THE WIZ
+WHICH IS EXTINCT
+BEAUTY IS A FRENCH PHONETIC
+CORRUPTION
+OF A SHORT CLOTH NECK ORNAMENT
+CURRENTLY IN RESURGENCE
+
+IF YO[A]UR IN THE AUDIENC[D]E AND LIKE WHAT [E]
+WE DO [C#m][B]
+WELL WE WANT YO[A]U TO KNOW THAT WE [D]
+[E]LIKE YOU ALL TOO [C#m][B]
+BUT AS F[A]OR THE SUCKER WHO[D] WILL WRITE [E]
+THE REV[C#m]IEW
+
+{comment: À vérifier : E C#m A B etc, etc...}
+# SOURCE A VERIFIER: E      C#m     A       B    etc, etc... 
+IF HIS MIND IS PREHENSILE
+HE'LL PUT DOWN HIS PENCIL
+AND HAVE HIMSELF A SQUAT
+ON THE COSMIC UTENSIL
+GIVE IT ALL YOU GOT
+ON THE COSMIC UTENSIL
+SIT AND SPIN UNTIL YOU ROT
+ON THE COMIC UTENSIL
+HE REALLY NEEDS TO SQUAT
+ON THE COSMIC UTENSIL
+
+NOW THAT I GOT THAT OVER WITH
+ILL JUST PLAY MY IMAGINARY GUITAR
+AGAIN
+
+submited by
+Will Kaemmerling
+# SOURCE A VERIFIER: [email protected] 
+［email protected］

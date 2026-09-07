@@ -1,0 +1,48 @@
+{title: Absolutely Sweet Marie}
+{artist: George Harrison}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, beatlesque, classic rock, folk rock, mellow gold, psychedelic rock, rock, roots rock, soft rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 30889
+# Empreinte source SHA256: a3661c76e75cc8d337c61c3f2ef0d97eaca81ce94c20c428ae65abd64874ab3a
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+[D]
+
+Well, your rail[D]roadgate, [G]you know I [A7]just can't jump [D]it.
+[G]Sometimes it gets [D]so hard, you see[A7].
+I'm just [D]sitting here[G] beating on[A7] my trumpet[D], [Bm]
+with [F#m]all these promises you [D]left for me[A7].
+But where [G]are you tonight[A7], sweet Marie [D]?
+
+Well, I w[D]aited for you[G] when I [A7]was half[D] sick.
+Yes I w[G]aited for you w[D]hen you hated [A7]me.
+Well, I w[D]aited for you[G] inside of the [A7]frozen tra[D]ffic [Bm]
+When you [F#m]knew I had some other p[D]lace to be[A7].
+Now, where [G]are you tonight[A7], sweet Marie [D]?
+
+Well, [Bb]anybody can be just like [D]me, obviosly,
+But t[Bb]hen, now again, not too many can be like you[D], fortunately.[A7]
+Well, six white h[D]orses [G]that you d[A7]id prom[D]ise me
+Where [G]finaly delivered down[D] to the penitentia[A7]ry.
+But to [D]live outside the [G]law, you mus[A7]t be hon[D]est. [Bm]
+I [F#m]know you always say that you[D] agree, [A7]
+But w[G]here are you tonight[A7], sweet Marie [D]?
+
+Now, I been in [D]jail[G] when [A7]all my mail[D] showed
+That a [G]man can't give his address [D]out to bad compa[A7]ny,
+And now I [D]stand here l[G]ookin' at your [A7]yellow rail[D]road [Bm]
+In the [F#m]ruins of your [D]balcony,[A7]
+Wond'ring where[G] are you tonight,[A7] sweet Marie [D]?
+
+Well I don't [Bb]know how it happened,But the riverboat captain,[D]he knows my fate
+But [Bb]ev'rybody else, even yourself, they're just [D]gonna have to wait.[A7]
+Well, I got the [D]fever[G] down [A7]in my pock[D]ets,
+The [G]Persian drunk[D]ard, he follows [A7]me.
+Yes, I can t[D]ake him to your [G]house, but I [A7]can't unlock[D] it. [Bm]
+You [F#m]see, you forgot to leave me with[D] the key.[A7]
+Oh, [G]where are you tonight[A7], sweet Marie [D]?

@@ -1,5 +1,21 @@
 # Macarreira — Songbook de duo (PWA)
 
+## Évolution validée en septembre 2026 — à lire en premier
+
+Le propriétaire a choisi un dépôt public unique (pas Supabase), un catalogue
+en ligne et un songbook local-first partagé via GitHub. Lire `CATALOGUE.md`
+pour l’architecture actuelle ; les principes historiques ci-dessous restent
+utiles pour le design mais `songs/` n’est plus le stockage principal.
+`catalogue/songs/` est la source du catalogue ; `book/songs/` celle des versions
+personnelles partagées. Ne jamais écraser une grille locale non synchronisée.
+Les `.pro` partagés et leur manifeste sont enregistrés dans un seul commit,
+avec contrôle de concurrence. Aucun jeton dans le code, les tests ou les exports.
+Les 34 chansons initiales ont été retirées à la demande de l’utilisateur et
+restent dans l’historique. Ne pas les réimporter automatiquement.
+Le service worker ne doit jamais télécharger le catalogue entier ni forcer
+le rechargement d’une chanson en cours. Changer sa VERSION à chaque évolution
+de l’application. Préserver les identifiants du catalogue lors des corrections.
+
 ## Contexte et utilisateur
 
 Macarreira est le songbook privé d'un duo : lui à la guitare (ou ukulélé), elle au piano, au chant et parfois à la guitare. L'application affiche paroles, accords et partitions, et se partage entre un iPhone et un Android via une simple URL.

@@ -1,0 +1,107 @@
+{title: Love is the price}
+{artist: DJ BoBo}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, bubblegum dance, eurodance, europop, hip house}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 81034
+# Empreinte source SHA256: df1197efe9144a5f5c8fa8d5367918eda9ef2f5b70cdd005835bef374f4a148d
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: ligne_accords_non_reconnue, ponctuation_chordpro_neutralisee, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{comment: À vérifier : Intro(G C Am D)}
+# SOURCE A VERIFIER:             Intro(G C Am D) 
+
+[G]BABY'S IN THE PARLOUR
+[C]WAITING FOR THE RAIN
+[Am]BEATING LIKE A HAMMER
+[D]WASHING OUT HER PAIN
+
+CLEARING LIKE THE ONE
+SEVEN YEARS AGO
+WHEN HER FIRST BIG LOVE
+MELTED LIKE SNOW
+
+BACK THEN SHE DOUBET
+IF SHE WOULD EVER FIND A MAN
+WHO COULD LOVE HER THAT WAY
+THE SAME WAY AGAIN
+
+AND JUST WHEN SHE THOUGHT
+SHE'S LIVING IN VAIN
+THE MAN OF HER DREAMS
+CAME LIKE THE RAIN
+
+{start_of_chorus: REFRAIN}
+[G]WHEN LOVE IS THE PRICE
+[C]FREEDOM IS THE COST
+[Am]LOVE IS THE PRICE
+[D]FREEDOM IS THE COST
+
+[G]AND JUST WHEN YOU THINK
+[C]EVERYTHING IS LOST
+[Am]LOVE WILL BE YOUR PRIC[D]E
+AND [G]I KN[C]OW I W[Am]OULD NOT CHANGE A TH[D]ING
+YES [G]I KN[C]OW I W[Am]OULDN'T CHANGE A TH[D]ING
+
+RAP 2:
+THEY SPOKE ABOUT HER DREAMS
+THEY SPOKE ABOUT LOVE
+THEY SPOKE ABOUT THE THINGS
+SHE WAS SO AFRAID OF
+
+HE HAD THE KEY-WORD
+FOR EVERYTHING SHE FELT
+SO IT DIDN'T TAKE LONG
+TILL HE GOT HER NAILED
+
+PIN ONE'S HOPE ON
+SOMEONE ELSES LIFE
+AND ALL YOUR DREAMS
+WILL HURT YOU LIKE A KNIFE
+
+WILL HURT YOU
+SHE SOON GOT LOST
+WHEN LOVE IS THE PRICE
+FREEDOM IS THE COST
+
+{end_of_chorus}
+{start_of_chorus: REFRAIN}
+WHEN LOVE IS THE PRICE
+FREEDOM IS THE COST
+LOVE IS THE PRICE
+FREEDOM IS THE COST
+AND JUST WHEN YOU THINK
+EVERYTHING IS LOST
+LOVE WILL BE YOUR PRIZE
+AND I KNOW I WOULD NOT CHANGE A THING
+YES I KNOW I WOULDN'T CHANGE A THING
+
+RAP 3:
+SHE DIDN'T TRUST
+THAT VERY FIRST MAN
+TO COME INTO HER LIFE
+TRYING TO UNDERSTAND
+
+WHAT NOBODY EVER
+COULD BEFORE
+HE ONLY MADE HER SEE
+THERE IS SOMETHING MORE
+
+TO LEARN ABOUT FREEDOM
+TO LEARN ABOUT LOVE
+TO HANDLE ALL THE THINGS
+SHE WAS SO AFRAID OF
+
+TO ALWAYS FOLLOW
+WHAT SHE REALLY FELT INSIDE
+EVERYTHING ELSE
+WAS A ROLLERCOASTER RIDE
+
+Por EDie
+# SOURCE A VERIFIER: Sugerencias: [email protected] 
+Sugerencias: ［email protected］
+
+{end_of_chorus}

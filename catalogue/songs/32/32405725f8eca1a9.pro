@@ -1,0 +1,78 @@
+{title: Ill Be A Hero When I Strike}
+{artist: Merle Haggard}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, bakersfield sound, country, country rock, nashville sound, outlaw country}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 134474
+# Empreinte source SHA256: 32405725f8eca1a956c616b0b687528a9bb9e71b14fd081bf364ebf6ea2a48b1
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[C]All because I walk a different street
+
+And not helloed by some I meet
+
+That don't [G7]mean that what I do is [C]right
+
+Those that said that I was wrong
+
+Now say they knew it all along
+
+Cause [G7]I'll be a hero when I [C]strike
+
+[C7]I'll be a hero when I strike
+
+Come [F]up tight and out of [C]sight
+
+They'll [F]say I'm dynamite
+
+And [C]they'd like to be there when I light
+
+Cause [G7]I'll be a hero when I [C]strike
+
+I love God and the flag
+
+And I ain't the kind to stand and brag
+
+And I'm [G7]the kind to stand right up and [C]fight
+
+Don't need a uniform to wear
+
+To make the people stop and stare
+
+Cause [G7]Hoss I'll be a hero when I [C]strike
+
+[C7]I'll be a hero when I strike
+
+Come [F]up tight and out of [C]sight
+
+They'll [F]say I'm dynamite
+
+And [C]they'd like to be there when I light
+
+Cause [G7]I'll be a hero when I [C]strike
+
+Won't shake hands until I'm sore
+
+Wear medals hangin' to the floor
+
+They'll [G7]throw rocks at Franklin and his [C]kind
+
+They'll say boy ain't that cowboy hot
+
+There ain't nothin' he ain't got
+
+But [G7]I'm gonna be a hero when I [C]strike
+
+[C7]I'll be a hero when I strike
+
+Come [F]up tight and out of [C]sight
+
+They'll [F]say I'm dynamite
+
+And [C]they'd like to be there when I light
+
+Cause [G7]I'll be a hero when I [C]strike

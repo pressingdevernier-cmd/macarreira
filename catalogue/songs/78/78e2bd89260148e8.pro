@@ -1,0 +1,61 @@
+{title: Deus contempla}
+{artist: Cassiane}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, adoracao, brazilian gospel, gospel antigas}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 93598
+# Empreinte source SHA256: 78e2bd89260148e8abacc0b40c1a9857a5fd750ea19899c0c43450af41237d0f
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{comment: À vérifier : INT -> :: F9 : Fm13- D#9/13 : Cm11 A#m7/11 : Gm7/11 :: Gm/F F9 : C7/F F9 ::}
+# SOURCE A VERIFIER:              INT -> :: F9 : Fm13- D#9/13 : Cm11 A#m7/11 : Gm7/11 :: Gm/F F9 : C7/F F9 :: 
+
+[F9]DEUS CONTEMPLA TEUS OLHOS CANSADOS [Bb/F]
+E AINDA MOLHADOS DE TANT[Bb/F]O CHORAR [F9][C#9/F]
+DEUS SE CO[F9]MOVE COM TEU SOFRIMENTO [A#/F]
+E É NESSE MOMENTO QUE ELE V[C/F]AI MANDAR... [F9]
+
+[Dm9]UM ANJO FORTE E VALENTE PRA TE PROTEGER [A#7+]
+E PERTO DELE VOCÊ NÃO PRECISA MAIS TEMER [F/A]
+POR QUE COM ELE ESTA PROVAÇÃO NÃO VAI MAIS TE AFLIGIR [A#9][C7]
+[Dm9]SE ENTRAR NA LUTA, VOCÊ PODE CRER QUE É PRA GANHAR [A#7+]
+O INIMIGO CORRE PARA NUNCA MAIS VOLTAR [F/A]
+E DEUS TE HONRA PORQUE VÊ VOCÊ SE HUMILHAR [F9][C4/7]
+
+[C4/7]DEUS TE LEVANTA LÁ DA CINZA PARA TE DAR VITÓRIA [Gm7/F]
+DEUS TE CONTEMPLA E SE COMOVE QUANDO VOCÊ CHORA [F/A][A#9]
+NA MADRUGADA ELE VÊ VOCÊ CHEGAR AO PÓ [Gm7]
+DEUS TE CONHECE E JAMAIS VAI TE DEIXAR TÃO SÓ[A#/C]
+[F9]QUANDO UMA LÁGRIMA CAIR NO CHÃO DEUS VAI OUVIR [Gm7/F]
+ESTÁ ATENTO E PRONTO PRA ENTREGAR O QUE PEDIR [F/A]
+[A#9]DEUS VAI MOVER OS CÉUS NA HORA QUE VOCÊ CLAMAR [Gm7]
+ENTÃO COMECE AGORA A DEUS GLORIFICAR... [A#/C]
+
+[F9]O CÉU ESTÁ ABRINDO E AGORA JÁ VEJO DESCER [Dm7]
+UM GRANDE EXÉRCITO QUE DEUS MANDOU PARA TRAZER [Gm7]
+UM BATALHÃO DE BÊNÇÃOS, PODE ERGUER AS SUAS MÃOS [F/A][A#9]
+RECEBA AGORA E CONTEMPLE A MULTIPLICAÇÃO [A#/C]
+[F9]DEUS DECIDIU ABRIR O CÉU PARA TE ABENÇOAR [Dm7]
+PORQUE SENTIU A TUA DOR QUANDO TE VIU CHORAR [Gm7]
+SÓ UMA LÁGRIMA QUE DESCE NA HUMILHAÇÃO [F/A]
+[A#9]O CÉU SE ESTREMECE, DEUS ENTRA E[Gm7]M AÇÃO [C9][C#9]
+{comment: À vérifier : INTERLÚDIO: :: D#/F G#7+/A# D#6 Cm7/13 : C#9 : C4 C7 ::}
+# SOURCE A VERIFIER: INTERLÚDIO: :: D#/F G#7+/A# D#6 Cm7/13 : C#9 : C4 C7 :: 
+
+ÚLTIMA VEZ O CORO:
+
+[F9]O CÉU ESTÁ ABRINDO E AGORA JÁ VEJO DESCER [Dm7]
+UM GRANDE EXÉRCITO QUE DEUS MANDOU PARA TRAZER [Gm7]
+UM BATALHÃO DE BÊNÇÃOS, PODE ERGUER AS SUAS MÃOS [F/A][A#9]
+RECEBA AGORA E CONTEMPLE A MULTIPLICAÇÃO [A#/C]
+[F9]DEUS DECIDIU ABRIR O CÉU PARA TE ABENÇOAR [Dm7]
+PORQUE SENTIU A TUA DOR QUANDO TE VIU CHORAR [Gm7]
+SÓ UMA LÁGRIMA QUE DESCE NA HUMILHAÇÃO [F/A]
+[A#9]O CÉU SE ESTREMECE, DEUS ENTRA E[Gm7]M AÇÃO [F9][A#m6/9]
+
+DEUS SE COMOVE, QUAND[G#6]O VOCÊ CHORA [D#9/G]
+O CÉU SE ESTREMECE, DEUS ENTRA[F#6] EM AÇÃO [F9]

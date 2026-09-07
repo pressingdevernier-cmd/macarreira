@@ -1,0 +1,42 @@
+{title: Just Between The Two Of Us}
+{artist: Merle Haggard}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, bakersfield sound, country, country rock, nashville sound, outlaw country}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 134481
+# Empreinte source SHA256: 3e967a9ba83dba1f9f254e4a29677a5e90d56b243ad96e662d9a39e7cd1d5dd5
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+Just between the [C]two of us let's give up this [G]fantasy
+For we no longer [D7]care enough to even dis[G]agree
+Everybody [C]envies us and the way we get [G]along
+But just between the [D7]two of us we know our love is [G]gone
+
+{start_of_verse: verse 1}
+People think it's [C]wonderful our love can be so [G]true
+You never say an [D7]angry word no matter what I [G]do
+And you have so much [C]faith in me you trust me any[G]where
+But the reason if they [D7]only knew is that we just don't [G]care
+
+Just between the [C]two of us let's give up this [G]fantasy
+For we no longer [D7]care enough to even dis[G]agree
+Everybody [C]envies us and the way we get [G]along
+But just between the [D7]two of us we know our love is [G]gone
+
+{end_of_verse}
+{start_of_verse: verse 2}
+Wish we could go [C]back again to days that used to [G]be
+We fought a lot but [D7]even then I knew you cared for [G]me
+Now we get [C]along so well no teardrops ever [G]fall
+But there's no love [D7]no anything there's nothing left at [G]all
+
+Just between the [C]two of us let's give up this [G]fantasy
+For we no longer [D7]care enough to even dis[G]agree
+Everybody [C]envies us and the way we get [G]along
+But just between the [D7]two of us we know our love is [G]gone
+
+{end_of_verse}

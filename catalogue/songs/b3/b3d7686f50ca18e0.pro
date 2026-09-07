@@ -1,0 +1,124 @@
+{title: Flakes}
+{artist: Frank Zappa}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, art rock, experimental, instrumental rock, jazz fusion, jazz rock, progressive rock, psychedelic rock, rock, symphonic rock, zolo}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 75440
+# Empreinte source SHA256: b3d7686f50ca18e0e3d03dfd01a84a173dc31ac169e8faf6a34eeb3dc49a082d
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, ponctuation_chordpro_neutralisee, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            FLAKES
+by Frank Zappa
+
+FLAKES! FLAKES
+FLAKES, FLAKES
+
+[F#m]THEY DON'T DO NO G[E]OOD
+THEY NEVE[E]R BE [D]WORKIN
+[D]WHEN THEY O[F#m]UGHTA [E]SHOULD
+[E]THEY WASTE YOUR [C#m]TIME
+[D]THERE WASTIN M[Bm]INE
+[G#m]CALIFORNIA GOT THE MOST OF THEM
+[F#m]BOY THEY GOT A HOST OF THEM
+
+{start_of_chorus: CHORUS}
+[E]SWEAR TO GOD THE[A]Y GET THE MOS[B]T
+AT EVERY BUSINESS ON THE COAST
+SWEAR TO GOD THEY GET THE MOST
+AT EVERY BUSINESS ON THE COAST
+
+THEY GOT THE FLAKES
+
+FLAKES! FLAKES!
+[F#m]THEY CAN'T FIX YER [E]BRAKES
+[E]YOU ASK THEM "WHERE'S MY [D]MOTOR?"
+[D]WELL IT WAS[F#m] EATEN S[E]NAKES
+[E]YOU CAN STAB AN SHOOT AN [C#m]SPIT
+[D]BUT THEY WONT BE FIXIN [Bm]IT
+[G#m]THERE LYIN AND LAZY
+[F#m]THEY CAN BE DRIVIN YOU CRAZY
+
+{end_of_chorus}
+{start_of_chorus: CHORUS}
+TAKE IT AWAY BOB!!!
+[D]I ASKED AS NICE AS [Em]I COULD
+
+IF MY JOB [D]WOULD
+[G]SOMEHOW BE [A]FINISHED BY [B]FRIDAY
+[D]WELL THE WHOLE DAMN W[Em]EEKEND
+[Em]CAME AND WENT FRANKIE
+[D]AN THEY DIDN'T DO NOTHING
+[G]BUT THEY CHARGED ME [A]DOUBLE FOR [B]SUNDAY
+[D]YOU KNOW NO MATTER WHAT [Em]YOU DO
+[D]THEY GONNA CHEAT AN ROB YOU
+[G]THEN THEY'LL SEND YOU A [A]BILL
+[A]THAT'LL GET YOU SENSES [B]REELING
+[D]AND IF YOU DO NOT PAY [Em]
+THEY GOT CO[D]MPUTER COLLECTORS
+T[G]HAT'LL GET YOU SO CR[A]AZY
+TIL YOU [B]HEAD'LL GO THROUGH THE CEILING
+YES IT WILL
+
+{comment: À vérifier : E A B, E A B...ETC}
+# SOURCE A VERIFIER: E  A  B,  E  A B...ETC 
+
+{comment: À vérifier : E Eaug3rd E}
+# SOURCE A VERIFIER: E          Eaug3rd        E 
+I'M A MORON AN THIS IS MY WIFE
+SHE FROSTING A CAKE WITH A PAPER KNIFE
+ALL WHAT WE GOT HERE'S AMERICAN MAKE
+IT'S A LITTLE BIT CHEESEY
+BUT ITS NICELY DISPLAYED
+WELL WE DON'T GET EXCITED WHEN IT
+CRUMBLES AND BREAKS
+WE JUST GET ON THE PHONE AND CALL SOME FLAKES
+THEY RUSH ON OVER AND BREAK IT SOME MORE
+AND WE ARE SO DUMB THERE LINING UP AT OUR DOOR
+[E]WELL THE TOILET WENT CRAZY
+YEST[A]ERDAY AFTERNO[B]ON
+[E]THE PLUMBER HE SAYS NEVER [A]FLUSH A TAMP[B]OON
+
+[E]THIS GREAT INFO COST ME HALF A [A]WEEKS P[B]AY
+AND THE [E]TOILET BLEW UP
+LATER [A]ON THE NEXT[B] DAY
+BLEW UP THE NEXT DAY
+
+{comment: À vérifier : E D E D E D ETC..}
+# SOURCE A VERIFIER: E D E D E D ETC.. 
+
+WE ARE MILLION AN MILLIONS
+WERE COMING TO GET YOU
+WERE PROTECTED BY UNIONS
+SO DON'T LET IT UPSET YOU
+CANT ESCAPE THE CONCLUSION
+ITS PROBABLY GOD'S WILL
+THAT CIVILIZATION
+WILL GRIND TO A STANDSTILL
+AND WE ARE THE PEOPLE
+WHO WILL MAKE IT ALL HAPPEN
+WHILE YER CHILDREN IS SLEEPIN
+YER PUPPY IS CRAPPIN
+YOU MIGHT CALL US FLAKES
+OR SOMETHING ELSE YOU MIGHT COIN US
+BUT WE KNOW YOU'RE SO GREEDY
+THAT YOU'LL PROBABLY JOIN US
+
+WERE COMING TO GET YOU, WERE
+COMING TO GET YOU
+
+If you know this song it should come easy!
+
+Eaug3rd 022200
+
+You might want to check some of the chord sequences!!
+
+Submited by
+Will Kaemmerling
+# SOURCE A VERIFIER: [email protected]
+［email protected］
+
+{end_of_chorus}

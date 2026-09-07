@@ -1,0 +1,62 @@
+{title: Blue Ridge Mountains Turning Green}
+{artist: Charley Pride}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic country pop, country, country rock, nashville sound}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 98806
+# Empreinte source SHA256: 9aa74a7ff4e42fa25cd22d9b24842573ff1250948b200510bd88514c5b1f09b5
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+Blue Ridge M[G]ounta[C]ins tu[D7]rning green [G]
+
+Wanna go [D7]home again to see my [G]mountain friends
+
+Spring[C]time [D7]opens up my [G]heart
+
+Makes me [D7]want to share that good old [G]mountain air
+
+[C]Life's so [D7]young and free for all
+
+For those [C]who answer the [D7]Blue Ridge Mountain call
+
+[G]Blue [C]Ridge [D7]Mountains turning [G]green
+
+I wanna go [D7]home again to see my [G]mountain friends
+
+Sun-[C]rise [D7]drinks the morning [G]dew
+
+Walking on [D7]new plowed ground distant [G]cowbells sound
+
+Tall [C]trees [D7]reach the misty [G]blue
+
+All their [D7]leaves are green the shadows on a [G]mountain stream
+
+[C]Dogwood and [D7]mountain laurel bloom
+
+A welcome [C]mat for [D7]nature's living room
+
+[G]Blue [C]Ridge [D7]Mountains turning [G]green
+
+Wanna go [D7]home again to see my [G]mountain friends
+
+Night-[C]time [D7]gathers in the [G]crowd
+
+Listen to the [D7]children sing hear the [G]banjos ring
+
+Blue [C]Ridge [D7]Mountain music [G]sound
+
+Comes from [D7]lonely hill the song of a [G]whippoorwill
+
+[C]Old time [D7]fiddles that I hear
+
+Playing the [C]tune that [D7]I love so dear
+
+[G]Blue [C]Ridge [D7]Mountains calling [G]me
+
+I wanna go [D7]home again to see my [G]mountain friends
+
+Blue [C]Ridge [D7]Mountains turning [G]green

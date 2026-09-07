@@ -1,0 +1,61 @@
+{title: Hello Old Friend (ver. 2)}
+{artist: Eric Clapton}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, album rock, blues rock, classic rock, electric blues, mellow gold, rock, soft rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 129748
+# Empreinte source SHA256: bab043502f4572e5470917c444886cb373f5f4e95e5473733a974e3308a7e201
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+            from "No Reason To Cry"
+
+transcribed by Daniel E. Smith
+
+{start_of_part: INTRO}
+[G] [C] [D]
+[G] [C] [D]
+
+As [G]I was [D]strolling [C]down the garden [G]path
+I saw a [D]flower [C]glowing in the d[G]ark
+It looked so [D]pretty [C]and it was u[G]nique
+I had to [D]bend down [C]just to have a [G]peek
+
+{end_of_part}
+{start_of_chorus: CHORUS}
+Hello old [Bm7]friend (hello old [Am7]friend)
+It's [C]really good to [D]see you once a[G]gain
+Hello old [Bm7]friend  (hello old friend)
+It's [C]really good to [D]see you once a[G]gain
+
+[G] [C] [D]
+[G] [C] [D]
+
+I saw you walking underneath the stars
+I couldn't stop 'cause I was in a car
+I'm sure the distance wouldn't be too far
+If I got out and walked to where you are
+
+{end_of_chorus}
+{start_of_chorus: CHORUS}
+
+{end_of_chorus}
+{start_of_part: SOLO}
+
+[G] [C] [D]
+[G] [C] [D]
+
+An old man passed me on the street today
+I thought I knew him but I couldn't say
+I stopped to think if I could place his frame
+When he tipped his hat I knew his name
+
+{end_of_part}
+{start_of_chorus: CHORUS 2x}
+
+end on G
+
+{end_of_chorus}

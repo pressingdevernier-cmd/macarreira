@@ -1,0 +1,47 @@
+{title: Guitar Town}
+{artist: Steve Earle}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, alternative country, country rock, folk, folk rock, heartland rock, indie folk, mellow gold, new americana, outlaw country, roots rock, singer-songwriter, texas country}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 70090
+# Empreinte source SHA256: a991f5f0e5c77c15f4aececa2278fa310c7fda04e4a48177b4bfdc13a88f80d9
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[G]HEY PRETTY BABY ARE YOU READY FOR ME
+IT'S YOUR [D]GOOD ROCKIN' DA[G]DDY DOWN FROM TE[C]NNESSEE
+[D]I'M JUST OUTTA AUSTIN BOUND FOR SAN ANTONE
+[D]WITH THE RADIO[C] BLASTIN' AND THE BIRD DOG ON
+
+SPEED TRAP UP AHEAD SELMA TOWN
+BUT NO LOCAL YOKEL'S GONNA SHUT ME DOWN
+CAUSE ME AND MY BOYS GOT THIS RIG UNWOUND
+AND WE'VE COME A THOUSAND MILES FROM THE GUITAR TOWN.
+
+NOTHIN' EVER HAPPENED ROUND MY HOME TOWN
+AND I AIN'T THE KIND TO JUST HANG AROUND
+I HEARD SOMEONE CALLIN' MY NAME ONE DAY
+SO I FOLLOWED THAT VOICE DOWN THE LOST HIGHWAY
+
+EVERYBODY TOLD ME YOU CAN'T GET FAR
+ON $37 AND A JAP GUITAR
+NOW I'M SMOKIN INTO TEXAS WITH THE HAMMER DOWN
+AND A ROCKIN' LITTLE COMBO FROM THE GUITAR TOWN.
+
+[D]HEY PRETTY BABY DON'T YOU KNOW IT AIN'T MY FAULT
+[C]LOVE TO HEAR THE STEEL BELTS HUMMIN ON THE [G]ASPHALT
+[D]WAKE UP IN THE MIDDLE OF THE NIGHT IN A TRUCK STOP
+[C]STUMBLE IN THE RESTAURANT, WONDERIN' WHY I[D7] DON'T STOP
+
+WELL, I GOTTA KEEP ROCKIN WHILE I STILL CAN
+GOT A TWO-PACK HABIT AND A MOTEL TAN
+WHEN MY BOOTS HIT THE BOARDS I'M A BRAND NEW MAN
+PUT MY BACK TO THE RISERS AND MAKE MY STAND
+
+HEY PRETTY BABY WON'T YOU HOLD ME TIGHT
+I'M LOADIN' UP AND ROLLIN' OUT OF HERE TONIGHT
+ONE OF THESE DAYS I'M GONNA SETTLE DOWN
+AND I'LL TAKE YOU BACK WITH ME TO THE GUITAR TOWN

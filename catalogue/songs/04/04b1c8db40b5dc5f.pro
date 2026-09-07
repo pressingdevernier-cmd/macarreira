@@ -1,0 +1,61 @@
+{title: Sold (the Grundy County Auction)}
+{artist: John Michael Montgomery}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, contemporary country, country, country road, country rock}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 64193
+# Empreinte source SHA256: 04b1c8db40b5dc5f4dcac860cb796499fd533777e1a91bb6f38082d0bc363b1c
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{start_of_part: INTRO}
+[A] [D] [A] [E] [A] [D] [A] [E]
+
+WELL, [A]I WENT DOWN TO THE GRUNDY COUNTY [D]AUCTION
+WHERE [A]I SAW SOMETHING I JUST HAD TO [E]HAVE
+MY [A]MIND SAID I SHOULD PROCEED WITH [D]CAUTION
+BUT MY [A]HEART SAID GO A[E]HEAD AND MAKE A BID ON [A]THAT
+
+AND I SAID [A]HEY PRETTY LADY WONT YOU GIVE ME A SIGN
+[A]I'D GIVE ANYTHING TO MAKE YOU MINE ALL MINE
+I'LL [D]DO YOUR BIDDIN AND [G]BE AT YOUR BECKON [A]CALL
+[A]YEAH, I NEVER SEEN ANYONE LOOKIN SO FINE
+[A]MAN, I GOTTA HAVE HER, SHE'S A ONE OF KIND
+I'M [D]GOING ONCE, [E]GOING TWICE
+
+AND I'M ABOUT TO BID MY HEART GOODBYE
+
+[A]WELL THE AUCTIONEER WAS GOING BOUT A MILE A [D]MINUTE
+HE WAS [A]TAKING BIDS AND CALLING THEM OUT [E]LOUD
+AND I [A]GUESS I WAS REALLY GETTING IN [D]IT
+CAUSE I [A]JUST SHOUTED OUT [E]ABOVE THE [A]CROWD
+
+AND I SAID [A]HEY PRETTY LADY WONT YOU GIVE ME A SIGN
+[A]I'D GIVE ANYTHING TO MAKE YOU MINE ALL MINE
+I'LL [D]DO YOUR BIDDIN AND [G]BE AT YOUR BECKON [A]CALL
+[A]YEAH, I NEVER SEEN ANYONE LOOKIN SO FINE
+[A]MAN, I GOTTA HAVE HER, SHE'S A ONE OF KIND
+I'M [D]GOING ONCE, [E]GOING TWICE
+I'M [A]SOLD! TO THE LADY IN THE SECOND ROW
+[A]SHE'S AN EIGHT, SHE'S A NINE, SHES A TEN I KNOW
+[A]SHE'S GOT RUBY RED LIPS, BLONDE HAIR, BLUE EYES
+[A]AND I'M ABOUT TO BID MY HEART GOODBYE  [A] [D][A][E][A][D][A][E]
+
+[A]I'M SOLD TO THE LADY IN THE LONG BLACK DRESS
+[A]WELL SHE WON MY HEART IT WAS NO CONTEST
+[A]WITH HER RUBY RED LIPS, BLONDE HAIR, BLUE EYES
+[A]I'M ABOUT TO BID MY HEART GOODBYE  [A][D][A][E]
+
+{end_of_part}
+{start_of_bridge: BRIDGE}
+[E]YEAH, WE FOUND LOVE ON THE AUCTION BLOCK
+AND I [F#m]HAULED HER HEART AWAY
+NOW [G]WE STILL LOVE TO LAUGH ABOUT
+THE [E]WAY WE MET THAT DAY
+
+REPEAT CHORUS
+
+{end_of_bridge}

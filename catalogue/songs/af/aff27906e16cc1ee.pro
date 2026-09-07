@@ -1,0 +1,72 @@
+{title: A Woman In Love}
+{artist: Ronnie Milsap}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic country pop, country, country rock, nashville sound}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 97323
+# Empreinte source SHA256: aff27906e16cc1ee11370d25da5714111c853e65e3ca6bfe95cc8df28d8a07af
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[G]No matter [C]what you [D7]do or [G]say
+
+She's always [C]got to [D7]have her [G]way
+
+She'll bring you [C]down just to [D7]cheer you [Em]up
+
+[G]You never [C]know with a [D7]woman in [G]love
+
+The minute [C]you start [D7]holding [G]on
+
+You'll turn [C]around and [D7]she'll be [G]gone
+
+This is [C]very unpre[D7]dictable [Em]stuff
+
+[G]You never [C]know with a [D7]woman in [G]love
+
+[C]She's a lady she's a [G]child
+
+[D7]She'll make you crazy [G]she'll drive you wild
+
+[C]Do you give in or do you [G]just give up
+
+You never [C]know with a [D7]woman in [G]love
+
+You never [C]know with a [D7]woman in [G]love
+
+I oughta [C]know cause I've [D7]held a [G]few
+
+I've seen the [C]things that a [D7]woman can [G]do
+
+She'll play the [C]game till [D7]you call her [Em]bluff
+
+[G]Oh You never [C]know with a [D7]woman in [G]love
+
+[Em]Just when you [G]think  you've [C]got it [G]all toget[D7]her
+
+[Em]If you [G]blink she'll [C]change just [Em]like the weat[D7]her ooo ooo ooo
+
+[G]No matter [C]what you [D7]do or [G]say
+
+She's always [C]got to [D7]have her [G]way
+
+This is [C]very unpre[D7]dictable [Em]stuff
+
+[G]You never [C]know with a [D7]woman in [G]love
+
+[C]She's a lady she's a [G]child
+
+[D7]She'll make you crazy [G]she'll drive you wild
+
+[C]Do you give in or do you [G]just give up
+
+You never [C]know with a [D7]woman in [G]love
+
+You never [C]know with a [D7]woman in [G]love
+
+You never [C]know with a [D7]woman in [Em]love
+
+[C]You never [G]know with a [Em]wo-[D7]man ooo ooo woman in [G]love

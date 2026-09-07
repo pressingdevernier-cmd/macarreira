@@ -1,0 +1,83 @@
+{title: Quero Sim}
+{artist: Paula Fernandes}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, sertanejo, sertanejo pop, sertanejo universitario}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 66306
+# Empreinte source SHA256: 81602980c361ec0119a7a59c6da198aa715274a3b8f88cbd4d5b6a70519621cd
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, ligne_accords_non_reconnue, tabulations_interpretees_4_colonnes, tonalite_absente
+
+EU ESTOU COM[A#] SAUDADES
+[Gm]DA NOSSA AMIZADE
+[D#]DO TEMPO EM QUE A GENTE
+[F]AMAVA SE VER
+
+EU NÃO SOU PALAVRA
+EU NÃO SOU POEMA
+SOU HUMANA PEQUENA
+A SE ARREPENDER
+
+AS VEZES SOU UM DIA
+AS VEZES SOU UM NADA
+HOJE LAGRIMA CAIDA
+CHORO PELA MADRUGADA
+
+AS VEZES SOU FADA
+AS VEZES FAISCA
+ESTOU LIGADA NA TOMADA
+NUMA NOITE MAL DORMIDA
+
+(REPETE)
+[Gm]SE O TEU AMOR FOR FRÁGIL E NÃO RESISTIR
+[D#]E ESSA MÁGOA ENTÃO FICAR ETERNAMENTE AQUI
+[Gm]ESTOU DE VOLTA A IMENSIDÃO DE[F] UM MAR QUE É FEITO DE SILÊNCIO
+
+[Gm]SE OS TEUS OLHOS NÃO REFLETEM MAIS O NOSSO AMOR
+E A SAUD[D#]ADE ME SEGUIR PRA SEMPRE AONDE EU FOR
+FICA[Gm] CLARO QUE TENTEI [F]LUTAR POR ESSE SENTIMENTO
+
+DIGA [Bb]SIM OUÇ[Gm]A O SOM
+PROVE O[D#] SABOR QUE TEM[F] O MEU AMOR
+
+COLE[Bb] EM MIM[Gm] A TUA COR
+EU TE [D#]QUERO SIM SE[F]M DOR
+
+{comment: À vérifier : (SOLO: Bb Gm D# F)}
+# SOURCE A VERIFIER: (SOLO: Bb  Gm  D#  F)  
+
+AS V[C]EZES SOU UM DIA
+AS V[Am]EZES SOU UM NADA
+HOJE[F] LÁGRIMA CAÍDA
+CHOR[G]O PELA MADRUGADA
+
+AS VEZES SOU FADA
+AS VEZES FAíSCA
+ESTOU LIGADA NA TOMADA
+NUMA NOITE MAL DORMIDA
+
+[Am]SE O TEU AMOR FOR FRÁGIL E NÃO RESISTIR
+E ES[F]SA MÁGOA ENTÃO FICAR ETERNAMENTE AQUI
+ESTO[Am]U DE VOLTA A IMENSID[G]ÃO DE UM MAR QUE É FEITO DE SILÊNCIO
+
+SE OS TE[Am]US OLHOS NÃO REFLETEM MAIS O NOSSO AMOR
+E A [F]SAUDADE ME SEGUIR PRA SEMPRE AONDE EU FOR
+FICA[Am] CLARO QUE TENTEI[G] LUTAR POR ESSE SENTIMENTO
+
+DIGA [D]SIM OUÇA [Bm]O SOM
+PROV[G]E O SABO[A]R QUE TEM O MEU AMOR
+COLE[D] EM M[Bm]IM A TUA COR
+EU T[G]E QUERO [A]SIM SEM DOR
+
+DIGA[D] SIM[Bm]  [G][A]
+DIGA[D] SIM[Bm]  [G][A]
+
+DIGA [D]SIM OUÇA [Bm]O SOM
+PROV[G]E O SABO[A]R QUE TEM O MEU AMOR
+COLE[D] EM M[Bm]IM A TUA COR
+EU T[G]E QUERO [A]SIM SEM DOR
+
+DIGA[D] SIM[Bm]  [G][A]

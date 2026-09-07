@@ -1,0 +1,56 @@
+{title: Theres The Door}
+{artist: George Jones}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, country, country rock, honky tonk}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 52367
+# Empreinte source SHA256: 63f402bff26ddaa09a3945d8dc3f727085ad55acbf7ed78042dd133e03373c17
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tonalite_absente
+
+[C]I wandered in around midnight
+
+Like I've done so many times
+She was [F]sitting at the table
+There were [G7]no tears in her [C]eyes
+
+It seemed so much unlike her
+
+To be so much at ease
+She [F]took a sip of coffee
+And [G7]softly said to [C]me
+
+There's the [F]mantle where
+We keep our wedding [C]picture
+There's the [G7]bedroom where
+We make both love and [C]war
+
+And there's the [F]ring that keeps
+On slipping off your [C]finger
+There's no [D7]reason we should go on any[G7]more
+And there's the [C]door
+
+So I'm back here on this bar stool
+
+My whole world gone to hell
+Behind the [F]bottles there's a mirror
+Where a [G7]fool can see [C]himself
+
+If I was the man I should be
+
+And not the one I am
+I would go [F]back there this minute
+And [G7]beg for one more [C]chance
+
+There's the [F]jukebox
+Where I wasted all those [C]quarters
+Oh there's a [G7]lady trying to
+Get me out on the [C]floor
+
+And there's a [F]chance the one I love
+Would still [C]forgive me
+It's a [D7]step that I just never took[G7] before
+There's the [C]door

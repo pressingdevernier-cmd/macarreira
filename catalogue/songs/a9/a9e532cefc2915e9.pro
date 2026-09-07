@@ -1,0 +1,143 @@
+{title: Tiroteo}
+{artist: Marc Seguí}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, rap espanol, urbano espanol}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 77312
+# Empreinte source SHA256: a9e532cefc2915e99cd897eb26e0594bd3cb423d11e6e9c1daf09a1931098595
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+{start_of_part: Intro}
+[A] [C#m] [A] [C#m] [Bm] [E]
+
+TÚ Y YO LOS  DOS  JUNTI[A]TOS  FRENTE  AL  M[C#m]AR
+
+SE  POR  DÓNDE  QUI[A]ERES  IR  A  PA[C#m]RAR
+
+AUNQUE  MIRES  A[Bm]SÍ  NO  SERVIRÁ
+
+SI  ES  QUE  NOS  ENTEND[E]EMOS  SIN  HABLAR
+
+MUERO  CUANDO  TE  V[A]AS [C#m]
+
+TOCO  EL  CIELO  SI  EST[A]ÁS [C#m]
+
+SENTADA  EN  MI  PO[Bm7]RTAL
+
+SIEMPRE  HACIÉNDOTE  ESPE[E]RAR
+
+Y  AHORA  QUIERO  QUE  VU[A]ELVAS  COMO  UN  NIÑO,  LOS  FIN[C#m]DES
+
+DESDE  QUE  TE  HAS  I[A]DO  NO  HACEN  GRACIA  LOS  CH[C#m]ISTES
+
+ME  HE  CORTADO  EL  PE[Bm]LO, ME  HE  COMPRADO  OTRO  TINTE
+
+[E]
+
+BUSCANDO  A  VER  B  ENCUENTRO  ALGUNA  COMO  TÚ  EN  TINDER
+
+[A] [C#m]
+
+E  NIÑA  ERES  A  PROTA  DE  MIS  CANCIONES TRISTES
+
+NO  PUEO  CERRAR  LOS  OJ[A]OS  MIENTRAS  TE  ME  DE[C#m]SVISTES
+
+TÚ  DILE  A  LAS  DEMÁS [Bm] QUE  NO  ME  QUEDAN  MÁS  CHICLES
+
+SOLO  TE  DOY  A  TI  EL  A[E]MOR,  ES  ASÍ  DE  SIMPLE,
+
+UOH, OH,[A] OH, OH, OH, OH,[C#m] OH
+
+SE  ME  CONGELA  EL  M[A]UNDO  SIEMPRE  QUE  NOS  VE[C#m]MOS
+
+DISCUTIR  CON[Bm]TIGO  ES  COMO  UN  TIROTEO
+
+Y PIENSO   MORIRME  E[E]L  PRIMERO,  AH,  AH, AH, AH, AH,
+
+TÚ Y YO LOS  DOS  JUNTIT[A]OS, SIN  PE[C#m]NSAR
+
+CONTIGO  COMO  UN  N[A]IÑO  EN  TOYS 'R [C#m]US
+
+QUE  SE  APAGUE  LA [Bm] LUZ  EN  NAVIDAD
+
+[E]
+
+B DESPRENDEMOS  ELECTRICIDAD
+
+MIRA  QUE  YO  LO  IN[A]TENTO  PERO  TE  DESVA[C#m]NECES
+
+SIEMPRE  ME  HAGO  EL CONTE[A]NTO  PERO  HOY  NO ME  A[C#m]PETECE
+
+Y  NO  ENTIENDEN  QUE [Bm7] SIEMPRE  HAS  SIDO  DIFERENTE
+
+COMO  VENECIA  SIN  [E]AGUA,  COMO  MADRID  SIN GENTE
+
+Y  AHORA  QUIERO  QUE  V[A]UELVAS  COMO  UN  NIÑO,  LOS  FIN[C#m]DES
+
+DESDE  QUE  TE  HAS  IDO[A]  NO  HACEN  GRACIA  LOS  CHI[C#m]STES
+
+ME  HE  CORTADO  EL  P[Bm]ELO,  ME  HE  COMPRADO  OTRO  TINTE
+
+[E]
+
+BUSCANDO  A  VER  B  ENCUENTRO  ALGUNA  COMO  TÚ  EN  TINDER
+
+[A] [C#m]
+
+E  NIÑA  ERES  A  PROTA  DE  MIS  CANCIONES TRISTES
+
+NO  PUE  CERRAR  LOS  OJO[A]S  MIENTRAS  TE  ME  DE[C#m]SVISTES
+
+TÚ  DILE  A  LAS  DEM[Bm]ÁS  QUE  NO  ME  QUEDAN  MÁS  CHICLES
+
+SOLO  TE  DOY  A  TI  EL  AM[E]OR,  ES  ASÍ  DE  SIMPLE,
+
+OH, OH, [A]OH, OH, OH, OH,[C#m] OH
+
+SE  ME  CONGELA  EL  MUN[A]DO  SIEMPRE  QUE  NOS  VEM[C#m]OS
+
+DISCUTIR  CONT[Bm]IGO  ES  COMO  UN  TIROTEO
+
+PIENSO  EN  MORIRME [E] EL  PRIMERO, Oh, Oh, Oh, Oh, O[A]h,
+
+SIEM[C#m]PRE TE VAS DE [A]MI
+
+SIEM[C#m]PRE TE VAS D[Bm7]E MI
+
+SIEMPRE TE VAS DE[E] MI    (DE MI)
+
+DE MI OH, OH, OH
+
+Y  AHORA  QUIERO  QUE  V[A]UELVAS  COMO  UN  NIÑO,  LOS  FIND[C#m]ES
+
+DESDE  QUE  TE  HAS  IDO[A]  NO  HACEN  GRACIA  LOS  CHISTE[C#m]S
+
+ME  HE  CORTADO  EL  P[Bm]ELO,  ME  HE  COMPRADO  OTRO  TINTE
+
+[E]
+
+BUSCANDO  A  VER  B  ENCUENTRO  ALGUNA  COMO  TÚ  EN  TINDER
+
+[A] [C#m]
+
+E  NIÑA  ERES  A  PROTA  DE  MIS  CANCIONES TRISTES
+
+NO  PUE  CERRAR  LOS  OJO[A]S  MIENTRAS  TE  ME  DESV[C#m]ISTES
+
+TÚ  DILE  A  LAS  DEM[Bm]ÁS  QUE  NO  ME  QUEDAN  MÁS  CHICLES
+
+SOLO  TE  DOY  A  TI  EL  AM[E]OR,  ES  ASÍ  DE  SIMPLE
+
+[A]OH, OH, OH, OH, OH, [C#m]OH, OH
+
+SE  ME  CONGELA  EL  MUN[G]DO  SIEMPRE  QUE  NOS  [Bm]VEMOS
+
+DISCUTIR  CONTIGO  ES  COMO  UN  TIROTEO
+
+Y PIENSO  MORIRME[E]  EL  PRIMERO,  Oh, Oh, Oh, Oh.
+
+{end_of_part}

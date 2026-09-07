@@ -1,15 +1,1 @@
-{
-  "_note": "Nos setlists : des listes de chansons DANS L'ORDRE OU ON LES JOUE. Chaque setlist a un identifiant court (id, sans accents ni espaces), un nom affiche, une date facultative, et soit une liste \"songs\" (les noms de fichiers dans l'ordre voulu), soit un \"tag\" (toutes les chansons portant ce tag, dans l'ordre de la bibliotheque). Si les deux sont presents, \"songs\" gagne. Ce fichier se modifie a la main : ajoutez une accolade, mettez les noms de fichiers, enregistrez, commitez.",
-
-  "setlists": [
-    {
-      "id": "soiree",
-      "nom": "Soirée",
-      "date": "",
-      "songs": [
-        "sous-les-toits.pro",
-        "premier-matin.pro"
-      ]
-    }
-  ]
-}
+{"_note":"Ancienne setlist retirée avec les chansons de départ.","setlists":[]}

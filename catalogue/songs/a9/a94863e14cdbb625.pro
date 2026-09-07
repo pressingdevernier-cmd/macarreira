@@ -1,0 +1,58 @@
+{title: El siete mares}
+{artist: José Alfredo Jimenez}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-pt, mariachi, ranchera, regional mexican}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 51594
+# Empreinte source SHA256: a94863e14cdbb62502ab55379a097e4c9805e4c34e57e64bcb0a5f52cee6b911
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: tabulations_interpretees_4_colonnes, tonalite_absente
+
+SOY MARINO V[A]IVO ERRANTE[E7]
+CRUZO POR [A]LOS 7 MARES
+Y COMO S[E7]OY NAVEGANTE
+VIVO ENTRE LAS[A] TEMPESTADES
+DESAFIANDO L[E7]OS PELIGROS
+QUE ME DAN [A]LOS 7 MARES.
+
+CUANDO EL MAR[E7] ESTA TRANQUILO
+Y HAY ESTREL[A]LAS EN EL CIELO
+ENTRE PENA[E7]S Y SUSPIROS
+LE HABLO A LA M[A]UJER QUE QUIERO
+Y SOLO EL MAR[E7] ME CONTESTA
+YA NO LLOR[A]ES MARINERO.
+
+ME D[A7]ICEN EL 7[D] MARES
+PORQUE ANDO DE PUE[A]RTO EN PUERTO
+LLEVANDO C[E7]ONMIGO MISMO
+UN AMOR YA[A] CASI MUERTO
+YO [A7]YA QUISIERA Q[D]UEDARME
+JUNTITO A MI G[A]RAN CARIÑO
+PERO ESA NO [E7]FUE MI VIDA
+NAVEGAR ES M[A]I DESTINO.
+
+ESTR[A]ELLI[E7]TA MARINERA
+COMPAÑERA[A] DE NOSOTROS
+QUE NOTICIA [E7]TIENES AHORA
+DE ESA QUE ME[A] TRAE TAN LOCO
+SI ESQUE TOD[E7]AVIA ME QUIERE
+DIMELO POQ[A]UITO A POCO.
+
+OLAS [A]ALTAS,OLA[E7]S GRANDES
+QUE ME ARRAST[A]REN Y ME ALEJAN
+CUANDO ANCLE[E7]MOS EN TAMPICO
+QUEDENSE UN RAT[A]ITO QUIETAS
+TAN SIQUIER[E7]A 4 NOCHES
+SI ES QUE ENTINDE[A]N MI TRISTEZAZ.
+
+M[A7]E DICEN [D]EL 7 MARES
+PORQUE ANDO DE PUE[A]RTO EN PUERTO
+LLEVANDO C[E7]ONMIGO MISMO
+UN AMOR YA[A] CASI MUERTO
+YO [A7]YA QUISIERA Q[D]UEDARME
+JUNTITO A MI G[A]RAN CARIÑO
+PERO ESA NO [E7]FUE MI VIDA
+NAVEGAR ES M[A]I DESTINO.

@@ -1,0 +1,69 @@
+{title: Igziabeher (Let Jah be Praise)}
+{artist: Peter Tosh}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, dub, reggae, roots reggae}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 80287
+# Empreinte source SHA256: a87d80447a53069382ef7dd35a84deb3ea31dd13a42d82964965ad3d026d0fdb
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: aucun_accord_converti, tabulations_interpretees_4_colonnes, tonalite_absente
+
+            (Am Em) (a musica inteira alterna nessas notas.)
+
+IGZIABEHER
+LET JAH BE PRAISED
+NEGUSA NEGHAST
+LET JAH BE PRAISED
+ME DON E-AH LAMB
+
+LET JAH BE PRAISED
+LET HIM BE PRAISED(3X)
+
+HE WATERETH THE HILLS
+FROM HIS CHAMBERS
+AND THE EARTH IS SATISFIED
+SO SATISFIED
+HE MAKETH THE GRASS TO GROW FOR ANIMALS
+JAH MADE THE HERB FOR MAN(3X)
+
+FRET NOT THYSELF
+BECAUSE OF EVILDOERS
+NEITHER BE THOU ENVIOUS
+AGAINST THE WORKERS OF INEQUITY
+FOR THEY SHALL SOON BE CUT DOWN
+CUT DOWN LIKE GRASS
+AND THEY SHALL WITHER LIKE CORN
+
+LET JAH ARISE
+AND LET ALL HIS ENEMIES BE SCATTERED
+LET THEM THAT HATE JAH
+NOW SCAT UP SHUT UP BUTT UP AND FLAT UP
+AS THE SMOKE WAS DRIVEN AWAY
+JAH, DRIVE THEM AWAY
+AS THE ROCKS MELTED
+LET THEM BE MELTED JAH-JAH
+
+IGZIABEHER
+LET JAH BE PRAISED
+YOU DON E-AH LAMB
+LET JAH BE PRAISED
+NEGUSA NEGHAST
+LET JAH BE PRAISED
+LET HIM BE PRAISED(4X)
+
+AHH...LIGHTNING
+EARTHQUAKE
+BRIMSTONE
+FOR THE FIRE
+
+I SAID LIGHTNING
+BRIMSTONE AND FIRE
+IGZIABEHER
+
+WEAKHEART SCAT UP SHUT UP FLAT UP AND BUTT OUT
+I FEEL IT
+WEAKHEART FEEL IT
+KILL THEM DEAD BEFORE THEM SPREAD...

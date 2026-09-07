@@ -1,0 +1,61 @@
+{title: Dont Back Down}
+{artist: Bruce Springsteen}
+{status: en_travail}
+{tags: import-kaggle, a-verifier, lang-en, classic rock, heartland rock, mellow gold, permanent wave, rock, singer-songwriter}
+
+# Import automatique 1.1.0 ; validation musicale non effectuee.
+# Source: https://www.kaggle.com/datasets/eitanbentora/chords-and-lyrics-dataset
+# Ligne CSV (hors en-tete): 12179
+# Empreinte source SHA256: b56277655245f3bf31ff9e0ec026fc364154fc36ef925e1777527bb973ef23a2
+# Alignement par colonnes du texte source ; aucune syllabe devinee.
+# Capo: accords stockes en sons reels, formes source retrouvees par le lecteur.
+# Verifications: accord_apres_fin_ligne, tabulations_interpretees_4_colonnes, tonalite_absente
+
+WHEN THE NIG[B]HT WIND RUSTLES FAR AWAY
+ROLLING [F#]DOWN THE CONNA VALLEY THROUGH THE [B]COTTONWOOD TREES
+
+AND THE RIVER IS RISEN WITH LAST YEAR'S RAIN
+I [F#]AWAKE IN THE DARKNESS AND I [B]CALL YOUR NAME
+
+DON'T BACK [E]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN ON OUR LOVE
+DON'T BACK [F#]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN
+
+[B]I LIE AWAKE AND I KNOW SLEEP WON'T COME SOON
+SO I WATCH THE [F#]HEADLIGHTS CRAWL UP AND DOWN THE WALL OF THE [B]LONESOME ROOM
+
+I THINK OF THAT CLUB BY THE RIVER WE DANCED ON AND ON
+SWORE OUR [F#]LOVE WOULD LAST FOREVER AND YOU LAUGHED [B]ON AND ON
+
+DON'T BACK [E]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN ON OUR LOVE
+DON'T BACK [F#]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN
+
+YEAH [E]I WANNA WEEP BUT I'M BROKEN INSIDE AND THE [B]TEARS WON'T RUN
+I WANT TO SLEEP BUT THERE AIN'T NO DREAM AND THE SLEEP WON'T [F#]COME
+
+[B]WHOA [B][E][B][E][B][F#][B]
+
+[B]LAST NIGHT I STOOD ON BLACK MOUNTAIN AND LOOKED OUT TO THE SEA
+WHERE THE [E]WATERS OF MYSTERY RIVER GO RUSHING [B]ENDLESSLY
+[B]DON'T [E]THROW AWAY THE LOVE WE KEPT FOR SO [B]LONG, LONG, LONG
+WHEN WE [F#]COME BACK LOOKING DARLING IT'LL BE [B]GONE, GONE, GONE
+
+DON'T BACK [E]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN ON OUR LOVE
+DON'T BACK [F#]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN
+
+BABY DON'T BACK [E]DOWN ON OUR LOVE
+[B]
+
+DON'T BACK DOWN ON OUR LOVE
+DON'T BACK [F#]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN
+
+BABY DON'T BACK [E]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN ON OUR LOVE
+DON'T BACK [F#]DOWN ON OUR LOVE
+DON'T BACK [B]DOWN

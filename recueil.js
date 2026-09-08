@@ -10,7 +10,7 @@ var Recueil = (function () {
   function cat(slug) { return /^catalogue-[a-zA-Z0-9_-]+$/.test(slug); }
   function h(s) { return txt(s); }
   function bouton(action, label, extra) { return '<button type="button" data-local="' + action + '" ' + (extra || '') + '>' + label + '</button>'; }
-  function outils() { return '<nav class="recueil-nav" aria-label="Navigation du recueil"><a href="#/">Songbook</a><a href="#/catalogue">Catalogue</a><a href="#/songbook">Sauvegarde &amp; hors ligne</a></nav>'; }
+  function outils() { return ''; } // La navigation principale est unique, dans index.html.
   function statut() { var el = document.getElementById('sync-status'); if (el) el.textContent = Synchro.message(); }
   function notice(m, erreur) {
     var b = document.getElementById('local-notice');
@@ -18,7 +18,7 @@ var Recueil = (function () {
     b.className = erreur ? 'avertissement' : 'indice'; b.textContent = m;
   }
   function preparerRoute() {
-    if (dirty && !confirm('Quitter sans enregistrer les modifications de la grille ?')) {
+    if (Studio.busy() || ((dirty || Studio.dirty()) && !confirm('Quitter sans enregistrer les modifications en cours ?'))) {
       history.replaceState(null, '', dernierHash || '#/'); return false;
     }
     dirty = false; edition = null; dernierHash = location.hash; epoch++; querySeq++;
@@ -28,7 +28,7 @@ var Recueil = (function () {
     if (local(slug)) {
       var c = await Carnet.get('chansons', slug);
       if (!c || c.deleted) throw new Error('Cette chanson est absente du songbook.');
-      return analyserChordPro(c.texte);
+      var analyse = analyserChordPro(c.texte); analyse.texteSource = c.texte; return analyse;
     }
     if (cat(slug)) {
       var f = await Catalogue.fiche(slug.slice(10));
@@ -50,7 +50,7 @@ var Recueil = (function () {
     var ticket = epoch;
     vue.innerHTML = outils() + '<header class="song-header"><h2>Notre songbook</h2></header><p id="sync-status" class="indice" role="status"></p>' +
       '<div class="recherche"><input id="book-search" type="search" aria-label="Chercher dans notre songbook" placeholder="Titre, artiste ou paroles…" value="' + h(bookQuery) + '"></div>' +
-      '<div class="barre-actions recueil-actions"><a href="#/catalogue">Explorer le catalogue</a><a href="#/editer/nouveau">＋ Créer une grille</a></div><div id="book-results"><p>Ouverture du songbook…</p></div>';
+      '<div class="barre-actions recueil-actions"><a class="primary" href="#/catalogue">＋ Ajouter un morceau</a><a href="#/editer/nouveau">Créer une grille</a></div><div id="book-results"><p>Ouverture du songbook…</p></div>';
     statut(); document.title = 'Songbook · Macarreira';
     try { localData = await Carnet.list(); if (ticket === epoch) rendreBook(); }
     catch (e) { if (ticket === epoch) notice('Le stockage de cet appareil est indisponible. Autorisez le stockage du site pour conserver vos chansons.', true); }
@@ -63,12 +63,12 @@ var Recueil = (function () {
     var list = match.slice(bookPage * 80, bookPage * 80 + 80);
     b.innerHTML = match.length ? '<p class="indice">' + match.length.toLocaleString('fr') + ' chanson(s) · paroles et accords conservés sur cet appareil</p><ul class="song-list">' + list.map(function (c) {
       return '<li><a class="song-link" href="#/song/' + c.id + '"><span class="song-main"><span class="song-title">' + h(c.meta.title || 'Sans titre') + '</span><span class="song-meta">' +
-        h(c.meta.artist || '') + (c.conflictOf ? ' · version à comparer' : '') + '</span></span><span class="local-badge">' + (c.revision === c.syncRevision ? 'Partagée' : 'Sur cet appareil') + '</span></a></li>';
+        h(c.meta.artist || '') + (c.conflictOf ? ' · version à comparer' : '') + '</span></span><span class="local-badge">✓ Hors ligne<small>' + (c.revision === c.syncRevision ? 'Synchronisé' : 'À synchroniser') + '</small></span></a></li>';
     }).join('') + '</ul>' + pagination('book', bookPage, match.length) : '<p class="message">' + (q ? 'Aucune chanson ne correspond.' : 'Votre songbook est prêt à accueillir vos chansons.<br>Choisissez un morceau dans le catalogue, puis « Ajouter au songbook ».') + '</p>';
     var compteur = document.getElementById('song-count'); if (compteur) compteur.textContent = localData.length + ' chanson(s) dans le songbook';
   }
   function pagination(type, p, total) {
-    if (!total) return '';
+    if (!total || total <= 80) return '';
     return '<nav class="pagination" aria-label="Pages des résultats">' + bouton(type + '-avant','← Précédent', p === 0 ? 'disabled' : '') +
       '<span>' + (p * 80 + 1).toLocaleString('fr') + '–' + Math.min(total,p * 80 + 80).toLocaleString('fr') + ' sur ' + total.toLocaleString('fr') + '</span>' +
       bouton(type + '-apres','Suivant →', (p+1)*80 >= total ? 'disabled' : '') + '</nav>';
@@ -81,10 +81,10 @@ var Recueil = (function () {
     } catch (e) { langues = ['fr','pt','es','it','en']; }
     vue.innerHTML = outils() + '<header class="song-header"><h2>Catalogue</h2></header>' +
       '<div class="recherche"><input id="catalogue-search" type="search" aria-label="Chercher un titre ou un artiste dans tout le catalogue" placeholder="Titre ou artiste…" value="' + h(query) + '"></div>' +
-      '<fieldset class="langues"><legend>Langues prédites</legend>' + Object.keys(labels).map(function (l) { return '<label><input type="checkbox" data-lang="' + l + '" ' + (langues.includes(l) ? 'checked' : '') + '> ' + labels[l] + '</label>'; }).join('') +
+      '<details class="catalogue-filters"><summary><span id="langues-resume">' + (langues.length ? langues.length + ' langues' : 'Toutes les langues') + '</span> · Filtres</summary><fieldset class="langues"><legend>Langues estimées</legend>' + Object.keys(labels).map(function (l) { return '<label><input type="checkbox" data-lang="' + l + '" ' + (langues.includes(l) ? 'checked' : '') + '> ' + labels[l] + '</label>'; }).join('') +
       bouton('toutes-langues','Toutes les langues', 'aria-pressed="' + !langues.length + '"') + '</fieldset>' +
-      '<p class="indice">La recherche porte sur tout le catalogue, pas seulement la page affichée. Les langues sont estimées : certains morceaux peuvent être mal classés.</p>' +
-      '<div class="barre-actions recueil-actions">' + bouton('actualiser-index','Actualiser le catalogue') + '</div><div id="catalogue-results" aria-live="polite"><p>Préparation de la recherche…</p></div>';
+      '<p class="indice">Recherche dans tout le catalogue. Une langue mal estimée ? Essayez « Toutes les langues ».</p>' +
+      '<div class="barre-actions recueil-actions">' + bouton('actualiser-index','Actualiser le catalogue') + '</div></details><div id="catalogue-results" aria-live="polite"><p>Préparation de la recherche…</p></div>';
     document.title = 'Catalogue · Macarreira';
     try { await Catalogue.ouvrir(); if (ticket === epoch) await chercher(); }
     catch (e) { if (ticket === epoch) notice(e.message, true); }
@@ -95,9 +95,10 @@ var Recueil = (function () {
     if (seq !== querySeq) return;
     var b = document.getElementById('catalogue-results'); if (!b) return;
     rows = new Map(r.rows.map(function (f) { return [f.id, f]; }));
-    b.innerHTML = '<p class="indice">' + r.total.toLocaleString('fr') + ' résultats dans l’ensemble du catalogue</p>' + pagination('catalogue', page, r.total) +
+    var resume = document.getElementById('langues-resume'); if (resume) resume.textContent = langues.length ? langues.length + ' langues' : 'Toutes les langues';
+    b.innerHTML = '<p class="indice">' + r.total.toLocaleString('fr') + ' résultats · tout le catalogue</p>' +
       (r.rows.length ? '<ul class="song-list">' + r.rows.map(function (f) {
-        return '<li><a class="song-link" data-catalogue-id="' + h(f.id) + '" href="#/song/catalogue-' + encodeURIComponent(f.id) + '"><span class="song-main"><span class="song-title">' + h(f.title) + '</span><span class="song-meta">' + h(f.artist) + ' · ' + h(labels[f.language] || f.language || 'Langue inconnue') + '</span></span></a></li>';
+        return '<li><a class="song-link" data-catalogue-id="' + h(f.id) + '" href="#/song/catalogue-' + encodeURIComponent(f.id) + '"><span class="song-main"><span class="song-title">' + h(f.title) + '</span><span class="song-meta">' + h(f.artist) + ' · ' + h(labels[f.language] || f.language || 'Langue inconnue') + '</span></span><span class="song-chevron" aria-hidden="true">›</span></a></li>';
       }).join('') + '</ul>' : '<p class="message">Aucun résultat. Essayez sans filtre de langue.</p>') + pagination('catalogue', page, r.total);
   }
   async function ajouter(id) {
@@ -229,7 +230,7 @@ var Recueil = (function () {
   }
   document.addEventListener('pointerover', intention);
   document.addEventListener('focusin', intention);
-  window.addEventListener('beforeunload', function (e) { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+  window.addEventListener('beforeunload', function (e) { if (dirty || Studio.dirty() || Studio.busy()) { e.preventDefault(); e.returnValue = ''; } });
   window.addEventListener('songbook-status', statut);
   window.addEventListener('songbook-changed', function () {
     invalider();
@@ -238,5 +239,5 @@ var Recueil = (function () {
   });
   return { local: local, cat: cat, charger: charger, fiches: fiches, actions: actions,
     modifier: modifier, route: route, preparerRoute: preparerRoute,
-    dirty: function () { return dirty; }, invalider: invalider, epoch: function () { return epoch; } };
+    dirty: function () { return dirty || Studio.dirty() || Studio.busy(); }, invalider: invalider, epoch: function () { return epoch; } };
 })();

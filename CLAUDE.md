@@ -2,6 +2,19 @@
 
 ## Évolution validée en septembre 2026 — à lire en premier
 
+Le 8 septembre, le propriétaire a validé la refonte **Studio**. Cette décision
+remplace la section historique « identité validée » plus bas : navigation unique
+Songbook / Catalogue / Réglages, interface sans empattements, contrastes renforcés,
+apparence claire / sombre / automatique par appareil. `studio.css` surcharge les
+anciens composants ; `studio.js` gère le lecteur, le mode scène et le panneau Notes.
+Ne pas revenir aux palettes et menus vintage sans nouvelle demande.
+Les notes sont **publiques lors de la synchronisation**, comme les morceaux ; pas
+de second stockage « notes privées ». Plusieurs directives `{x_notes: ...}`
+représentent plusieurs lignes, dans leur ordre. L'édition des notes utilise la
+révision capturée à l'ouverture : ne jamais écraser une modification concurrente.
+Les préférences d'affichage restent locales ; les paroles et les notes sont
+dans Carnet puis dans le `.pro` partagé. Lire `STUDIO.md` pour les contrôles.
+
 Le propriétaire a choisi un dépôt public unique (pas Supabase), un catalogue
 en ligne et un songbook local-first partagé via GitHub. Lire `CATALOGUE.md`
 pour l’architecture actuelle ; les principes historiques ci-dessous restent
@@ -102,7 +115,7 @@ La transposition affichée par défaut = `our_key` si présente, sinon `key`. Qu
 - **Import intelligent** : page « Ajouter » où l'on colle un texte au format « accords au-dessus des paroles » (Ultimate Guitar, etc.) → conversion ChordPro via ChordsOverWordsParser → prévisualisation → le fichier .pro généré est proposé au téléchargement avec les instructions pour le déposer dans `songs/` (l'appli étant statique, elle ne peut pas écrire dans le dépôt elle-même — ne pas promettre le contraire).
 - **Version imprimable** : feuille de style `@media print` élégante, dans l'esprit vintage, pour un backup papier du répertoire.
 
-## Design — identité validée (à respecter)
+## Design historique — remplacé par Studio le 8 septembre 2026
 
 Deux thèmes, même âme. Variables CSS :
 

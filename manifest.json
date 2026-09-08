@@ -6,9 +6,9 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#f4ecda",
-  "theme_color": "#f4ecda",
+  "orientation": "any",
+  "background_color": "#f6f8fc",
+  "theme_color": "#f6f8fc",
   "share_target": {
     "action": "./",
     "method": "GET",

@@ -55,8 +55,10 @@ var Carnet = (function () {
   function metadata(texte) {
     var m = Object.create(null);
     texte.replace(/^\s*\{([\w]+):\s*([^}]*)\}\s*$/gm, function (_, cle, valeur) {
-      if (['title','artist','key','our_key','capo','tempo','status','tags','x_score','x_notes'].indexOf(cle) >= 0)
-        m[cle] = valeur.trim();
+      if (['title','artist','key','our_key','capo','tempo','status','tags','x_score','x_notes'].indexOf(cle) >= 0) {
+        if (cle === 'x_notes' && Object.prototype.hasOwnProperty.call(m,cle)) m[cle] += '\n' + valeur.trim();
+        else m[cle] = valeur.trim();
+      }
       return _;
     });
     return m;

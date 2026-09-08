@@ -65,7 +65,8 @@ function instrumentChoisi() {
 /* Sans choix enregistre, on suit le reglage du telephone
    (data-theme absent = « automatique »). */
 function themeEnregistre() {
-  return lireMemoire(CLE_THEME);
+  var choix = lireMemoire(CLE_THEME);
+  return choix === 'jour' || choix === 'nuit' ? choix : null;
 }
 
 function themeEffectif() {
@@ -83,6 +84,12 @@ function appliquerTheme(theme) {
   // L'icone montre ce vers quoi on bascule : lune = passer en nuit.
   var icone = document.getElementById('theme-icon');
   if (icone) icone.textContent = themeEffectif() === 'nuit' ? '☀' : '☾';
+  var bouton = document.getElementById('theme-toggle');
+  if (bouton) bouton.setAttribute('aria-label', themeEffectif() === 'nuit' ? 'Passer au mode clair' : 'Passer au mode sombre');
+  document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+    m.content = themeEffectif() === 'nuit' ? '#121b2a' : '#f6f8fc';
+  });
+  var choix = document.getElementById('studio-theme'); if (choix) choix.value = theme || '';
 }
 
 function initTheme() {
@@ -152,7 +159,8 @@ function analyserChordPro(texte) {
         continue;
       }
       // Toute autre directive est rangee dans les metadonnees.
-      chanson.meta[cle] = valeur;
+      if (cle === 'x_notes' && Object.prototype.hasOwnProperty.call(chanson.meta, cle)) chanson.meta[cle] += '\n' + valeur;
+      else chanson.meta[cle] = valeur;
       continue;
     }
 
@@ -780,57 +788,7 @@ function afficherChanson(slug, idSetlist) {
 
     etatChanson = etatPour(slug, chanson);
 
-    var html = fil
-      ? '<a class="back-link" href="#/setlist/' + encodeURIComponent(fil.id) + '">← ' +
-        txt(fil.nom) + '</a>'
-      : '<a class="back-link" href="' + (Recueil.cat(slug) ? '#/catalogue' : '#/') + '">← ' + (Recueil.cat(slug) ? 'Le catalogue' : 'Le songbook') + '</a>';
-
-    html += '<header class="song-header">';
-    html += '<h2>' + txt(m.title || slug) + '</h2>';
-    if (m.artist) html += '<p class="song-artist">' + txt(m.artist) + '</p>';
-    html += '<div class="song-facts" id="facts"></div>';
-    html += '<div class="barre-actions">' +
-      reglettePas('Ton', '<span id="val-ton"></span>', 'ton-', 'ton+', 'la tonalité') +
-      reglettePas('Capo', '<span id="val-capo"></span>', 'capo-', 'capo+', 'le capo') +
-      '<span class="reglette">' +
-        '<button type="button" data-act="chant" aria-pressed="false">Chant</button>' +
-        '<button type="button" data-act="defiler" aria-pressed="false">Défiler</button>' +
-        (m.x_score
-          ? '<button type="button" data-act="partition" aria-pressed="false">Partition</button>'
-          : '') +
-      '</span>' +
-      '<span class="enveloppe" id="vitesse" hidden>' +
-        reglettePas('Vitesse', '<span id="val-vitesse"></span>',
-          'vitesse-', 'vitesse+', 'la vitesse de défilement') +
-      '</span>' +
-      '</div>';
-    html += '<p class="astuce" id="astuce" hidden></p>';
-    html += '</header>';
-
-    if (m.x_notes) {
-      html += '<aside class="notes"><span class="notes-label">Nos notes</span>' +
-        txt(m.x_notes) + '</aside>';
-    }
-
-    html += '<div class="sheet" id="sheet"></div>';
-
-    if (m.x_score) {
-      html += '<section class="partition" id="partition" hidden>' +
-        '<h3 class="section-title">Partition piano</h3>' +
-        '<div id="cadre-partition"></div>' +
-        '</section>';
-    }
-
-    html += rendreFilSetlist(fil);
-
-    // Modifier les notes, le statut, ou retirer la chanson : seulement si
-    // l'application a le droit d'ecrire dans le depot.
-    html += Recueil.actions(slug);
-    if (Depot.estConfigure() && !Recueil.local(slug) && !Recueil.cat(slug)) {
-      html += '<p class="lien-ajouter"><button type="button" class="lien-plat" ' +
-        'data-act="ouvrir-edition">Modifier cette chanson</button></p>';
-    }
-    html += '<div id="edition"></div>';
+    var html = Studio.chanson(slug, chanson, fil);
 
     vue.innerHTML = html;
     modeChant = false;
@@ -840,6 +798,7 @@ function afficherChanson(slug, idSetlist) {
     vue.focus();
     window.scrollTo(0, 0);
     document.title = (m.title || slug) + ' · Macarreira';
+    Studio.lecturePrete(slug, chanson).catch(function () {});
 
     // On prepare la base de l'instrument en tache de fond : au premier
     // accord tape, le panneau s'ouvre sans attente.
@@ -1063,6 +1022,10 @@ function majAstuce() {
       '<button type="button" data-act="retenir-ton">Retenir cette tonalité</button>';
     return;
   }
+  if (Recueil.cat(e.slug)) {
+    boite.textContent = 'Ajoutez ce morceau au songbook pour retenir votre tonalité.';
+    return;
+  }
 
   boite.innerHTML = 'Garder ce ton ? ' +
     (e.meta.our_key ? 'Remplacez <code>{our_key: ' + txt(e.meta.our_key) + '}</code> par '
@@ -1188,7 +1151,7 @@ function arreterDefilement() {
   defilement.actif = false;
   if (defilement.image) window.cancelAnimationFrame(defilement.image);
   defilement.image = null;
-  relacherEcran();
+  if (!document.body.classList.contains('studio-scene')) relacherEcran();
   majDefilement();
 }
 
@@ -1228,7 +1191,7 @@ function changerVitesse(pas) {
    pendant le defilement. */
 function majDefilement() {
   var bouton = document.querySelector('[data-act="defiler"]');
-  if (bouton) bouton.setAttribute('aria-pressed', defilement.actif ? 'true' : 'false');
+  if (bouton) { bouton.setAttribute('aria-pressed', defilement.actif ? 'true' : 'false'); bouton.textContent = defilement.actif ? 'Pause' : 'Défiler'; }
 
   var boite = document.getElementById('vitesse');
   if (!boite) return;
@@ -2505,12 +2468,12 @@ function dansUnAn() {
 }
 
 function afficherReglages() {
-  var html = '<a class="back-link" href="#/">← Le recueil</a>';
+  var html = '';
   html += '<header class="song-header">';
   html += '<h2>Réglages</h2>';
-  html += '<p class="song-artist">Pour enregistrer une chanson depuis le téléphone, ' +
-    'sans passer par l\'ordinateur.</p>';
   html += '</header>';
+  html += Studio.reglages();
+  html += '<details class="studio-settings-detail"><summary>Connexion et partage GitHub</summary>';
 
   html += '<div id="etat-jeton"></div>';
 
@@ -2533,7 +2496,7 @@ function afficherReglages() {
     '<button type="button" data-act="enregistrer-jeton">Vérifier et enregistrer</button>' +
     '</span></div>';
   html += '</div>';
-
+  html += '</details><details class="studio-settings-detail"><summary>Recherche de grilles et confidentialité</summary>';
   html += '<h3 class="section-title">Où chercher les grilles</h3>';
   html += '<p class="indice">Le bouton « Trouver la grille », sur une chanson sans ' +
     'paroles, ouvre une recherche sur ce site.</p>';
@@ -2564,7 +2527,7 @@ function afficherReglages() {
     'téléphone. Il n\'est envoyé qu\'à GitHub, n\'est écrit dans aucun fichier du ' +
     'dépôt — qui est public — et n\'est jamais réaffiché en entier. Il faut le ' +
     'coller séparément sur chaque téléphone. Si vous perdez l\'appareil, révoquez ' +
-    'le jeton sur github.com : personne ne pourra plus s\'en servir.</p>';
+    'le jeton sur github.com : personne ne pourra plus s\'en servir.</p></details>';
 
   vue.innerHTML = html;
   window.scrollTo(0, 0);
@@ -2669,11 +2632,13 @@ function valeurSure(valeur) {
 function ecrireDirective(texte, cle, valeur) {
   var lignes = String(texte).replace(/\r\n?/g, '\n').split('\n');
   var ligne = '{' + cle + ': ' + valeurSure(valeur) + '}';
+  if (cle === 'x_notes') ligne = String(valeur || '').replace(/\r\n?/g,'\n').split('\n').map(function (l) { return '{x_notes: ' + valeurSure(l) + '}'; }).join('\n');
   var motif = new RegExp('^\\{\\s*' + cle + '\\s*:[^}]*\\}$', 'i');
 
   for (var i = 0; i < lignes.length; i++) {
     if (motif.test(lignes[i].trim())) {
       lignes[i] = ligne;
+      if (cle === 'x_notes') lignes = lignes.filter(function (l, index) { return index <= i || !motif.test(l.trim()); });
       return lignes.join('\n');
     }
   }
@@ -3178,6 +3143,7 @@ document.addEventListener('change', function (ev) {
 function router() {
   if (!Recueil.preparerRoute()) return;
   var chemin = window.location.hash.replace(/^#\/?/, '');
+  Studio.navigation(chemin);
 
   fermerPanneau();
   arreterDefilement();

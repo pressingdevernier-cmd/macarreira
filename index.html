@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>try { var themeInitial = localStorage.getItem('macarreira.theme'); if (themeInitial === 'jour' || themeInitial === 'nuit') document.documentElement.setAttribute('data-theme', themeInitial); } catch (e) {}</script>
 <title>Macarreira</title>
 <meta name="description" content="Le songbook du duo : paroles, accords et partitions.">
 <!-- Couleur de la barre du navigateur sur téléphone, une par thème -->
-<meta name="theme-color" content="#f4ecda" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1a1a1e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121b2a" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
 <!-- L'iPhone n'accepte pas les icones SVG : il lui faut un PNG opaque. -->
@@ -18,22 +19,22 @@
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet" href="recueil.css">
+<link rel="stylesheet" href="studio.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">m.</span>
       <span class="brand-title">Macarreira</span>
-      <span class="brand-sub">Guitare · Piano · Deux voix</span>
     </a>
-    <nav class="nav-haut">
-      <a href="#/catalogue">Catalogue</a>
-      <a class="nav-lien" href="#/accords">Accords</a>
+    <div class="nav-haut">
+      <span class="brand-sub">À deux voix</span>
       <button id="theme-toggle" class="icon-button" type="button" aria-label="Changer de thème">
         <span id="theme-icon" aria-hidden="true">☾</span>
       </button>
-    </nav>
+    </div>
   </div>
 </header>
 
@@ -42,10 +43,14 @@
 <main id="view" class="wrap" tabindex="-1"></main>
 
 <footer class="site-footer wrap">
-  <p>Notre recueil · <span id="song-count"></span>
-     · <a class="lien-reglages" href="#/reglages">Réglages</a>
+  <p><span id="song-count"></span>
      <span id="app-version"></span></p>
 </footer>
+<nav class="studio-nav" aria-label="Navigation principale">
+  <a href="#/" data-nav="songbook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16M12 5C8 2 4 3 2 4v15c4-2 7-1 10 2 3-3 6-4 10-2V4c-2-1-6-2-10 1Z"/></svg>Songbook</a>
+  <a href="#/catalogue" data-nav="catalogue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg>Catalogue</a>
+  <a href="#/reglages" data-nav="reglages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h5m4 0h9M3 12h11m4 0h3M3 18h3m4 0h11M8 3v6m6 0v6M6 15v6"/></svg>Réglages</a>
+</nav>
 
 <!-- Bibliothèques téléchargées une fois et rangées dans lib/ (aucun appel à Internet) :
      ChordSheetJS lit et transpose les accords ; chords.js dessine les diagrammes
@@ -58,6 +63,7 @@
 <script src="catalogue.js"></script>
 <script src="synchro.js"></script>
 <script src="recueil.js"></script>
+<script src="studio.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

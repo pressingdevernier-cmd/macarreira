@@ -5,6 +5,8 @@
 - **Songbook** est l'accueil et contient les morceaux conservés sur l'appareil.
 - **Catalogue** cherche dans l'index complet. Les filtres de langue se déplient ;
   les résultats sont paginés en bas de liste, sans limiter la recherche à la page.
+- **Accords** ouvre directement les grilles guitare, ukulélé et baryton, sans
+  devoir ouvrir un morceau ni passer par les réglages.
 - **Réglages** rassemble l'apparence, la taille de lecture, les sauvegardes,
   le dictionnaire d'accords, l'impression et la connexion GitHub.
 
@@ -25,6 +27,46 @@ Dans Réglages, **Automatique** suit le thème du téléphone. **Claire** et **S
 le remplacent. Le bouton soleil/lune est un raccourci de bascule manuelle.
 Le thème et la taille restent propres à chaque appareil. Les polices de l'interface
 sont celles du système : aucun chargement de police depuis un service tiers.
+Les boutons colorés distinguent les actions : bleu pour ajouter, vert pour
+enregistrer ou défiler, violet pour les notes et ambre pour le mode scène.
+Un bouton activé est aussi souligné et encadré ; la couleur n'est pas le seul repère.
+
+## Ajouter un morceau absent du catalogue
+
+1. Dans **Songbook** ou **Catalogue**, toucher **Coller une grille**.
+2. Sur le site source, copier le texte de la version **Chords / Accords** :
+   paroles et accords, idéalement avec les titres de sections. Coller le texte,
+   pas seulement l'adresse de la page. Aucun compte de ce site n'est connecté.
+3. Indiquer le titre et, si besoin, l'artiste. Les bandeaux « Titre Chords by
+   Artiste » et les métadonnées ChordPro peuvent les fournir automatiquement.
+4. Ouvrir **Format, tonalité et capo** si la grille utilise un capo. Les lignes
+   `Capo: 2` ou `Capo: 2nd fret` en tête du texte sont également reconnues.
+   La tonalité réelle peut rester vide : l'application ne la devine pas.
+5. Toucher **Convertir et voir l'aperçu**. Vérifier les paroles et les placements.
+   **Corriger le texte ChordPro** permet d'ajuster un accord ou une syllabe,
+   puis **Actualiser l'aperçu** rend l'ajout disponible à nouveau.
+6. Toucher **Ajouter au songbook**. La chanson est enregistrée sur l'appareil,
+   disponible hors ligne, modifiable et envoyée par la synchronisation GitHub
+   habituelle. Sans connexion GitHub, elle attend sur cet appareil. Aucune
+   chanson existante ni entrée du catalogue n'est remplacée.
+
+**Formats et limites.** Les grilles avec accords au-dessus des paroles, les
+accords entre crochets et les sections `[Verse]` / `[Chorus]` sont pris en charge.
+Les espaces et les tabulations sont conservés pour le placement. Si le site les
+a perdus au copier-coller, vérifier et corriger : l'app ne peut pas les deviner.
+Les tablatures à numéros ne sont pas converties en accords. Le collage est limité
+à une chanson et 200 000 caractères. Un lien seul ne déclenche aucun téléchargement.
+
+En mode **Grille de site**, les accords copiés sont des formes à jouer avec le
+capo : l'app enregistre les accords réels et restitue les formes à la lecture.
+En mode **ChordPro**, elle attend la convention Macarreira (accords réels déjà
+enregistrés), sans appliquer le capo deux fois. La détection automatique choisit
+ChordPro lorsqu'elle reconnaît des directives entre accolades ; sélectionner
+le format explicitement si le fichier utilise une autre convention.
+
+La conversion et les corrections restent un brouillon jusqu'à l'ajout. Quitter
+l'écran demande confirmation. En cas d'échec d'enregistrement, le texte reste
+disponible ; ne pas fermer la page avant de l'avoir enregistré ou copié ailleurs.
 
 ## Notes
 
@@ -65,7 +107,7 @@ Le navigateur peut toujours effacer ses données ; garder une sauvegarde export�
 
 ## Maintenance
 
-`studio.css` et `studio.js` sont précachés avec le code de l'app. Ne pas retirer les
+`studio.css`, `studio.js` et `importer.js` sont précachés avec le code de l'app. Ne pas retirer les
 anciens styles sans vérifier les écrans de dictionnaire, d'impression et d'import.
 Les données du catalogue ne doivent pas être modifiées lors d'une refonte graphique.
 
@@ -74,6 +116,7 @@ Tests de logique (Playwright et Chrome nécessaires uniquement sur la machine de
 ```text
 node outils/test-local-first.cjs http://127.0.0.1:8892/ rapport-regressions.json
 node outils/test-studio.cjs http://127.0.0.1:8892/ rapport-studio.json
+node outils/test-importer.cjs http://127.0.0.1:8892/ rapport-import.json
 ```
 
 Ces tests tournent dans un contexte isolé, bloquent les appels réseau externes et

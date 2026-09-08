@@ -3166,8 +3166,9 @@ function router() {
     afficherSetlist(decodeURIComponent(chemin.slice(8)));
   } else if (chemin === 'accords') {
     afficherDictionnaire();
-  } else if (chemin === 'completer') {
-    Recueil.route('editer/nouveau');
+  } else if (chemin === 'importer' || chemin === 'completer') {
+    Importer.ouvrir(texteRecuParPartage || '');
+    texteRecuParPartage = '';
   } else if (chemin === 'imprimer') {
     afficherImpression();
   } else if (chemin === 'reglages') {

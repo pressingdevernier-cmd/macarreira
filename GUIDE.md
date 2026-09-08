@@ -1,7 +1,8 @@
 # Guide de Macarreira
 
 > **Interface Studio** : [mode d'emploi actuel](STUDIO.md) pour les thèmes
-> clair/sombre/automatique, les notes, le mode scène et les états de sauvegarde.
+> clair/sombre/automatique, les notes, le mode scène, le bouton **Accords**,
+> **Coller une grille** pour ajouter un morceau et les états de sauvegarde.
 
 > **Version catalogue / songbook (septembre 2026)** : le mode d’emploi actuel
 > est dans [CATALOGUE.md](CATALOGUE.md). Les chapitres ci-dessous décrivent le

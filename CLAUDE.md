@@ -4,7 +4,7 @@
 
 Le 8 septembre, le propriétaire a validé la refonte **Studio**. Cette décision
 remplace la section historique « identité validée » plus bas : navigation unique
-Songbook / Catalogue / Réglages, interface sans empattements, contrastes renforcés,
+Songbook / Catalogue / Accords / Réglages, interface sans empattements, contrastes renforcés,
 apparence claire / sombre / automatique par appareil. `studio.css` surcharge les
 anciens composants ; `studio.js` gère le lecteur, le mode scène et le panneau Notes.
 Ne pas revenir aux palettes et menus vintage sans nouvelle demande.
@@ -14,6 +14,15 @@ représentent plusieurs lignes, dans leur ordre. L'édition des notes utilise la
 révision capturée à l'ouverture : ne jamais écraser une modification concurrente.
 Les préférences d'affichage restent locales ; les paroles et les notes sont
 dans Carnet puis dans le `.pro` partagé. Lire `STUDIO.md` pour les contrôles.
+
+La navigation comporte désormais un accès direct **Accords**. Les actions ont
+des couleurs contrastées dans les deux thèmes (bleu ajout, vert enregistrement,
+violet notes, ambre scène). `importer.js` gère **Coller une grille** : conversion
+manuelle texte → aperçu → nouvelle chanson Carnet, puis Synchro. Ne pas réutiliser
+les anciens enregistrements de `afficherAjouter()` dans `songs/`. Le format grille
+interprète les accords comme des positions au capo ; le format ChordPro utilise
+les accords réels de Macarreira. Aucun téléchargement automatique d'un site tiers.
+Tout changement du collage ou du ChordPro invalide l'aperçu avant l'enregistrement.
 
 Le propriétaire a choisi un dépôt public unique (pas Supabase), un catalogue
 en ligne et un songbook local-first partagé via GitHub. Lire `CATALOGUE.md`

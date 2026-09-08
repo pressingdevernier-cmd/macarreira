@@ -35,7 +35,7 @@ var Studio = (function () {
   function navigation(chemin) {
     fermer(true); basculerScene(false);
     var courant = chemin === 'catalogue' || chemin.startsWith('song/catalogue-') ? 'catalogue' :
-      ['reglages','songbook','accords','imprimer'].includes(chemin) ? 'reglages' : 'songbook';
+      chemin === 'accords' ? 'accords' : ['reglages','songbook','imprimer'].includes(chemin) ? 'reglages' : 'songbook';
     document.querySelectorAll('[data-nav]').forEach(function (a) {
       if (a.dataset.nav === courant) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });

@@ -18,10 +18,10 @@ var Recueil = (function () {
     b.className = erreur ? 'avertissement' : 'indice'; b.textContent = m;
   }
   function preparerRoute() {
-    if (Studio.busy() || ((dirty || Studio.dirty()) && !confirm('Quitter sans enregistrer les modifications en cours ?'))) {
+    if (Studio.busy() || Importer.busy() || ((dirty || Studio.dirty() || Importer.dirty()) && !confirm('Quitter sans enregistrer les modifications en cours ?'))) {
       history.replaceState(null, '', dernierHash || '#/'); return false;
     }
-    dirty = false; edition = null; dernierHash = location.hash; epoch++; querySeq++;
+    dirty = false; edition = null; Importer.reset(); dernierHash = location.hash; epoch++; querySeq++;
     Catalogue.annuler(); return true;
   }
   async function charger(slug) {
@@ -50,7 +50,7 @@ var Recueil = (function () {
     var ticket = epoch;
     vue.innerHTML = outils() + '<header class="song-header"><h2>Notre songbook</h2></header><p id="sync-status" class="indice" role="status"></p>' +
       '<div class="recherche"><input id="book-search" type="search" aria-label="Chercher dans notre songbook" placeholder="Titre, artiste ou paroles…" value="' + h(bookQuery) + '"></div>' +
-      '<div class="barre-actions recueil-actions"><a class="primary" href="#/catalogue">＋ Ajouter un morceau</a><a href="#/editer/nouveau">Créer une grille</a></div><div id="book-results"><p>Ouverture du songbook…</p></div>';
+      '<div class="barre-actions recueil-actions"><a class="primary" href="#/catalogue">＋ Catalogue</a><a class="import-action" href="#/importer">Coller une grille</a><a href="#/editer/nouveau">Créer une grille</a></div><div id="book-results"><p>Ouverture du songbook…</p></div>';
     statut(); document.title = 'Songbook · Macarreira';
     try { localData = await Carnet.list(); if (ticket === epoch) rendreBook(); }
     catch (e) { if (ticket === epoch) notice('Le stockage de cet appareil est indisponible. Autorisez le stockage du site pour conserver vos chansons.', true); }
@@ -84,7 +84,7 @@ var Recueil = (function () {
       '<details class="catalogue-filters"><summary><span id="langues-resume">' + (langues.length ? langues.length + ' langues' : 'Toutes les langues') + '</span> · Filtres</summary><fieldset class="langues"><legend>Langues estimées</legend>' + Object.keys(labels).map(function (l) { return '<label><input type="checkbox" data-lang="' + l + '" ' + (langues.includes(l) ? 'checked' : '') + '> ' + labels[l] + '</label>'; }).join('') +
       bouton('toutes-langues','Toutes les langues', 'aria-pressed="' + !langues.length + '"') + '</fieldset>' +
       '<p class="indice">Recherche dans tout le catalogue. Une langue mal estimée ? Essayez « Toutes les langues ».</p>' +
-      '<div class="barre-actions recueil-actions">' + bouton('actualiser-index','Actualiser le catalogue') + '</div></details><div id="catalogue-results" aria-live="polite"><p>Préparation de la recherche…</p></div>';
+      '<div class="barre-actions recueil-actions">' + bouton('actualiser-index','Actualiser le catalogue') + '</div></details><div class="catalogue-import"><span>Un morceau manque ?</span><a class="studio-button import-action" href="#/importer">Coller une grille</a></div><div id="catalogue-results" aria-live="polite"><p>Préparation de la recherche…</p></div>';
     document.title = 'Catalogue · Macarreira';
     try { await Catalogue.ouvrir(); if (ticket === epoch) await chercher(); }
     catch (e) { if (ticket === epoch) notice(e.message, true); }
@@ -99,7 +99,7 @@ var Recueil = (function () {
     b.innerHTML = '<p class="indice">' + r.total.toLocaleString('fr') + ' résultats · tout le catalogue</p>' +
       (r.rows.length ? '<ul class="song-list">' + r.rows.map(function (f) {
         return '<li><a class="song-link" data-catalogue-id="' + h(f.id) + '" href="#/song/catalogue-' + encodeURIComponent(f.id) + '"><span class="song-main"><span class="song-title">' + h(f.title) + '</span><span class="song-meta">' + h(f.artist) + ' · ' + h(labels[f.language] || f.language || 'Langue inconnue') + '</span></span><span class="song-chevron" aria-hidden="true">›</span></a></li>';
-      }).join('') + '</ul>' : '<p class="message">Aucun résultat. Essayez sans filtre de langue.</p>') + pagination('catalogue', page, r.total);
+      }).join('') + '</ul>' : '<p class="message">Aucun résultat. Essayez sans filtre de langue, ou <a href="#/importer">ajoutez le morceau depuis une grille copiée</a>.</p>') + pagination('catalogue', page, r.total);
   }
   async function ajouter(id) {
     var f = await Catalogue.fiche(id); if (!f) throw new Error('Chanson introuvable.');
@@ -230,7 +230,7 @@ var Recueil = (function () {
   }
   document.addEventListener('pointerover', intention);
   document.addEventListener('focusin', intention);
-  window.addEventListener('beforeunload', function (e) { if (dirty || Studio.dirty() || Studio.busy()) { e.preventDefault(); e.returnValue = ''; } });
+  window.addEventListener('beforeunload', function (e) { if (dirty || Studio.dirty() || Studio.busy() || Importer.dirty() || Importer.busy()) { e.preventDefault(); e.returnValue = ''; } });
   window.addEventListener('songbook-status', statut);
   window.addEventListener('songbook-changed', function () {
     invalider();
@@ -239,5 +239,5 @@ var Recueil = (function () {
   });
   return { local: local, cat: cat, charger: charger, fiches: fiches, actions: actions,
     modifier: modifier, route: route, preparerRoute: preparerRoute,
-    dirty: function () { return dirty || Studio.dirty() || Studio.busy(); }, invalider: invalider, epoch: function () { return epoch; } };
+    dirty: function () { return dirty || Studio.dirty() || Studio.busy() || Importer.dirty() || Importer.busy(); }, invalider: invalider, epoch: function () { return epoch; } };
 })();

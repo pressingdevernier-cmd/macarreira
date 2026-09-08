@@ -2,12 +2,12 @@
    Nouvelle version en attente : jamais de rechargement imposé pendant le jeu.
    Changer VERSION à chaque publication de l'application. */
 'use strict';
-var VERSION = '2026-09-08-studio-1';
+var VERSION = '2026-09-08-studio-2';
 var CACHE = 'macarreira-shell-' + VERSION;
 var FICHIERS = [
   './index.html','./app.css','./recueil.css','./app.js','./chords.js','./depot.js',
   './config.js','./carnet.js','./catalogue.js','./catalogue-worker.js','./synchro.js','./recueil.js',
-  './studio.css','./studio.js',
+  './studio.css','./studio.js','./importer.js',
   './manifest.json','./setlists.json',
   './icons/icon.svg','./icons/icon-192.png','./icons/icon-512.png',
   './icons/icon-maskable-192.png','./icons/icon-maskable-512.png','./icons/apple-touch-icon.png',
@@ -62,6 +62,6 @@ self.addEventListener('message', function (e) {
   var type=e.data && e.data.type, port=e.ports && e.ports[0];
   if (type === 'activer') { e.waitUntil(self.skipWaiting()); return; }
   if (!port) return;
-  if (type === 'version') port.postMessage({date:'2026-09-08T08:04:00Z', version:VERSION});
+  if (type === 'version') port.postMessage({date:'2026-09-08T16:49:00Z', version:VERSION});
   if (type === 'verifier') port.postMessage({codeAChange:false});
 });
